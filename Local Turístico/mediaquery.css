@@ -1,0 +1,6 @@
+@media screen and (min-width: 550px) {
+    article#title-page {
+        width: 70rem;
+        margin: 2.658rem auto;
+    }
+}

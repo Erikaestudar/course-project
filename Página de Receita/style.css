@@ -21,7 +21,7 @@ article#page {
     padding: 1.5rem;
     background-color: hsl(50, 61%, 85%);
     border-radius: 1.5rem;
-    margin: 3rem auto;
+    margin: 3rem auto 1.75rem;
 }
 
 img {
@@ -61,4 +61,23 @@ ul {
 
 section#preparation p + p{
     padding-top: 1rem;
+}
+
+footer {
+    color: #F0E8C2;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+footer img {
+    vertical-align: middle;
+}
+
+a {
+    color: #ad847f;
+}
+
+a:hover {
+    color: #F0E8C2;
+    text-decoration: underline;
 }

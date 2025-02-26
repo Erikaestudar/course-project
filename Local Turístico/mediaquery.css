@@ -5,6 +5,18 @@
 }
 
 @media screen and (min-width: 768px) {
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    svg.drop {
+        display: none;
+    }
+
+    article.drop-text {
+        display: block !important; /* Garante que os textos fiquem sempre visíveis */
+    }
+
     nav#menu {
         display: none;
     }
@@ -20,6 +32,10 @@
     img {
         width: 100%;
         border-radius: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
     }
 
     nav#menu {

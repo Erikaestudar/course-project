@@ -4,7 +4,7 @@
     --cor-border: hsl(0, 0%, 85%);
     --cor-headline: hsl(8, 71%, 60%);
 
-    --text-title: hsl(0, 0%, 11%);
+    --text-title: #1c1c1c;
     --text-secundary: hsl(0, 0%, 20%);
     --blue-history: hsl(213, 87%, 35%);
     --purple-couple: hsl(270, 70%, 35%);
@@ -33,7 +33,6 @@ article#title-page {
     display: block;
     margin: auto;
     margin-top: 3rem;
-
 }
 
 main {
@@ -78,7 +77,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 1.70rem;
     font-weight: bold;
     margin-bottom: 0.25rem;
 }
@@ -105,8 +104,27 @@ article p + p {
     font-weight: bolder;
 }
 
-article p:first-child {
+article.drop-text p:first-child {
     text-indent: 1rem;
+}
+
+article.drop-text {
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+section#title-list p ~ p {
+    text-indent: 1rem;
+}
+
+.drop {
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.drop:hover {
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.356); 
 }
 
 ul {

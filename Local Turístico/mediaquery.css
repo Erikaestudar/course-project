@@ -1,6 +1,28 @@
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 485px) {
+    nav#menu menu{
+        gap: 10rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav#menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
     article#title-page {
-        width: 100vw;
+        width: 70rem;
         margin: 2.658rem auto;
+        padding: 1rem;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 1.75rem;
+    }
+
+    nav#menu {
+        display: none;
     }
 }

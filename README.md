@@ -1,4 +1,4 @@
-# course-project :1F4DA:
+# course-project
  Projetos criados durando o curso
 
 ## Menu

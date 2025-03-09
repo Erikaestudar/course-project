@@ -6,14 +6,18 @@
 
 :root {
     --brand-color: hsl(7, 84%, 62%);
-
     --background-color: hsl(0, 0%, 100%);
     --surface-color: hsl(0, 0%, 96%);
     --skeleton-color: hsl(0, 0%, 85%);
     --shape-transparecy: hsla(0, 0%, 100%, 0.56);
-
     --text-color-primary: hsl(0, 0%, 19%);
     --text-color-secondary: hsl(0, 0%, 42%);
+
+    --font-family: "Poppins", sans-serif;
+    --text-lg: bold 2rem/125% var(--font-family);
+    --text: 1rem/1.5 var(--font-family); /* 16px/24px (16*1.5=24 ou 150%) */
+    --text-md: 0.875rem/170% var(--font-family);
+    --text-sm: 0.75rem/170% var(--font-family);
 }
 
 body {

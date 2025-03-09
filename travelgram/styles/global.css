@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --brand-color: hsl(7, 84%, 62%);
+
+    --background-color: hsl(0, 0%, 100%);
+    --surface-color: hsl(0, 0%, 96%);
+    --skeleton-color: hsl(0, 0%, 85%);
+    --shape-transparecy: hsla(0, 0%, 100%, 0.56);
+
+    --text-color-primary: hsl(0, 0%, 19%);
+    --text-color-secondary: hsl(0, 0%, 42%);
+}
+
+body {
+    color: var(--text-color-secondary);
+}

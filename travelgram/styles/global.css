@@ -34,7 +34,7 @@ a:hover {
     text-decoration: underline;
 }
 
-.conteiner {
+.container {
     padding-inline: 2rem;
     max-width: 80rem; /* 1280px */
     margin-inline: auto;

@@ -1,0 +1,47 @@
+header {
+    padding-block: 2rem;
+    font: var(--text-md);
+}
+
+header .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile {
+    display: flex;
+    gap: 2rem;
+    flex-flow: row nowrap;
+}
+
+#profile img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+#profile > div {
+    max-width: 24rem; /* 384px */
+}
+
+#profile h1 {
+    font: var(--text-lg);
+    color: var(--text-color-primary);
+    margin-bottom: 0.5rem;
+}
+
+#info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 17.5rem; /* 280px */
+}
+
+#info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

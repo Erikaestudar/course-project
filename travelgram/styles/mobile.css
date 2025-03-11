@@ -1,0 +1,158 @@
+@media screen and (max-width: 440px) {
+    main {
+        gap: 0.3rem !important;
+    }
+
+    main img {
+        width: 9rem !important; 
+        height: 9rem !important;
+    }
+}
+
+@media screen and (max-width: 490px) {
+        /* Ajuste do tamanho do logo */
+    #logo img {
+        max-width: 9rem; /* Permite que o logo encolha suavemente */
+        transition: transform 0.3s ease-in-out; /* Animação suave */
+    }
+
+    /* Ajuste do tamanho do input */
+    #mobile-menu input {
+        width: 6.7rem; /* Reduzindo o tamanho do input */
+    }
+
+    div#mobile-menu {
+        gap: 0.2rem;
+    }
+}
+
+@media screen and (min-width: 490px) {
+    #mobile-menu input {
+        width: 11rem; /* Mantendo o tamanho grande em telas maiores */
+        transition: transform 0.3s ease-in-out; /* Animação suave */
+    }
+
+    div#mobile-menu {
+        gap: 0.35rem;
+    }
+}
+
+@media screen and (min-width: 570px) and (max-width: 700px) {
+    #mobile-menu input {
+        width: 15rem; /* Mantendo o tamanho grande em telas maiores */
+        transition: transform 0.3s ease-in-out; /* Animação suave */
+    }
+
+    div#mobile-menu {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 992px) {
+    #mobile-menu input {
+        width: 23rem; /* Mantendo o tamanho grande em telas maiores */
+        transition: transform 0.3s ease-in-out; /* Animação suave */
+    }
+
+    div#mobile-menu {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #primary-menu {
+        display: none;
+    }
+
+    #mobile-menu {
+        cursor: pointer;
+        display: flex;
+    }
+
+    #mobile-menu label {
+        display: none;
+    }
+
+    #mobile-menu input {
+        display: none;
+        border: none;
+        outline: none;
+        border-radius: 2rem;
+        padding-block: 0.38rem;
+        text-indent: 0.8rem;
+    }
+
+    div#mobile-menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    menu#itens {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 1.2rem;
+        gap: 1rem;
+
+        font: var(--text-md);
+        color: var(--text-color-secondary);
+        display: none;
+    }
+
+    #itens ul {
+        width: 9.5rem;
+        box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.377);
+        list-style-type: none;
+        padding-inline: 1.3rem;
+        line-height: 2rem;
+    }
+
+    header .container {
+        flex-flow: row nowrap;
+    }
+
+    header #profile img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    header #profile h1 {
+        font: bold 1.5rem/125% var(--font-family);
+        color: var(--text-color-primary);
+    }
+
+    header #profile p {
+        display: none;
+    }
+
+    header #info {
+        display: none;
+    }
+
+    header #info-mobile {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header #info-mobile li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    header #info-mobile img {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    main {
+        gap: 0.8rem;
+    }
+
+    main img {
+        width: 11rem;
+        height: 11rem;
+    }
+}

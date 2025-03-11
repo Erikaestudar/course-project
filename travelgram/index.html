@@ -20,7 +20,13 @@
             </a>
             <ul id="primary-menu">
                 <li>
-                    <a href="#"><img src="assets/icons/MagnifyingGlass.svg" alt="ícone de busca"></a>
+                    <span>
+                        <label for="search-input-desktop">buscar</label>
+                        <input type="text" name="search-input-desktop" id="search-input-desktop" class="show-search">
+                    </span>
+                </li>
+                <li>
+                    <img class="search-btn" src="assets/icons/MagnifyingGlass.svg" alt="ícone de busca">
                 </li>
                 <li><a href="#">Explorer</a></li>
                 <li><a href="#">Minhas viagens</a></li>
@@ -28,7 +34,26 @@
                     <img src="assets/Profile pic.png" alt="Imangem de Isabela Torres"></a>
                 </li>
             </ul>
+            <div id="mobile-menu">
+                <span>
+                    <label for="search-input">buscar</label>
+                    <input type="text" name="search-input" id="search-input" class="show-search">
+                </span>
+                <span>
+                    <img class="search-btn" src="assets/icons/MagnifyingGlass.svg" alt="ícone de busca">
+                </span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#6C6C6C"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </span>
+            </div>
         </nav>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Minhas viagens</a></li>
+            </ul>
+        </menu>
     
         <header>
             <div class="container">
@@ -40,6 +65,20 @@
                             Amante de viagens, cultura e gastronomia. 🌍✈️ <br>
                             Aqui compartilho as histórias registradas em cada clique, explorando cantinhos fascinantes do nosso planeta a partir da movimentada cidade de São Paulo. 🏙️📸
                         </p>
+
+                        <ul id="info-mobile">
+                            <li>
+                                <img src="assets/icons/MapPin.svg" alt="Ícone de mapa">
+                                <span>São Paulo, Brazil</span>
+                            </li>
+                            <li><img src="assets/icons/AirplaneTilt.svg" alt="Ícone do avião">
+                                <span>37 países</span>
+                            </li>
+                            <li>
+                                <img src="assets/icons/Image.svg" alt="Ícone de fotografia">
+                                <span>240 fotos</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -78,5 +117,7 @@
         <span>Termos de uso</span>
         <span>Política de privacidade</span>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

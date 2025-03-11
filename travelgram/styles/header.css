@@ -1,13 +1,39 @@
+@media screen and (min-width: 992px) {
+    header .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #info {
+        width: 17.5rem; /* 280px */
+    }
+
+    header #info-mobile {
+        display: none;
+    }
+
+    #primary-menu label {
+        display: none;
+    }
+
+    #primary-menu input {
+        display: none;
+        border: none;
+        outline: none;
+        border-radius: 2rem;
+        padding-block: 0.38rem;
+        text-indent: 0.8rem;
+
+        width: 23rem; /* Mantendo o tamanho grande em telas maiores */
+        transition: transform 0.3s ease-in-out; /* Animação suave */
+    }
+}
+
 header {
     padding-block: 2rem;
     font: var(--text-md);
-}
-
-header .container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
 }
 
 #profile {
@@ -17,9 +43,10 @@ header .container {
 }
 
 #profile img {
-    width: 60%;
-    height: 60%;
+    width: 11rem;
+    height: 11rem;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 #profile > div {
@@ -37,7 +64,7 @@ header .container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 17.5rem; /* 280px */
+
 }
 
 #info li {

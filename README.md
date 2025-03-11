@@ -8,10 +8,12 @@
 
 ### Projetos :books:
 
-- Página de Receita: [site](https://erikaestudar.github.io/course-project/P%C3%A1gina%20de%20Receita/index.html)
-- Local Turístico: [site](https://erikaestudar.github.io/course-project/Local%20Tur%C3%ADstico/index.html)
+- Página de Receita: [site](https://erikaestudar.github.io/course-project/pagina-de-receita/index.html)
+- Local Turístico: [site](https://erikaestudar.github.io/course-project/local-turistico/index.html)
+- Travelgram: [site](https://erikaestudar.github.io/course-project/travelgram/index.html)
 
 ### GitHub Code :computer:
 
-- Página de Receita: [code](https://github.com/Erikaestudar/course-project/tree/main/P%C3%A1gina%20de%20Receita)
-- Local Turístico:  [code](https://github.com/Erikaestudar/course-project/tree/main/Local%20Tur%C3%ADstico)
+- Página de Receita: [code](https://github.com/Erikaestudar/course-project/tree/main/pagina-de-receita)
+- Local Turístico:  [code](https://github.com/Erikaestudar/course-project/tree/main/local-turistico)
+- Travelgram: [code](https://github.com/Erikaestudar/course-project/tree/main/travelgram)

@@ -1,77 +1,66 @@
-let searchBtns = document.querySelectorAll('.search-btn')
+let searchBtn = document.querySelector('.search-btn')
 let searchInput = document.querySelector('#search-input')
-let searchInputDesktop = document.querySelector('#search-input-desktop')
 let itensBtn = document.querySelector('#itens-btn')
 let itensMenu = document.querySelector('#itens')
 
+// Garante que o input de busca inicie oculto
+searchInput.style.display = 'none'
 
-if (itensBtn) {
+// Alternar visibilidade do menu de navegação mobile
+if (itensBtn && itensMenu) {
     itensBtn.addEventListener('click', (event) => {
-        event.stopPropagation(); // Impede que o clique na lupa feche o menu
+        event.stopPropagation() // Impede que o clique na lupa feche o menu
 
         if (window.innerWidth < 992) {
-            if (itensMenu.style.display === 'block') {
-                itensMenu.style.display = 'none'
-            } else {
-                itensMenu.style.display = 'block'
-                searchInput.style.display = 'none' // Fecha o input de busca se estiver aberto
-                searchInputDesktop.style.display = 'none'
-            }
+            itensMenu.style.display = (itensMenu.style.display === 'block') ? 'none' : 'block'
+            searchInput.style.display = 'none' // Fecha o input se estiver aberto
         }
     })
 }
 
+// Alternar visibilidade ao clicar na lupa
+if (searchBtn && searchInput) {
+    searchBtn.addEventListener('click', (event) => {
+        event.stopPropagation() // Impede que o clique na lupa feche o input
 
-
-
-    // Alternar visibilidade ao clicar na lupa
-    searchBtns.forEach((btn) => {
-        btn.addEventListener('click', (event) => {
-            event.stopPropagation() // Impede que o clique na lupa feche o input
-
-            if (window.innerWidth <= 992) {
-                toggleInput(searchInput)
-            } else {
-                toggleInput(searchInputDesktop)
-            }
-
+        // Alterna a exibição do input de busca
+        if (searchInput.style.display === 'none' || searchInput.style.display === '') {
+            searchInput.style.display = 'block'
+            searchInput.focus(); // Mantém o foco para digitação imediata
+        } else {
+            searchInput.style.display = 'none'
+        }
             // Se o menu de navegação estiver aberto, fecha ao abrir a busca
             itensMenu.style.display = 'none'
-        })
     })
+}
 
-    // Função para alternar visibilidade do input e manter foco
-    function toggleInput(inputElement) {
-        let computedStyle = getComputedStyle(inputElement).display
 
-        if (computedStyle === 'none') {
-            inputElement.style.display = 'block'
-            inputElement.focus();
-        } else {
-            inputElement.style.display = 'none'
-        }
+// Esconder o input ao clicar fora dele
+document.body.addEventListener('click', (event) => {
+    if (!event.target.closest('#search-input') && !event.target.closest('.search-btn')) {
+        searchInput.style.display = 'none'
     }
 
-    // Monitora mudanças no tamanho da tela para evitar perda de foco
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 992) {
-            itensMenu.style.display = 'none';
-            searchInput.style.display = 'none';
-            searchInputDesktop.style.display = 'none'
-        }
-    })
+    if (!event.target.closest('#itens') && !event.target.closest('#itens-btn')) {
+        itens.style.display = 'none'
+    }
+})
 
-    // Esconder o input ao clicar fora dele
-    document.body.addEventListener('click', () => {
-        if (window.innerWidth < 992) {
-            itensMenu.style.display = 'none'
-            searchInput.style.display = 'none'
-            searchInputDesktop.style.display = 'none'
-        } else {
-            searchInputDesktop.style.display = 'none'
-        }
-    })
+// Monitora mudanças no tamanho da tela para evitar perda de foco
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992) {
+        itensMenu.style.display = 'none'
+        searchInput.style.display = 'none'
+    }
+})
 
+// Captura todos os links dentro do menu
+document.querySelectorAll('#itens a').forEach(link => {
+    link.addEventListener('click', () => {
+        itens.style.display = 'none' // Fecha o menu ao clicar em qualquer link
+    })
+})
 
 
 

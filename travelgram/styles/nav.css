@@ -8,7 +8,7 @@
     }
 
     menu#itens {
-        display: none;
+        display: none !important;
     }
 }
 

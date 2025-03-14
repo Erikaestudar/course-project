@@ -40,17 +40,17 @@ h1, h2, h3 {
     font: inherit;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
     max-width: 1280px;
     padding-inline: 2rem;
     margin-inline: auto;
 }
 
-/* utility-first */
-.grid {
-    display: grid;
+main {
+    margin-top: 2.5rem;
 }
 
-.grid-flow-col {
-    grid-auto-flow: column;
-}

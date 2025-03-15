@@ -170,7 +170,7 @@ nav#menu {
     background-color: white;
     display: flex;
     justify-content: center;
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     margin-top: 3rem;
 }
 
@@ -193,6 +193,6 @@ nav#menu a {
 }
 
 nav#menu img {
-    width: 2.8rem; /* Ajuste o tamanho dos ícones */
-    display: block; /* Evita espaços extras ao redor da imagem */
+    width: 2.2rem; /* Ajuste o tamanho dos ícones */
+    display: inline-block; /* Evita espaços extras ao redor da imagem */
 }

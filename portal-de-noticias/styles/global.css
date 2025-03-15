@@ -11,6 +11,7 @@
     --stroke-color: #1E293B;
     --text-color-primary: #F1F5F9;
     --text-color-secondary: #CBD5E1;
+    
 
     --font-family: 'Archivo', sans-serif;
     --h1: 800 1.5rem/135% var(--font-family);
@@ -19,6 +20,7 @@
     --text-span: 600 0.875rem/145% var(--font-family);
     --text: 400 1rem/140% var(--font-family);
     --text-sm: 400 0.875rem/160% var(--font-family);
+    --text-extra: 400 0.875rem/140% "Archivo Black", sans-serif;
 }
 
 body {
@@ -51,8 +53,17 @@ img {
 }
 
 main {
-    margin-top: 2.5rem;
-    gap: 5rem;
+    margin-block: 2.5rem;
+    row-gap: 5rem;
+    column-gap: 2rem;
+
+    /* section ai and aside */
+    grid-template-columns: 2fr 1.4fr;
+
+    grid-template-areas: 
+    "featured featured"
+    "weekly weekly"
+    "ai aside";
 }
 
 .content-tag {

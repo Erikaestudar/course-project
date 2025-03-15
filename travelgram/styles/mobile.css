@@ -82,8 +82,7 @@
         max-width: 50rem !important;
     }
 
-    div#profile p {
-        border: 1px solid red;
+    div#profile p#destaque {
         display: block !important;
 
         transition: transform 0.3s ease-in-out; /* Animação suave */

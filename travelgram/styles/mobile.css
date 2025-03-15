@@ -78,6 +78,10 @@
         margin-right: 0.5rem;
     }
 
+    #profile > div {
+        max-width: 20rem !important;
+    }
+
     div#profile p#destaque {
         display: block !important;
 

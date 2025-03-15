@@ -42,6 +42,14 @@ h1, h2, h3 {
     font: inherit;
 }
 
+h2 {
+    display: -webkit-box; /* Define um contêiner flexível para texto */
+    -webkit-box-orient: vertical; /* Orientação vertical */
+    -webkit-line-clamp: 3; /* Limita a 3 linhas */
+    overflow: hidden; /* Esconde o excesso de texto */
+    text-overflow: ellipsis; /* Adiciona "..." no final */
+}
+
 img {
     max-width: 100%;
 }

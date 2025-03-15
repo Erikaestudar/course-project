@@ -88,6 +88,12 @@ section header {
         p {
             margin-top: 0.5rem;
             font-weight: 800;
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }
@@ -104,7 +110,21 @@ section header {
 
     h3 {
         margin-block: 0.5rem 0.25rem;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
+    p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
 }
 
 aside {
@@ -121,6 +141,12 @@ aside {
     div h3 {
         margin-top: 0.5rem;
         font: var(--text-extra);
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     img {

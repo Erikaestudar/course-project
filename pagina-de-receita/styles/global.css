@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+:root {
+    font-family: "Alice", serif;
+    line-height: 150%;
+    color: #573A37;
+
+    --bg-main: hsl(50, 61%, 85%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}

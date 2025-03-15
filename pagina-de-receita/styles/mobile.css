@@ -1,0 +1,41 @@
+@import url(style.css);
+
+@media screen and (max-width: 850px) {
+    body {
+        background-color: var(--bg-main);
+    }
+
+    article#page {
+        width: 100vw;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 140%;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
+
+    footer p {
+        font-size: 1rem;
+        color: #291B1A;
+        padding-block: 0.5rem;
+    }
+
+    footer img {
+        display: none;
+    }
+
+    a:hover {
+        color: #533d3a;
+        text-decoration: underline;
+    }
+}

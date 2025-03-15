@@ -193,6 +193,6 @@ nav#menu a {
 }
 
 nav#menu img {
-    width: 2.2rem; /* Ajuste o tamanho dos ícones */
+    width: 2rem; /* Ajuste o tamanho dos ícones */
     display: inline-block; /* Evita espaços extras ao redor da imagem */
 }

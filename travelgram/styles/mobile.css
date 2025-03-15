@@ -83,6 +83,7 @@
     }
 
     div#profile p {
+        border: 1px solid red;
         display: block !important;
 
         transition: transform 0.3s ease-in-out; /* Animação suave */

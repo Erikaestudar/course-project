@@ -59,6 +59,12 @@ section header {
             }
             h2 {
                 margin-top: 0.5rem;
+
+                display: -webkit-box; /* Define um contêiner flexível para texto */
+                -webkit-box-orient: vertical; /* Orientação vertical */
+                -webkit-line-clamp: 3; /* Limita a 3 linhas */
+                overflow: hidden; /* Esconde o excesso de texto */
+                text-overflow: ellipsis; /* Adiciona "..." no final */
             }
         }
     }

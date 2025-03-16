@@ -52,18 +52,23 @@ img {
     margin-inline: auto;
 }
 
+@media screen and (min-width: 1280px) {
+    main {
+        /* section ai and aside */
+        grid-template-columns: 2fr 1.4fr;
+
+        grid-template-areas: 
+        "featured featured"
+        "weekly weekly"
+        "ai aside";
+    }
+}
+
 main {
     margin-block: 2.5rem;
     row-gap: 5rem;
     column-gap: 2rem;
 
-    /* section ai and aside */
-    grid-template-columns: 2fr 1.4fr;
-
-    grid-template-areas: 
-    "featured featured"
-    "weekly weekly"
-    "ai aside";
 }
 
 .content-tag {

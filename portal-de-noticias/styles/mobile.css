@@ -1,0 +1,203 @@
+@media screen and (max-width: 1280px) {
+    /* Adiciona scroll horizontal no menu de navegação secundário */
+    #secondary {
+        overflow-x: auto; /* Habilita rolagem horizontal */
+        white-space: nowrap; /* Evita que os itens quebrem linha */
+        display: flex; /* Garante que os links fiquem em linha */
+        gap: 1rem; /* Adiciona um espaçamento entre os itens */
+        padding-bottom: 0.5rem; /* Dá um espacinho extra para não cortar */
+        scrollbar-width: none; /* Ajusta a largura do scrollbar no Firefox */
+    }
+
+    /* Adiciona scroll horizontal na seção "Mais lidas da semana" */
+    #weekly > div {
+        display: flex; /* Mantém os cards lado a lado */
+        overflow-x: auto;
+
+        gap: 1rem; /* Espaçamento entre os itens */
+        padding-bottom: 0.5rem;
+        scrollbar-width: none;
+    }
+
+    #weekly figure {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #weekly p {
+        display: -webkit-box; /* Define um contêiner flexível para texto */
+        -webkit-box-orient: vertical; /* Orientação vertical */
+        -webkit-line-clamp: 3; /* Limita a 3 linhas */
+        overflow: hidden; /* Esconde o excesso de texto */
+        text-overflow: ellipsis; /* Adiciona "..." no final */
+    }
+
+    /* Esconde a scrollbar no Chrome, Safari e Edge */
+    #secondary::-webkit-scrollbar,
+    #weekly > div::-webkit-scrollbar {
+        display: none;
+    }
+
+    #secondary,
+    #weekly > div {
+        cursor: grab;
+
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE/Edge */
+        user-select: none;         /* Padrão */
+    }
+
+    /* Enquanto arrasta */
+    #secondary.active,
+    #weekly > div.active {
+        cursor: grabbing;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav#primary strong {
+        display: none;
+    }
+
+    .mobile {
+        grid-auto-flow: row;
+    }
+
+    div#ads {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 660px) {
+
+    #ai {
+        article.screen {
+            grid-template-areas: 
+            "img img img"
+            "span span ."
+            "h3 h3 h3"
+            "p p p";
+        }
+
+        article.screen div:nth-child(2) {
+            grid-area: img;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #ai article.screen img {
+            width: 100%; /* Mantém um tamanho proporcional */
+            max-width: 300px; /* Limita o tamanho máximo */
+            aspect-ratio: 16 / 9; /* Proporção de retrato (16:9) */
+            object-fit: cover; /* Garante que a imagem não deforme */
+            border-radius: 0.5rem;
+        }
+
+        h3, p {
+            margin-top: 1rem;
+        }
+    }
+
+    #more {
+        article {
+            margin-bottom: 2rem;
+        }
+
+        margin-top: 2rem;
+
+        div h3 {
+            margin-top: 0.5rem;        
+            font-size: clamp(0.7rem, 50%, 2rem);
+        }
+
+        img {
+            width: 6rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 660px) and (max-width: 1280px) {
+    
+    .card {
+        border-radius: 0.25rem;
+        overflow: hidden;
+
+        position: relative;
+        /* & substitui o .card::before */
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            background: linear-gradient(
+                180deg, 
+                transparent 0%,
+                #020617 100%
+            );
+        }
+    }
+
+    figcaption {
+
+        position: absolute;
+        bottom: 0;
+
+        padding: 1.5rem;
+
+        &:has(.text-lg) {
+            padding: 0.75rem;
+        }
+        h2 {
+            margin-top: 0.5rem;
+
+            display: -webkit-box; /* Define um contêiner flexível para texto */
+            -webkit-box-orient: vertical; /* Orientação vertical */
+            -webkit-line-clamp: 3; /* Limita a 3 linhas */
+            overflow: hidden; /* Esconde o excesso de texto */
+            text-overflow: ellipsis; /* Adiciona "..." no final */
+        }
+    }
+
+    #ai {
+
+        img {
+            width: 14rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        p {
+            margin-top: 0.2rem;
+            text-indent: 1.1rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 6;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    #more {
+        article {
+            margin-bottom: 2rem;
+        }
+
+        margin-top: 2rem;
+
+        div h3 {
+            margin-top: 0.5rem;
+            font: var(--text-extra);
+        }
+
+        img {
+            width: 6rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+    }   
+}

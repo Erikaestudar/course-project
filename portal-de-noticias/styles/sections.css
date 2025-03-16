@@ -1,3 +1,151 @@
+@media screen and (min-width: 1280px) {
+
+    main {
+        grid-template-rows: auto;
+    }
+
+    #featured {
+        grid-area: featured;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        .card {
+            border-radius: 0.25rem;
+            overflow: hidden;
+
+            position: relative;
+            /* & substitui o .card::before */
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                top: 50%;
+                background: linear-gradient(
+                    180deg, 
+                    transparent 0%,
+                    #020617 100%
+                );
+            }
+
+            figcaption {
+                position: absolute;
+                bottom: 0;
+
+                padding: 1.5rem;
+
+                &:has(.text-lg) {
+                    padding: 0.75rem;
+                }
+                h2 {
+                    margin-top: 0.5rem;
+
+                    display: -webkit-box; /* Define um contêiner flexível para texto */
+                    -webkit-box-orient: vertical; /* Orientação vertical */
+                    -webkit-line-clamp: 3; /* Limita a 3 linhas */
+                    overflow: hidden; /* Esconde o excesso de texto */
+                    text-overflow: ellipsis; /* Adiciona "..." no final */
+                }
+            }
+        }
+    }
+
+    #weekly {
+
+        grid-area: weekly;
+
+        & > div {
+            grid-template-columns: repeat(4, 18.25rem);
+        } 
+
+        img {
+            height: 10rem;   
+        }
+
+        figure {
+            position: relative;
+
+            .content-tag {
+                position: absolute;
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+
+            p {
+                margin-top: 0.5rem;
+                font-weight: 800;
+
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    #ai {
+
+        grid-area: ai;
+
+        img {
+            width: 11rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        h3 {
+            margin-block: 0.5rem 0.25rem;
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    #more {
+        article {
+            margin-bottom: 2rem;
+        }
+
+        margin-top: 2rem;
+
+        div h3 {
+            margin-top: 0.5rem;
+            font: var(--text-extra);
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        img {
+            width: 4.5rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+    }
+}
+
 section header {
     border-top: 1px solid var(--stroke-color);
     padding-block: 0.75rem 1.5rem;
@@ -18,146 +166,5 @@ section header {
         &:hover span {
             background-image: url(../assets/icons/ArrowRight-hover.svg);
         }
-    }
-}
-
-#featured {
-    grid-area: featured;
-
-    img {
-        height: 100%;
-        object-fit: cover;
-        
-    }
-
-    .card {
-        border-radius: 0.25rem;
-        overflow: hidden;
-
-        position: relative;
-        /* & substitui o .card::before */
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            top: 50%;
-            background: linear-gradient(
-                180deg, 
-                transparent 0%,
-                #020617 100%
-            );
-        }
-
-        figcaption {
-            position: absolute;
-            bottom: 0;
-
-            padding: 1.5rem;
-
-            &:has(.text-lg) {
-                padding: 0.75rem;
-            }
-            h2 {
-                margin-top: 0.5rem;
-
-                display: -webkit-box; /* Define um contêiner flexível para texto */
-                -webkit-box-orient: vertical; /* Orientação vertical */
-                -webkit-line-clamp: 3; /* Limita a 3 linhas */
-                overflow: hidden; /* Esconde o excesso de texto */
-                text-overflow: ellipsis; /* Adiciona "..." no final */
-            }
-        }
-    }
-}
-
-#weekly {
-
-    grid-area: weekly;
-
-    & > div {
-        grid-template-columns: repeat(4, 18.25rem);
-    } 
-
-    img {
-        height: 10rem;   
-    }
-
-    figure {
-        position: relative;
-
-        .content-tag {
-            position: absolute;
-            top: 0.5rem;
-            left: 0.5rem;
-        }
-
-        p {
-            margin-top: 0.5rem;
-            font-weight: 800;
-
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-}
-
-#ai {
-
-    grid-area: ai;
-
-    img {
-        width: 11rem;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-    }
-
-    h3 {
-        margin-block: 0.5rem 0.25rem;
-
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    p {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-}
-
-aside {
-    grid-area: aside;
-}
-
-#more {
-    article {
-        margin-bottom: 2rem;
-    }
-
-    margin-top: 2rem;
-
-    div h3 {
-        margin-top: 0.5rem;
-        font: var(--text-extra);
-
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    img {
-        width: 4.5rem;
-        aspect-ratio: 1/1;
-        object-fit: cover;
     }
 }

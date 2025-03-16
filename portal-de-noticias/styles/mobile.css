@@ -91,6 +91,7 @@
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
+        row-gap: 1.5rem;
     }
 
     #featured .card {
@@ -132,6 +133,26 @@
     }
 
     #ai {
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h3 {
+            margin: 0;
+            white-space: nowrap;  /* Impede que o texto quebre */
+        }
+    
+        header a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
         article.screen {
             grid-template-areas: 
             "img img img"

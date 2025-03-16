@@ -185,6 +185,7 @@
     #more {
         article {
             margin-bottom: 2rem;
+            width: 100%;
         }
 
         margin-top: 2rem;
@@ -196,6 +197,7 @@
 
         img {
             width: 6rem;
+            height: 6rem;
             aspect-ratio: 1/1;
             object-fit: cover;
         }
@@ -273,7 +275,7 @@
 
         article {
             margin-bottom: 2rem;
-            max-width: 82%;
+            max-width: 81%;
         }
 
         div h3 {
@@ -283,8 +285,8 @@
         }
 
         img {
-            width: 6rem;
-            height: 6rem;
+            width: 6.2rem;
+            height: 6.2rem;
             aspect-ratio: 1/1;
             object-fit: cover;
         }

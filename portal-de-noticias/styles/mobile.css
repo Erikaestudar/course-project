@@ -260,7 +260,7 @@
             text-indent: 1.1rem;
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 6;
+            -webkit-line-clamp: 5;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -282,6 +282,12 @@
             width: 100%;
             margin-top: 0.5rem;
             font: var(--text-extra-sm);
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         img {

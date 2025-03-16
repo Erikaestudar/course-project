@@ -53,6 +53,17 @@
     #weekly > div.active {
         cursor: grabbing;
     }
+
+    #ads {
+        display: flex;
+        justify-content: center;
+        margin: 2rem auto;
+    }
+
+    #ads img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -70,6 +81,12 @@
 }
 
 @media screen and (max-width: 660px) {
+
+    /* Impede que o main transborde */
+    main.container {
+        overflow-x: hidden;
+    }
+    
     #featured div.screen01 {
         display: flex;
         flex-flow: column nowrap;
@@ -192,12 +209,12 @@
         margin: auto;
     }
 
-    #more {
+    #more {        
+        margin-top: 2rem;
+
         article {
             margin-bottom: 2rem;
         }
-
-        margin-top: 2rem;
 
         div h3 {
             margin-top: 0.5rem;
@@ -206,6 +223,7 @@
 
         img {
             width: 6rem;
+            height: 6rem;
             aspect-ratio: 1/1;
             object-fit: cover;
         }

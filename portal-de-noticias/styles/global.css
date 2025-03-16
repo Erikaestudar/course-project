@@ -21,6 +21,7 @@
     --text: 400 1rem/140% var(--font-family);
     --text-sm: 400 0.875rem/160% var(--font-family);
     --text-extra: 400 0.875rem/140% "Archivo Black", sans-serif;
+    --text-extra-sm: 400 0.82rem/140% "Archivo Black", sans-serif;
 }
 
 body {

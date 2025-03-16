@@ -84,13 +84,51 @@
 
     /* Impede que o main transborde */
     main.container {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
     
-    #featured div.screen01 {
+    #featured div.screen01, #weekly div.screen01 {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
+    }
+
+    #featured .card {
+        position: relative; /* Define a card como referência para o position absolute */
+    }
+
+    #featured .card img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #featured .card span {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
+        border-radius: 0.25rem;
+        z-index: 1; /* Garante que o span fique por cima */
+    }
+
+    #weekly figure {
+        position: relative; /* Define o figure como referência */
+    }
+
+    #weekly figure img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #weekly figure span {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
+        border-radius: 0.25rem;
+        z-index: 1; /* Garante que o span fique por cima */
     }
 
     #ai {

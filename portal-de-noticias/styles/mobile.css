@@ -273,11 +273,13 @@
 
         article {
             margin-bottom: 2rem;
+            max-width: 82%;
         }
 
         div h3 {
+            width: 100%;
             margin-top: 0.5rem;
-            font: var(--text-extra);
+            font: var(--text-extra-sm);
         }
 
         img {

@@ -15,7 +15,7 @@
         <main>
             <div class="main-container">
                 <div class="back">
-                    <img src="assets/images/icons/arrow-left-02.svg" alt="ícone de voltar">
+                    <img src="assets/icons/arrow-left-02.svg" alt="ícone de voltar">
                     <span>Voltar</span>
                 </div>
                 
@@ -23,13 +23,67 @@
                 <p>
                     Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.
                 </p>
+
+                <form method="post" enctype="multipart/form-data">
+                    <fieldset class="child-info">
+                        <legend>Informações da criança</legend>
+
+                    <div class="input-wrapper">
+                        <label for="fullname">Nome Completo </label>
+                        <input 
+                        type="text" 
+                        name="fullname" 
+                        id="fullname"
+                        placeholder="Qual o nome da criança">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="birth">Data de Nascimento</label>
+                        <input 
+                        type="date" 
+                        name="birth" 
+                        id="birth"
+                        lang="pt-BR">
+                    </div>
+
+                    <div class="select-wrapper">
+                        <label for="gender">Sexo</label>
+                        <select name="gender" id="gender">
+                            <option value="male">Masculino</option>
+                            <option value="female">Feminino</option>
+                            <option value="na">Prefiro não responder</option>
+                        </select>
+                    </div>
+
+                    <div class="textarea-wrapper">
+                        <label for="medical-info">Informações médicas</label>
+                        <textarea 
+                        name="medical-info" 
+                        id="medical-info"
+                        cols="30"
+                        rows="10"
+                        placeholder="A criança possui alguma condição médica que a escola deve estar ciente? (Se sim, especifique)"
+                        ></textarea>
+                    </div>
+
+                    <div class="droparea-wrapper">
+                        <label for="birth-file">birth-file</label>
+                        <input type="file" name="birth-file" id="birth-file">
+                        <img src="assets/icons/cloud-upload.svg" alt="ícone de upload">
+                        <p>
+                            Clique aqui para <br>
+                            selecionar os arquivos
+                        </p>
+                    </div>
+                    </fieldset>
+                </form>
             </div>
         </main>
 
         <aside>
             <div class="aside-container">
                 <header>
-                    <img src="assets/images/icons/logo.svg" alt="Logo Estrelas do Amanhã">
+                    <img src="assets/images/logo.svg" alt="Logo Estrelas do Amanhã">
                     <h2>
                         Porque cada momento de <span>aprendizado</span> conta
                     </h2>

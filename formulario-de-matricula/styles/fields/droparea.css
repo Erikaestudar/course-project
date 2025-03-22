@@ -1,0 +1,40 @@
+.dropzone {
+    border: 1px dashed var(--stroke-default);
+    border-radius: .25rem;
+
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+
+    text-align: center;
+    padding: 1.75rem 1rem;
+    position: relative;
+}
+
+.dropzone input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    opacity: 0;
+}
+
+.dropzone p {
+    color: #A8A29E;
+}
+
+.dropzone:hover, .dropzone:has(input:focus) {
+    border-width: 2px;
+    border-color: var(--stoke-hightlight);
+    background-color: var(--surface-secondary);
+}
+
+.dropzone:hover svg path,
+.dropzone:has(input:focus) svg path{
+    stroke: var(--stoke-hightlight);
+}
+
+.dropzone p:hover, 
+.dropzone:has(input:focus) p:hover {
+    color: var(--text-tertiary);
+}

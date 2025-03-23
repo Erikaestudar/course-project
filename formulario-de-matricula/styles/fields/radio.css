@@ -41,7 +41,7 @@ label + .radio-wrapper {
 
 .radio-inner:hover,
 .radio-inner:focus-within {
-    border: 1px solid var(--stoke-hightlight);
+    border: 1px solid var(--stroke-highlight);
 }
 
 .radio-inner:hover .radio-image,
@@ -50,7 +50,7 @@ label + .radio-wrapper {
 }
 
 .radio-inner:has(:checked) {
-    border: 2px solid var(--stoke-hightlight);
+    border: 2px solid var(--stroke-highlight);
 }
 
 .radio-inner:has(:checked) .radio-image {

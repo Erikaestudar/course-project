@@ -25,13 +25,13 @@
 
 .dropzone:hover, .dropzone:has(input:focus) {
     border-width: 2px;
-    border-color: var(--stoke-hightlight);
+    border-color: var(--stroke-highlight);
     background-color: var(--surface-secondary);
 }
 
 .dropzone:hover svg path,
 .dropzone:has(input:focus) svg path{
-    stroke: var(--stoke-hightlight);
+    stroke: var(--stroke-highlight);
 }
 
 .dropzone p:hover, 

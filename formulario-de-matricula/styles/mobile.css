@@ -22,6 +22,10 @@
         align-items: center;
     }
 
+    aside .mobile-mode-primary span {
+        text-align: center;
+    }
+
     aside .mobile-mode-primary .btn-aside {
         margin: 1.5rem;
     }

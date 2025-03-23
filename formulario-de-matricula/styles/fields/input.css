@@ -31,18 +31,14 @@ input[type="date"]:focus-within {
 input[type="date"] {
     position: relative;
 
-        /*  Adiciona esses estilos para padronizar no Safari */
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        width: 100%;
-        padding: 0.75rem 1rem;
-        font: inherit;
-        color: var(--text-primary);
-        border: 2px solid transparent;
-        outline: 1px solid var(--stroke-default);
-        border-radius: .5rem;
-        background: var(--surface-primary);
+    min-width: 100%; /* Garante que ele sempre ocupe o mesmo espaço */
+    padding: 0.75rem 1rem;
+    font: inherit;
+    color: var(--text-primary);
+    border: 2px solid transparent;
+    outline: 1px solid var(--stroke-default);
+    border-radius: .5rem;
+    background: var(--surface-primary);
 }
 
 

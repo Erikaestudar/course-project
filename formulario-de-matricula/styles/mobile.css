@@ -40,4 +40,8 @@
     aside .mobile-mode-primary .btn-aside {
         margin: 1.5rem;
     }
+
+    button {
+        margin-bottom: 3rem;
+    }
 }

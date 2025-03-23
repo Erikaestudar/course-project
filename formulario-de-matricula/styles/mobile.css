@@ -1,0 +1,28 @@
+@media screen and (max-width: 64rem) {
+    .mobile-mode-secondary main {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    aside {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    aside .mobile-mode-primary {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside .mobile-mode-primary .btn-aside {
+        margin: 1.5rem;
+    }
+}

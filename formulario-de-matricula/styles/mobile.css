@@ -12,11 +12,10 @@
         flex-direction: column;
         justify-items: center;
         align-items: center;
-        overflow: auto;
     }
 
     aside .mobile-mode-primary {
-        margin-top: 3rem;
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;

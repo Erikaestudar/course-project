@@ -53,10 +53,6 @@ img {
     flex: 2;
 }
 
-.mobile-mode-secondary main {
-    display: block;
-}
-
 aside .mobile-mode-primary {
     display: none;
 }

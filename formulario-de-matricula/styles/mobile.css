@@ -1,6 +1,9 @@
 @media screen and (max-width: 64rem) {
-    .mobile-mode-secondary main {
+    .mobile-hidden {
         display: none;
+    }
+
+    .mobile-mode-secondary main {
         width: 100vw;
         height: 100vh;
 

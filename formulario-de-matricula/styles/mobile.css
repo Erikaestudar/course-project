@@ -4,7 +4,7 @@
     }
 
     .mobile-mode-secondary main {
-        margin-top: 2rem;
+        margin-top: 1.4rem;
         width: 100vw;
         height: 100vh;
 
@@ -47,6 +47,6 @@
     }
 
     button {
-        margin-bottom: 2.2rem;
+        margin-bottom: 2.8rem;
     }
 }

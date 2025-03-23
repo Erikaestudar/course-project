@@ -17,6 +17,10 @@
         overflow-y: auto;
         transition: transform 0.3s ease-in-out; /* Animação suave */
     }
+    
+    aside h2 {
+        font-size: 2rem;
+    }
 
     aside .mobile-mode-primary {
         margin-top: 1.5rem;

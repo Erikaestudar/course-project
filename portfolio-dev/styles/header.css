@@ -1,5 +1,5 @@
 header {
-    background: url(../assets/images/Background_Intro.png) no-repeat center/contain;
+    background: url(../assets/images/Background_Intro.png) no-repeat center/cover;
     margin-inline: 10.18rem;
     padding-top: 7.5rem;
 }
@@ -68,8 +68,12 @@ header {
 }
 
 .info-wrapper span {
-    font: var(--subtitle);
+    color: var(--gray-500);
     text-align: center;
+}
+
+.info-wrapper span.red {
+    color: var(--red);
 }
 
 .info-wrapper h1 {

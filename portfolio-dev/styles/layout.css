@@ -1,0 +1,14 @@
+header.header-container {
+    max-width: 85.375rem;
+    height: 46.875rem;
+    margin: auto;
+}
+
+main.main-container {
+    max-width: 85.375rem;
+    height: 57.313rem;
+    margin: auto;
+    padding-top: 4.5rem;
+    background-color: var(--bg-main);
+}
+

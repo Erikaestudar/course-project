@@ -31,15 +31,41 @@
     --text-sm: 400 0.875rem/140% var(--font-text);
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--gray-100);
+    color: var(--gray-600);
+
+}
+
+.subtitle {
+    color: var(--gray-500);
+}
+
+.red {
+    color: var(--red);
+}
+
+.gray-400 {
+    color: var(--gray-400);
+}
+
 h1 {
     font: var(--h1);
-    color: var(--yellow);
 }
 
-h2 {
-    font: var(--subtitle);
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-p{
-    font: var(--text-sm);
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 85.375rem;
+    height: 46.875rem;
+    margin: auto;
 }

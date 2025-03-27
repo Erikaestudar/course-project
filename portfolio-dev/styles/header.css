@@ -1,0 +1,106 @@
+header {
+    background: url(../assets/images/Background_Intro.png) no-repeat center/contain;
+    margin-inline: 10.18rem;
+    padding-top: 7.5rem;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduce-wrapper {
+    max-width: 65rem;
+    height: 27.93rem;
+    margin: 0rem auto 5.875rem;
+}
+
+#secondary {
+    text-align: center;
+}
+
+.hard-skills {
+    margin-bottom: 5.875rem;
+}
+
+#avatar {
+    width: 42.5rem;
+    height: 20.43rem;
+    margin: auto;
+}
+
+.user-wrapper {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.user-border {
+    width: 6rem;
+    height: 6rem;
+}
+
+.user-photo {
+    width: 5.454rem;
+    height: 5.454rem;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.icon-code img {
+    width: 2rem;
+    height: 2rem;
+
+    position: absolute;
+    top: 68px;
+    left: 67px;
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-wrapper span {
+    font: var(--subtitle);
+    text-align: center;
+}
+
+.info-wrapper h1 {
+    margin-bottom: 1.25rem;
+    padding: .5rem 1rem;
+}
+
+.info-wrapper p {
+    font: var(--text-sm);
+    text-indent: 0.5rem;
+}
+
+.hard-skills {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    padding: .5rem 1rem;
+    width: 7.125rem;
+    height: 2.5rem;
+    background-color: var(--gray-300);
+    border-radius: 1.875rem;
+}

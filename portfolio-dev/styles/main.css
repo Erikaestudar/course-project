@@ -1,0 +1,44 @@
+div.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20.625rem, 1fr));
+    gap: 1.5rem;
+    margin: auto;
+}
+
+
+main div.title-container {
+
+    margin: 0rem auto 3.5rem;
+    text-align: center;
+    width: 65rem;
+    height: 3.812rem;
+}
+
+main div.project-container {
+    width: 65rem;
+    height: 36.5rem;
+    margin-bottom: 9rem;
+}
+
+main div.project-container figure {
+    width: 20.625rem;
+    height: 17.5rem;
+    background-color: var(--gray-300);
+    border-radius: .75rem;
+}
+
+main div.project-container figcaption {
+    margin: 1rem;
+}
+
+main div.project-container figcaption h3 {
+    margin-bottom: .5rem;
+}
+
+main div.project-container img {
+    margin: .5rem ;
+    border-radius: .5rem;
+    overflow: hidden;
+    width: 19.125rem;
+    height: 9.75rem;
+}

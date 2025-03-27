@@ -13,6 +13,7 @@
     --green: #82BC4F;
     --yellow: #EABD5F;
 
+    --bg-main: #16181D;
     --gray-100: #0D0E11;
     --gray-200: #16181D;
     --gray-300: #292C34;
@@ -40,7 +41,7 @@ body {
 }
 
 .subtitle {
-    color: var(--gray-500);
+    font: var(--subtitle);
 }
 
 .red {
@@ -55,6 +56,18 @@ h1 {
     font: var(--h1);
 }
 
+h2 {
+    font: var(--h2);
+}
+
+h3 {
+    font: var(--h3);
+}
+
+p.text-sm {
+    font: var(--text-sm);
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -64,8 +77,4 @@ img {
     max-width: 100%;
 }
 
-.container {
-    max-width: 85.375rem;
-    height: 46.875rem;
-    margin: auto;
-}
+

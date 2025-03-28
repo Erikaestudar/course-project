@@ -77,4 +77,9 @@ img {
     max-width: 100%;
 }
 
-
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

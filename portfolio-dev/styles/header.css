@@ -4,13 +4,6 @@ header {
     padding-top: 7.5rem;
 }
 
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .introduce-wrapper {
     max-width: 65rem;
     height: 27.93rem;
@@ -87,6 +80,7 @@ header {
 }
 
 .hard-skills {
+    font: var(--text-md);
     margin-top: 5rem;
     display: flex;
     flex-direction: row;
@@ -95,7 +89,7 @@ header {
     gap: 1rem;
 }
 
-a {
+.itens-flex {
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -12,3 +12,9 @@ main.main-container {
     background-color: var(--bg-main);
 }
 
+aside.aside-container {
+    max-width: 85.375rem;
+    height: 30rem;
+    margin: auto;
+}
+

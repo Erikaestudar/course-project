@@ -5,9 +5,7 @@ div.grid {
     margin: auto;
 }
 
-
 main div.title-container {
-
     margin: 0rem auto 3.5rem;
     text-align: center;
     width: 65rem;
@@ -27,6 +25,14 @@ main div.project-container figure {
     border-radius: .75rem;
 }
 
+main div.project-container img {
+    margin: .5rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    width: 19.125rem;
+    height: 9.75rem;
+}
+
 main div.project-container figcaption {
     margin: 1rem;
 }
@@ -35,10 +41,3 @@ main div.project-container figcaption h3 {
     margin-bottom: .5rem;
 }
 
-main div.project-container img {
-    margin: .5rem ;
-    border-radius: .5rem;
-    overflow: hidden;
-    width: 19.125rem;
-    height: 9.75rem;
-}

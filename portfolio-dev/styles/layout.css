@@ -18,3 +18,9 @@ aside.aside-container {
     margin: auto;
 }
 
+section.section-container {
+    max-width: 85.375rem;
+    height: 49.19rem;
+    margin: auto;
+}
+

@@ -92,10 +92,12 @@ header {
 .itens-flex {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: .5rem;
+}
 
+.hard-skills-size {
+    justify-content: center;
+    gap: .5rem;
     padding: .5rem 1rem;
     width: 7.125rem;
     height: 2.5rem;

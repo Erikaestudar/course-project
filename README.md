@@ -13,6 +13,7 @@
 - Travelgram: [site](https://erikaestudar.github.io/course-project/travelgram/index.html)
 - Portal de notícias: [site](https://erikaestudar.github.io/course-project/portal-de-noticias/index.html)
 - Formulário de matrícula: [site](https://erikaestudar.github.io/course-project/formulario-de-matricula/index.html)
+- Portfolio Dev: [site](https://erikaestudar.github.io/course-project/portfolio-dev/index.html)
 
 ### GitHub Code :computer:
 
@@ -21,3 +22,4 @@
 - Travelgram: [code](https://github.com/Erikaestudar/course-project/tree/main/travelgram)
 - Portal de notícias: [code](https://github.com/Erikaestudar/course-project/tree/main/portal-de-noticias)
 - Formulário de matrícula: [code](https://github.com/Erikaestudar/course-project/tree/main/formulario-de-matricula)
+- Portfolio Dev: [code](https://github.com/Erikaestudar/course-project/tree/main/portfolio-dev)

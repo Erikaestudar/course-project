@@ -1,6 +1,6 @@
 @media screen and (max-width: 440px) {
     header #profile h1 {
-        font: bold 1.4rem/125% var(--font-family) !important;
+        font: bold 1.3rem/125% var(--font-family) !important;
     }
 
     main {
@@ -10,6 +10,11 @@
     main img {
         width: 9rem !important; 
         height: 9rem !important;
+    }
+
+    header #profile img {
+        width: 10rem;
+        height: 10rem;
     }
 }
 

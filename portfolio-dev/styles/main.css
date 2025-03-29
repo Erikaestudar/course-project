@@ -8,12 +8,12 @@ div.grid {
 main div.title-container {
     margin: 0rem auto 3.5rem;
     text-align: center;
-    width: 65rem;
-    height: 3.812rem;
+    max-width: 65rem;
+    max-height: 3.812rem;
 }
 
 main div.project-container {
-    width: 65rem;
+    max-width: 65rem;
     height: 36.5rem;
     margin-bottom: 9rem;
 }
@@ -46,3 +46,38 @@ main div.project-container figcaption h3 {
     margin-bottom: .5rem;
 }
 
+@media screen and (min-width: 23.43rem) and (max-width: 48rem) {
+    main div.title-container {
+        margin-bottom: 2rem;
+    }
+
+    div.grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 64rem) and (max-width: 80rem) {
+    div.grid {
+        gap: 0.1rem;
+    }
+    
+    main div.project-container figure {
+        margin: auto;
+        width: 19.625rem;
+        height: 16.5rem;
+        border: 1px solid transparent;
+        background-color: var(--gray-300);
+        border-radius: .75rem;
+    }
+
+    main div.project-container img {
+        margin: .5rem;
+        border-radius: .5rem;
+        overflow: hidden;
+        width: 18.125rem;
+        height: 8.75rem;
+    }
+}

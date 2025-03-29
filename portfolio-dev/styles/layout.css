@@ -14,7 +14,7 @@ main.main-container {
 
 aside.aside-container {
     max-width: 85.375rem;
-    height: 30rem;
+    max-height: 30rem;
     margin: auto;
 }
 
@@ -23,4 +23,17 @@ section.section-container {
     height: 49.19rem;
     margin: auto;
 }
+
+@media screen and (min-width: 23.43rem) and (max-width: 48rem) {
+    main.main-container {
+        height: 130rem;
+        margin: auto;
+    }
+
+    aside.aside-container {
+        max-height: 120rem;
+        margin: auto;
+    }
+}
+
 

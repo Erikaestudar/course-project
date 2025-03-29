@@ -19,7 +19,7 @@ header {
 }
 
 #avatar {
-    width: 42.5rem;
+    max-width: 42.5rem;
     height: 20.43rem;
     margin: auto;
 }
@@ -99,8 +99,34 @@ header {
     justify-content: center;
     gap: .5rem;
     padding: .5rem 1rem;
-    width: 7.125rem;
+    max-width: 7.125rem;
     height: 2.5rem;
     background-color: var(--gray-300);
     border-radius: 1.875rem;
+}
+
+
+@media screen and (min-width: 23.43rem) and (max-width: 48rem) {
+    #avatar {
+        max-width: 36rem;
+        height: 20.43rem;
+        text-align: center;
+        margin: 0rem auto 2rem;
+    }
+
+    .introduce-wrapper {
+        margin-bottom: 7rem;
+    }
+
+    .info-wrapper h1 {
+        font-size: clamp(2rem, 50%, 5rem);
+    }
+    
+    .word-hidden {
+        display: none;
+    }
+
+    .hard-skills {
+        margin-top: clamp(2rem, 100%, 6rem);
+    }
 }

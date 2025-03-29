@@ -1,11 +1,11 @@
 aside div.title-container {
-    width: 65rem;
+    max-width: 65rem;
     margin-top: 5.5rem;
     text-align: center;
 }
 
 aside div.devices-container {
-    width: 55.5rem;
+    max-width: 55.5rem;
     height: 9.68rem;
     margin-top: 3.5rem;
     margin-bottom: 7.5rem;
@@ -25,4 +25,21 @@ aside div.devices-container figure {
 
 aside div.devices-container figure figcaption h3 {
     margin-block: 1.25rem 0.5rem;
+}
+
+@media screen and (min-width: 23.43rem) and (max-width: 48rem) {
+    aside div.title-container h2 {
+        font-size: 1.4rem;
+    }
+
+    aside div.devices-container {
+        height: 22rem;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 9rem;
+    }
+
+    aside div.title-container {
+        margin-bottom: 10rem;
+    }
 }

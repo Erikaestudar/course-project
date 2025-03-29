@@ -34,3 +34,9 @@ nav.nav-container span:hover {
 nav.nav-container span:hover a img {
     filter: brightness(0) saturate(100%) invert(40%) sepia(34%) saturate(1184%) hue-rotate(175deg) brightness(92%) contrast(93%);
 }
+
+@media screen and (min-width: 23.43rem) and (max-width: 48rem) {
+    nav.nav-container span {
+        width: 20rem;
+    }
+}

@@ -24,6 +24,7 @@
     --font-title: "Asap", sans-serif;
     --font-subtitle: "Inconsolata", monospace;
     --font-text: "Maven Pro", sans-serif;
+    
     --h1: 700 3.5rem/120% var(--font-title);
     --h2: 700 1.5rem/120% var(--font-title);
     --h3: 700 1rem/120% var(--font-title);

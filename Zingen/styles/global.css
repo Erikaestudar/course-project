@@ -25,7 +25,8 @@
     --brand-color-primary: #f7b733;
     --brand-color-secondary: #fc4a1a;
 
-    --font-family: "Inter", system-ui, sans-serif;
+    /* font-family */
+    --ff-sans: "Inter", system-ui, sans-serif;
     --fw-base: 400;
     --fw-md: 500;
     --fw-bold: 800;

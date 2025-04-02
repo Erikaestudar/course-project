@@ -47,6 +47,7 @@
                     display: -webkit-box; /* Define um contêiner flexível para texto */
                     -webkit-box-orient: vertical; /* Orientação vertical */
                     -webkit-line-clamp: 3; /* Limita a 3 linhas */
+                    line-clamp: 3;
                     overflow: hidden; /* Esconde o excesso de texto */
                     text-overflow: ellipsis; /* Adiciona "..." no final */
                 }
@@ -82,6 +83,7 @@
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 3;
+                line-clamp: 3;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
@@ -104,6 +106,7 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
+            line-clamp: 2;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -112,6 +115,7 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 4;
+            line-clamp: 4;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -135,6 +139,7 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
+            line-clamp: 2;
             overflow: hidden;
             text-overflow: ellipsis;
         }

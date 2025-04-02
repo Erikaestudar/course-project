@@ -97,6 +97,11 @@ ul[role="list"] {
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
 /* 'em' sempre vai buscar a fonte no pai da media no caso é o root */
 @media (width >= 80em) {
     :root {

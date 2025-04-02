@@ -12,41 +12,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <ul class="flex gap-1">
-        <li>
-            <a href="#" class="social" aria-label="tiktok"></a>
-        </li>
-        <li>
-            <a href="#" class="social" aria-label="instagram"></a>
-        </li>
-        <li>
-            <a href="#" class="social" aria-label="discord"></a>
-        </li>
-        <li>
-            <a href="#" class="social" aria-label="twitter"></a>
-        </li>
-    </ul>
+    <header>
+        <div class="container py-base">
+            <nav class="flex itemscenter gap-1.5">
+                <a href="#">
+                    <img src="assets/zingen-logo.svg" alt="Logo Zinguen">
+                </a>
 
-    <div class="flex gap-1">
-        <span class="btn btn-sm"><a href="#" >Label</a></span>
-        <button class="btn btn-md">Label</button>
-        <button class="btn btn-lg">Label</button>
-    </div>
+                <a href="#about" class="desktop-only">Conheça o app</a>
+                <a href="#features" class="desktop-only">Funcionalidades</a>
+                <a href="#pricing" class="desktop-only">Planos e preços</a>
 
-    <div class="flex gap-1">
-        <span aria-label="Label" class="btn btn-sm">
-            <a href="#" >
-                
-            </a>
-        </span>
-        
-        <button aria-label="Label" class="btn btn-md">
-            
-        </button>
+                <a href="#download" class="btn btn-sm"> Baixar Agora</a>
+            </nav>
+        </div>
+    </header>
 
-        <button aria-label="Label" class="btn btn-lg">
-            
-        </button>
-    </div>
+    <section id="hero">
+        <div class="container py-xl">
+            <img src="assets/music-bars.svg" alt="">
+            <h1>Quem canta seus males espanta</h1>
+            <p>Cantar nunca foi tão fácil</p>
+
+            <div class="buttons flex itemscenter gap-1">
+                <a href="#pricing" aria-label="Ver planos" class="btn btn-md"></a>
+                <a href="#download" class="btn btn-md">Baixar agora</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

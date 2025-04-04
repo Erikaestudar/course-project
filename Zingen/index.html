@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="container py-base">
-            <nav class="flex itemscenter gap-1.5">
+            <nav class="flex items-center gap-1.5">
                 <a href="#">
                     <img src="assets/zingen-logo.svg" alt="Logo Zinguen">
                 </a>
@@ -34,7 +34,7 @@
             <h1>Quem canta seus males espanta</h1>
             <p>Cantar nunca foi tão fácil</p>
 
-            <div class="buttons flex itemscenter gap-1">
+            <div class="buttons flex items-center gap-1">
                 <a href="#pricing" aria-label="Ver planos" class="btn btn-md"></a>
                 <a href="#download" class="btn btn-md">Baixar agora</a>
             </div>
@@ -48,7 +48,7 @@
     </section>
 
     <section id="about">
-        <div class="container even-columns py-xl itemscenter">
+        <div class="container even-columns py-xl items-center">
             <div>
                 <header>
                     <strong>Conheça o app</strong>
@@ -114,6 +114,77 @@
                     </p>
                 </div>
                 <img class="desktop-only" src="assets/Tela 3.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container py-xl">
+            <Header>
+                <strong>Planos e preços</strong>
+                <h2>Assine e tenha acesso ilimitado a todas as funcionalidades</h2>
+            </Header>
+            
+            <div class="cards even-columns items-center">
+                <div class="card py-lg px-lg">
+                    <h3>Básico</h3>
+                    <p>Baixe o app e comece a cantar agora mesmo!</p>
+
+                    <!-- No HTML você pode criar tags-->
+                    <zin-pricing>Grátis</zin-pricing>
+
+                    <a href="#download" class="btn btn-md" aria-label="Baixar agora"></a>
+
+                    <div class="separator"></div>
+                    <ul role="list" class="grid gap-1">
+                        <li>Com anúncios</li>
+                        <li>Até 5 músicas por dia</li>
+                        <li>Cante apenas as músicas disponíveis no plano gratuito</li>
+                    </ul>
+                </div>
+
+                <div class="premium">
+                    <div class="card py-lg px-lg">
+                        <span>1 mês grátis</span>
+                        <h3>Premium</h3>
+                        <p>Ideal para quem já cansou de passar vergonha no Karaokê</p>
+    
+                        <!-- No HTML você pode criar tags-->
+                        <zin-pricing>R$ 24,90
+                            <small>/mês</small>
+                        </zin-pricing>
+    
+                        <a href="#download" class="btn btn-md">Experimente de graça</a>
+    
+                        <div class="separator"></div>
+                        <ul role="list" class="grid gap-1">
+                            <li>Sem interrupção de anúncios</li>
+                            <li>Cante quantas músicas quiser</li>
+                            <li>Cante todas as músicas da biblioteca</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card py-lg px-lg">
+                    <h3>Família</h3>
+                    <p>Para aquelas famílias que adoram se reunir pra cantar</p>
+
+                    <!-- No HTML você pode criar tags-->
+                    <zin-pricing>R$ 21,90 
+                        <small>/mês por pessoa</small>
+                    </zin-pricing>
+                    
+
+                    <a href="#download" class="btn btn-md" aria-label="Assinar agora"></a>
+
+                    <div class="separator"></div>
+                    <ul role="list" class="grid gap-1">
+                        <li>Sem interrupção de anúncios</li>
+                        <li>Cante quantas músicas quiser</li>
+                        <li>Cante todas as músicas da biblioteca</li>
+                    </ul>
+                    <small>Mínimo de 4 pessoas no plano família.</small>
+                </div>
             </div>
         </div>
     </section>

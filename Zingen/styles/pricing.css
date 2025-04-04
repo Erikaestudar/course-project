@@ -110,6 +110,11 @@
     #pricing .premium .card {
         padding-bottom: 6rem;
     }
+
+    .btn-md {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--fs-base);
+    }
     
     #pricing .card:nth-child(3) .separator {
         margin-block: 1.5rem;

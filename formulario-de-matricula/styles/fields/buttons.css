@@ -38,13 +38,14 @@ button {
         flex-direction: column;
         text-align: center;
         margin-inline: auto;
+        padding-bottom: 2.5rem;
     }
 
-    .btn-primary {
+    main .btn-primary {
         width: 85%;
     }
 
-    .btn-secondary {
+    main .btn-secondary {
         margin: auto;
         width: 85%;
     }

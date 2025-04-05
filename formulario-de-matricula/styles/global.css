@@ -53,6 +53,16 @@ img {
     flex: 2;
 }
 
+@media (width <= 48em) {
+    .flex-mobile {
+        flex-direction: column;
+    }
+    
+    .flex-mobile {
+        flex-direction: column;
+    }
+}
+
 aside .mobile-mode-primary {
     display: none;
 }

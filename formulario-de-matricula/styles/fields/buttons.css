@@ -28,3 +28,24 @@ button {
     color: var(--brand-dark);
     outline: .25rem solid var(--surface-secondary);
 }
+
+@media (width <= 24em) {
+    button {
+        padding: 1rem 1.5rem;
+    }
+
+    div.actions-wrapper {
+        flex-direction: column;
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .btn-primary {
+        width: 85%;
+    }
+
+    .btn-secondary {
+        margin: auto;
+        width: 85%;
+    }
+}

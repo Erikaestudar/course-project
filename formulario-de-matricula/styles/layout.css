@@ -11,6 +11,12 @@ main {
     padding: 4rem;
 }
 
+@media (width <= 48em) {
+    main {
+        padding: 2rem;
+    }
+}
+
 main .main-container {
     max-width: 33rem;
     margin-left: auto;

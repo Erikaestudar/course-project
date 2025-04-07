@@ -10,7 +10,6 @@ function initScroll(containerId) {
         // Evento para começar a arrastar
         container.addEventListener('mousedown', (e) => {
             isDown = true;
-            container.classList.add('active');
             startX = e.pageX - container.offsetLeft;
             scrollLeft = container.scrollLeft;
         });
@@ -18,12 +17,10 @@ function initScroll(containerId) {
         // Evento para parar de arrastar
         container.addEventListener('mouseleave', () => {
             isDown = false;
-            container.classList.remove('active');
         });
 
         container.addEventListener('mouseup', () => {
             isDown = false;
-            container.classList.remove('active');
         });
 
         // Evento para movimentar o scroll
@@ -51,4 +48,4 @@ function initScroll(containerId) {
 
 // Inicia a rolagem para os dois elementos
 initScroll('#secondary');
-initScroll('#weekly > div');
+

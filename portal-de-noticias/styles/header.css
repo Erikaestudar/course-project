@@ -1,20 +1,36 @@
+header .desktop-only {
+    display: none;
+}
+
+@media (width >= 62em) {
+    header strong.desktop-only {
+        display: block;
+    }
+}
+
+header {
+    max-width: 80em;
+    margin: auto;
+}
+
 #primary {
     padding-block: 1.25rem;
+}
 
-    div {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+#primary div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+}
 
-    /* nesting css */
-    div:nth-child(2) {
-        margin-inline: auto;
-    }
+/* nesting css */
+#primary div:nth-child(2) {
+    margin-inline: auto;
+}
 
-    div:nth-child(3) {
-        justify-self: end;
-    }
+#primary div:nth-child(3) {
+    justify-self: end;
 }
 
 #secondary {
@@ -22,4 +38,31 @@
     border: 1px solid var(--stroke-color);
     border-inline: none;
     justify-content: space-between;
+
+    overflow-x: auto;        /* permite rolagem horizontal */
+    overflow-y: hidden;      /* impede rolagem vertical */
+    white-space: nowrap;     /* impede quebra de linha */
+    scrollbar-width: none;   /* Firefox */
+    -ms-overflow-style: none; /* IE e Edge */
+}
+
+
+
+@media (width <= 48em) {
+    #primary {
+        padding-inline: 1rem;
+    }
+
+    #secondary a {
+        font-weight: 600;
+        padding-inline: 1.5rem;
+    }
+
+    #secondary::-webkit-scrollbar {
+        display: none;           /* Chrome, Safari */
+    }
+      
+    #secondary a {
+        display: inline-block;   /* importantíssimo pra funcionar com white-space */
+    }
 }

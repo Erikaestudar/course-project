@@ -28,6 +28,8 @@ body {
     font: var(--text);
     color: var(--text-color-primary);
     background-color: var(--bg-color);
+
+    scroll-behavior: smooth;
 }
 
 a {
@@ -48,28 +50,62 @@ img {
 }
 
 .container {
-    max-width: 1280px;
-    padding-inline: 2rem;
+    max-width: 80rem;
     margin-inline: auto;
 }
 
-@media screen and (min-width: 1280px) {
+#more h3 {
+    font: var(--text-extra);
+}
+
+@media (width <= 48em){
     main {
+        row-gap: 2rem;
+        margin-block: 1rem;
+    }
+
+    #ads {
+        padding-inline: 1rem;
+    }
+}
+
+@media (width >= 48em) {
+    .container {
+        padding-inline: 2rem;
+    }
+
+    main {
+        row-gap: 5rem;
+        margin-block: 2.5rem;
+
         /* section ai and aside */
         grid-template-columns: 2fr 1.4fr;
 
         grid-template-areas: 
         "featured featured"
         "weekly weekly"
-        "ai aside";
+        "ai aside";  
+    }
+
+    #featured {
+        grid-area: featured;
+    }
+
+    #weekly {
+        grid-area: weekly;
+    }
+
+    #ai {
+        grid-area: ai;
+    }
+
+    aside {
+        grid-area: aside;
     }
 }
 
 main {
-    margin-block: 2.5rem;
-    row-gap: 5rem;
     column-gap: 2rem;
-
 }
 
 .content-tag {

@@ -3,3 +3,80 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --input-base: #1c1f21;
+    --input-stroke: #363b40;
+    --input-placeholder: #869198;
+
+    --shape-bg: #131516;
+    --shape-body: #212427;
+    --shape-button: #2d3136;
+    --shape-hover: #383d42;
+
+    --text-body: #c8cdd0;
+    --text-heading: #f9f9f9;
+
+    --brand-light: #59b2ff;
+    --brand-mid: #3487cf;
+    --brand-dark: #1d6fb6;
+    --danger: #ff5959;
+    --color-logo: #ff598b;
+
+    --ff-logo: "Leckerli One", cursive;
+    --ff-heading: "Baloo 2", sans-serif;
+    --ff-text: "Open Sans", sans-serif;
+
+    --f-logo: 400 2.5rem var(--ff-logo);
+    --h-md: 700 1.75rem var(--ff-heading);
+    --h-sm: 700 1.125rem var(--ff-heading);
+    --text-md: 600 1rem var(--ff-text);
+    --text-sm: 600 0.875rem var(--ff-text);
+    --text-xs: 600 0.75rem var(--ff-text);
+    /* regular 400 */
+
+    --px-main: 8.125rem;
+    --py-main: 5rem;
+}
+
+body {
+    font: var(--text-sm);
+    color: var(--text-body);
+    background-color: var(--shape-bg);
+}
+
+#app {
+    max-width: 80rem;
+    margin-inline: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside img {
+    width: 2.865rem;
+    margin-bottom: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.grid {
+    display: grid;
+}
+
+.f-logo {
+    font: var(--f-logo);
+    color: var(--color-logo);
+}

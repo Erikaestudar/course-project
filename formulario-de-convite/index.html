@@ -28,7 +28,71 @@
 
         <main>
             <div class="main-container">
-                <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero soluta exercitationem totam rem ratione quas optio aspernatur nobis porro, fugiat quaerat corporis ipsam, ea modi libero incidunt possimus fuga quae.</h1>
+                <h2>Crie seu convite</h2>
+
+                <form method="post" enctype="multipart/form-data">
+                    <fieldset class="date-event">
+                        <legend class="flex gap-12">
+                            <img src="assets/icons/calendar.svg" alt="ícone de calendário">
+                            <h3>Sobre o evento</h3>
+                        </legend>
+
+                        <div class="input-wrapper">
+                            <label for="title">Título</label>
+                            <input 
+                            type="text" 
+                            name="title" 
+                            id="title"
+                            placeholder="Nome do evento">
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper">
+                                <label for="start">Início</label>
+                                <input 
+                                type="date" 
+                                name="start" 
+                                id="start"
+                                lang="pt-BR">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="end">Fim</label>
+                                <input 
+                                type="date" 
+                                name="end" 
+                                id="end"
+                                lang="pt-BR">
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="radio-wrapper">
+                                <div class="radio-inner">
+                                    <div class="radio-image"></div>
+                                    <input type="radio" name="local-type" value="presential" id="presential">
+                                    <img src="assets/icons/presencial.svg" alt="">
+                                    <label for="presential">Presencial</label>
+                                </div>
+
+                                <div class="radio-inner">
+                                    <div class="radio-image"></div>
+                                    <input type="radio" name="local-type" value="online" id="online">
+                                    <img src="assets/icons/video.svg" alt="">
+                                    <label for="online">Online</label>
+                                </div>
+                            </div>
+                            
+                            <div class="input-wrapper">
+                                <label for="local">Local</label>
+                                <input 
+                                type="text" 
+                                name="local" 
+                                id="local"
+                                placeholder="Link ou endereço">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </main>
     </div>

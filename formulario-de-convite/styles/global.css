@@ -45,6 +45,10 @@ body {
     background-color: var(--shape-bg);
 }
 
+h3 {
+    font: var(--h-sm);
+}
+
 #app {
     max-width: 80rem;
     margin-inline: auto;
@@ -79,4 +83,8 @@ aside img {
 .f-logo {
     font: var(--f-logo);
     color: var(--color-logo);
+}
+
+.gap-12 {
+    gap: 0.75rem;
 }

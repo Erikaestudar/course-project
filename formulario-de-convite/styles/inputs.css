@@ -1,0 +1,22 @@
+main div > h2 {
+    font: var(--h-md);
+}
+
+main h3 {
+    font: var(--h-sm);
+}
+
+fieldset {
+    border: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+legend .flex {
+    align-items: center;
+}
+
+legend .flex img {
+    width: 1.5rem;
+    height: 1.5rem;
+}

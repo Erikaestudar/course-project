@@ -42,7 +42,8 @@
 body {
     font: var(--text-sm);
     color: var(--text-body);
-    background-color: var(--shape-bg);
+    background-color: black;
+    overflow-x: hidden;
 }
 
 h3 {
@@ -62,6 +63,10 @@ img {
 aside img {
     width: 2.865rem;
     margin-bottom: 1rem;
+}
+
+main {
+    background-color: var(--shape-bg);
 }
 
 .flex {
@@ -87,4 +92,8 @@ aside img {
 
 .gap-12 {
     gap: 0.75rem;
+}
+
+.gap-16 {
+    gap: 1rem;
 }

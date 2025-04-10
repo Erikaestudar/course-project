@@ -128,7 +128,6 @@ section header a:hover span {
     margin-bottom: clamp(0.5rem, 50%, 1.1rem);
 }
 
-
 /* 375px = 23.4375em */    
 /* 600px = 37.5em */
 /* 768px = 48em */
@@ -146,6 +145,7 @@ section header a:hover span {
     }
 
     .grid-cols-2 {
+        grid-template-rows: repeat(4, 1fr);
         grid-template-columns: auto;
     }
 

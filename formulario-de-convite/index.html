@@ -26,51 +26,274 @@
             </div>
         </aside>
 
-        <main>
-            <div class="main-container">
-                <h2>Crie seu convite</h2>
+        <main class="main-container">
+            <h2>Crie seu convite</h2>
 
-                <form method="post" enctype="multipart/form-data">
-                    <fieldset class="date-event">
-                        <legend class="flex gap-12">
-                            <img src="assets/icons/calendar.svg" alt="ícone de calendário">
-                            <h3>Sobre o evento</h3>
-                        </legend>
+            <form method="post" enctype="multipart/form-data">
 
+                <fieldset class="date-event">
+                    <legend class="flex gap-12">
+                        <img src="assets/icons/calendar.svg" alt="ícone de calendário">
+                        <h3>Sobre o evento</h3>
+                    </legend>
+
+                    <div class="input-wrapper">
+                        <label for="title">Título</label>
+                        <input 
+                        type="text" 
+                        name="title" 
+                        id="title"
+                        placeholder="Nome do evento">
+                    </div>
+
+                    <div class="date-event flex gap-16">
                         <div class="input-wrapper">
-                            <label for="title">Título</label>
+                            <label for="start">Início</label>
                             <input 
-                            type="text" 
-                            name="title" 
-                            id="title"
-                            placeholder="Nome do evento">
+                            type="datetime-local" 
+                            name="start" 
+                            id="start"
+                            lang="pt-BR">
                         </div>
-
-                        <div class="date-event flex gap-16">
-                            <div class="input-wrapper">
-                                <label for="start">Início</label>
-                                <input 
-                                type="datetime-local" 
-                                name="start" 
-                                id="start"
-                                lang="pt-BR">
-                            </div>
-                            <div class="input-wrapper">
-                                <label for="end">Fim</label>
-                                <input 
-                                type="datetime-local" 
-                                name="end" 
-                                id="end"
-                                lang="pt-BR">
-                            </div>
+                        <div class="input-wrapper">
+                            <label for="end">Fim</label>
+                            <input 
+                            type="datetime-local" 
+                            name="end" 
+                            id="end"
+                            lang="pt-BR">
                         </div>
+                    </div>
 
+                    <div class="info flex gap-16">
+                        <div class="input-wrapper flex-1">
+                            <label>Tipo</label>
+                            <div class="radio-wrapper flex flex-1">
+                                <label class="radio-box presential flex flex-1" for="presential">
+                                    <input type="radio" name="type" value="presential" id="presential" checked>
+                                    <div class="presential-image"></div>
+                                    <span>Presencial</span>
+                                </label>
                         
-                    
-                    </fieldset>
-                </form>
-            </div>
+                                <label class="radio-box online flex flex-1" for="online">
+                                    <input type="radio" name="type" value="online"  id="online">
+                                    <div class="online-image"></div>
+                                    <span>Online</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-wrapper flex-1">
+                            <label for="local">Local</label>
+                            <input
+                            type="text"
+                            name="local"
+                            id="local"
+                            placeholder="Link ou endereço">
+                        </div>
+                    </div>
+
+                    <div class="textarea-wrapper">
+                        <label for="description">Descrição</label>
+                        <textarea 
+                        name="description" 
+                        id="description"
+                        cols="30"
+                        rows="5"
+                        placeholder="Escreva sobre os detalhes do evento"
+                        ></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset class="customize-container">
+
+                    <legend class="flex gap-12">
+                        <img src="assets/icons/paintbrush.svg" alt="ícone de pincel">
+                        <h3>Personalização</h3>
+                    </legend>
+
+                    <div class="input-wrapper">
+                        <span class="text-14">Cor principal</span>
+
+                        <div class="colors-box flex flex-1 gap-16">
+                            <label class="colors" for="blue-light" aria-label="blue-light">
+                                <input type="radio" name="color" value="blue-light"  id="blue-light">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="navy" aria-label="navy">
+                                <input type="radio" name="color" value="navy"  id="navy">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="purple" aria-label="purple">
+                                <input type="radio" name="color" value="purple"  id="purple">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="fuschia" aria-label="fuschia">
+                                <input type="radio" name="color" value="fuschia"  id="fuschia">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="pink" aria-label="pink">
+                                <input type="radio" name="color" value="pink"  id="pink">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="red" aria-label="red">
+                                <input type="radio" name="color" value="red"  id="red">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="orange" aria-label="orange">
+                                <input type="radio" name="color" value="orange"  id="orange">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="yellow" aria-label="yellow">
+                                <input type="radio" name="color" value="yellow"  id="yellow">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="lime" aria-label="lime">
+                                <input type="radio" name="color" value="lime"  id="lime">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="green" aria-label="green">
+                                <input type="radio" name="color" value="green"  id="green">
+                                <span class="circle"></span>
+                            </label>
+
+                            <label class="colors" for="cyran" aria-label="cyran">
+                                <input type="radio" name="color" value="cyran"  id="cyran">
+                                <span class="circle"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <span class="text-14">Tema do evento</span>
+
+                        <div class="theme-container grid gap-8">
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image01.png" alt="Tema de aniversário">
+                                    <figcaption>
+                                        <span class="text-14">Aniversário</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image02.png" alt="Tema de festa Infantil">
+                                    <figcaption>
+                                        <span class="text-14">Infantil</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image03.png" alt="Tema de Formatura">
+                                    <figcaption>
+                                        <span class="text-14">Formatura</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image04.png" alt="Tema de Casamento">
+                                    <figcaption>
+                                        <span class="text-14">Casamento</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image05.png" alt="Tema de Chá de bebê">
+                                    <figcaption>
+                                        <span class="text-14">Chá de bebê</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image06.png" alt="Tema de Chá de panela">
+                                    <figcaption>
+                                        <span class="text-14">Chá de panela</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image07.png" alt="Tema de Carnaval">
+                                    <figcaption>
+                                        <span class="text-14">Carnaval</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image08.png" alt="Tema de Páscoa">
+                                    <figcaption>
+                                        <span class="text-14">Páscoa</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image09.png" alt="Tema de São João">
+                                    <figcaption>
+                                        <span class="text-14">São João</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image10.png" alt="Tema de Halloween">
+                                    <figcaption>
+                                        <span class="text-14">Halloween</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image11.png" alt="Tema de Natal">
+                                    <figcaption>
+                                        <span class="text-14">Natal</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="card">
+                                <figure>
+                                    <img src="assets/themes/image12.png" alt="Tema de Outro">
+                                    <figcaption>
+                                        <span class="text-14">Outro</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                
+
+                
+            </form>
         </main>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

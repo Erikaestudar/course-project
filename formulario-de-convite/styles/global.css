@@ -35,19 +35,23 @@
     --text-xs: 600 0.75rem var(--ff-text);
     /* regular 400 */
 
-    --px-main: 8.125rem;
+    --px-main: 5.6rem;
     --py-main: 5rem;
 }
 
 body {
     font: var(--text-sm);
     color: var(--text-body);
-    background-color: black;
+    background-color: var(--shape-body);
     overflow-x: hidden;
 }
 
 h3 {
     font: var(--h-sm);
+}
+
+.text-14 {
+    font: var(--text-sm);
 }
 
 #app {
@@ -74,7 +78,7 @@ main {
 }
 
 .flex-1 {
-    flex: 1;
+    flex: 1; /* Faz cada botão ocupar o mesmo espaço */
 }
 
 .flex-2 {
@@ -90,10 +94,20 @@ main {
     color: var(--color-logo);
 }
 
+.gap-8 {
+    gap: 0.5rem;
+}
+
 .gap-12 {
     gap: 0.75rem;
 }
 
 .gap-16 {
     gap: 1rem;
+}
+
+@media (width >= 64em) {
+    :root {
+        --px-main: 8.125rem;
+    }
 }

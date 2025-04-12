@@ -1,0 +1,118 @@
+@media (width <= 80em) {
+    .colors-box {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.customize-container {
+    margin-top: 3rem;
+}
+
+.colors-box {
+    margin-top: 1rem;   
+}
+
+/* O círculo colorido visível */
+.colors-box .circle {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 5px solid var(--shape-button);
+    background-color: var(--brand-light); /* cor padrão, será substituída */
+    cursor: pointer;
+}
+
+/* Remove aparência nativa do input */
+.colors-box input[type="radio"] {
+    display: none;
+}
+
+/* Destaca o selecionado */
+.colors-box input[type="radio"]:checked + .circle {
+    outline: 0.125rem solid var(--brand-light);
+    border-color: var(--input-stroke);
+}
+  
+
+#blue-light + .circle {
+    background-color: var(--brand-light);
+}
+
+#navy + .circle {
+    background-color: #6a59ff;
+}
+
+#purple + .circle {
+    background-color: #b259ff;
+}
+
+#fuschia + .circle {
+    background-color: #ff59f9;
+}
+
+#pink + .circle {
+    background-color: #ff598b;
+}
+
+#red + .circle {
+    background-color: var(--danger);
+}
+
+#orange + .circle {
+    background-color: #ff8b59;
+}
+
+#yellow + .circle {
+    background-color: #ffcd59;
+}
+
+#lime + .circle {
+    background-color: #e1ff59;
+}
+
+#green + .circle {
+    background-color: #59ff91;
+}
+
+#cyran + .circle {
+    background-color: #59fff9;
+}
+
+.input-wrapper {
+border: 1px solid red;
+}
+
+.input-wrapper > span {
+    margin-top: 1.75rem;
+}
+
+.theme-container {
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.theme-container .card {
+    max-width: 8.375rem;
+    height: 6.4375rem;
+    text-align: center;
+    color: var(--text-heading);
+    background-color: var(--shape-button);
+    border: 1px solid var(--input-stroke);
+    border-radius: 0.5rem;
+}
+
+.card img {
+    max-width: 7.875rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    margin-top: 0.1875rem;
+}
+
+.card span {
+    display: block;
+    font-weight: 400;
+    margin-top: 0.1875rem;
+}

@@ -26,17 +26,16 @@
 }
 
 /* Remove aparência nativa do input */
-.colors-box input[type="radio"] {
+.customize-container input[type="radio"] {
     display: none;
 }
 
 /* Destaca o selecionado */
-.colors-box input[type="radio"]:checked + .circle {
+.customize-container input[type="radio"]:checked + .circle {
     outline: 0.125rem solid var(--brand-light);
     border-color: var(--input-stroke);
 }
   
-
 #blue-light + .circle {
     background-color: var(--brand-light);
 }
@@ -81,31 +80,38 @@
     background-color: #59fff9;
 }
 
-.input-wrapper {
-border: 1px solid red;
-}
-
 .input-wrapper > span {
     margin-top: 1.75rem;
+}
+
+@media (47.8125em < width < 54.1875em) {
+    .theme-container {
+        margin-inline: auto;
+        width: 35rem;
+    }
 }
 
 .theme-container {
     overflow: hidden;
     margin-top: 1rem;
+    padding: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(8.375rem, 1fr)); 
 }
 
 .theme-container .card {
-    max-width: 8.375rem;
+    width: 8.375rem;
     height: 6.4375rem;
     text-align: center;
     color: var(--text-heading);
     background-color: var(--shape-button);
     border: 1px solid var(--input-stroke);
     border-radius: 0.5rem;
+
+    margin-inline: auto;
 }
 
 .card img {
-    max-width: 7.875rem;
+    width: 7.875rem;
     height: 4rem;
     border-radius: 0.5rem;
     margin-top: 0.1875rem;
@@ -115,4 +121,9 @@ border: 1px solid red;
     display: block;
     font-weight: 400;
     margin-top: 0.1875rem;
+}
+
+.theme-container .card:has(:checked) {
+    outline: 0.125rem solid var(--brand-light);
+    border-color: var(--input-stroke);
 }

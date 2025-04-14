@@ -85,3 +85,7 @@ aside h1 {
 aside figcaption {
     padding: 1.5rem;
 }
+
+main {
+    border: 2px solid green;
+}

@@ -7,12 +7,21 @@
         flex-direction: column;
         flex-wrap: wrap;
     }
+
+    .radio-wrapper:has(.checkbox-container) {
+        flex-direction: column-reverse;  
+    }
+
+    .checkbox-container,
+    .droparea-wrapper {
+        margin-right: auto;
+    }
 }
 
 @media (47.8125em < width < 54.1875em) {
     .theme-container {
         margin-inline: auto;
-        width: 35rem;
+        width: 33.1rem;
     }
 }
 
@@ -67,7 +76,6 @@
         margin: 1.5rem 1.5rem 1.5rem 0.75rem;
         padding: var(--py-main) 1.5rem;
         overflow-y: auto;
-        border: 2px solid red;
     }
 
     .main-container {

@@ -1,0 +1,28 @@
+@import url(fields/index.css);
+
+fieldset {
+    border: none;
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 100%;
+}
+
+legend {
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+legend img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+label {
+    font: var(--text-sm);
+    color: var(--text-body);
+
+    display: block;
+    margin-bottom: 1rem;
+}
+

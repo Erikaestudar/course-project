@@ -1,91 +1,82 @@
 @media (width <= 37.5em) {
-    aside figure {
-        height: 40rem;
-        background: url(../assets/Background.png) no-repeat center bottom/cover;
-        
-        position: relative;
-        z-index: 0;
-    }
-
-    main {
-        padding: clamp(1.5rem, 1rem + 2vw, 5rem);
-    }
-
-    div.date-event {
+    .date-event {
         flex-wrap: wrap;
     }
 
-    div.info {
+    .info {
         flex-direction: column;
         flex-wrap: wrap;
     }
 }
 
-@media (37.5em < width < 80em) {
-    aside figure {
-        height: 40rem;
-        background: url(../assets/Background-mobile.png) no-repeat center bottom/contain;
-        
+@media (47.8125em < width < 54.1875em) {
+    .theme-container {
+        margin-inline: auto;
+        width: 35rem;
+    }
+}
+
+@media (width <= 54.25em) {
+    .aside-container {
+        height: 45rem;
+        background: url(../assets/Background-m.png) no-repeat center bottom/cover;
+    }
+
+    .aside-container {
         position: relative;
         z-index: 0;
     }
 
-    aside figcaption::before {
+    .aside-container header::before {
         content: "";
         position: absolute;
-        border-radius: 0.75rem;
         inset: 0;
         z-index: -1;
-        bottom: 40%;
+        bottom: 50%;
         background: linear-gradient(
             180deg, 
-            #131516 50%,
+            #080808 40%,
             transparent 100%
         );
     }
 
     main {
-        padding: clamp(1.5rem, 1rem + 2vw, 5rem);
+        padding: 1.5rem;
     }
 }
 
 @media (width >= 54.25em) {
     #app {
         grid-template-columns: 31.25% 68.75%;
-
+        
         height: 100vh;
         overflow: hidden;
     }
 
-    aside {
-        padding: 1.5rem;
-        overflow: hidden;
-    }
-
-    aside figure {
+    .aside-container {
+        max-width: 25rem;
         height: 45.5rem;
+        margin: 1.5rem 0.75rem 1.5rem 1.5rem;
+        background: url(../assets/Background.png) no-repeat center center/cover;
         border-radius: 0.75rem;
-        background: url(../assets/Background.png) no-repeat center/cover;
     }
 
     main {
-        padding-block: var(--py-main);
-        padding-inline: var(--px-main);
-        overflow-y: auto;
         border-radius: 0.75rem;
-        margin-block: 1.5rem;
+        max-width: 52.421875rem;
+        margin: 1.5rem 1.5rem 1.5rem 0.75rem;
+        padding: var(--py-main) 1.5rem;
+        overflow-y: auto;
         border: 2px solid red;
     }
+
+    .main-container {
+        max-width: 35rem;
+        margin-inline: auto;
+    }
+
 }
 
-aside h1 {
-    margin-bottom: 0.25rem;
-}
 
-aside figcaption {
-    padding: 1.5rem;
-}
 
-main {
-    border: 2px solid green;
-}
+

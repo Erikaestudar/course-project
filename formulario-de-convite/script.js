@@ -1,4 +1,4 @@
-const radios = document.querySelectorAll('.radio-box input[type="radio"]');
+let radios = document.querySelectorAll('.radio-box input[type="radio"]');
 
 radios.forEach(radio => {
   radio.addEventListener('change', () => {

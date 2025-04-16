@@ -1,0 +1,111 @@
+.input-wrapper, 
+.radio-wrapper,
+.textarea-wrapper {
+    width: 100%;
+}
+
+input, textarea {
+    appearance: none;
+
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    background-color: var(--input-base);
+    outline: 1px solid var(--input-stroke);
+
+    padding: 0.75rem 1rem;
+    font: var(--text-md);
+    color: var(--input-placeholder);
+}
+
+input:focus,
+textarea:focus,
+.colors-box input[type="radio"]:checked + .circle,
+.theme-container .card:has(:checked)  {
+    outline: .125rem solid var(--brand-light);
+    border-color: var(--input-stroke);
+    outline-offset: .1px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.info {
+    display: flex;
+}
+
+.radio-inner {
+    max-width: 100%;
+    height: 3.2rem;
+    border: 1px solid var(--input-stroke);
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    background-color: var(--input-base);
+
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.radio-box {
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: var(--input-base);
+
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    transition: color 0.3s ease;
+}
+
+.radio-box::before:has(input:checked) {
+    border: 1px solid var(--input-placeholder);
+}
+
+.radio-box div.image,
+.radio-box input[type="radio"]:checked ~ div.image {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    transition: background-image 0.3s ease;
+}
+
+
+.radio-box input[type="radio"]:checked ~ span {
+    color: var(--text-heading);
+}
+
+.presential div.image {
+    background-image: url(../../assets/icons/presencial.svg);
+}
+
+.presential input[type="radio"]:checked ~ div.image {
+    background-image: url(../../assets/icons/presencial-hover.svg);
+}
+
+.online div.image {
+    background-image: url(../../assets/icons/video.svg);
+}
+
+.online input[type="radio"]:checked ~ div.image {
+    background-image: url(../../assets/icons/video-hover.svg);
+}
+
+.radio-box:hover {
+    border: 2px solid var(--input-stroke);
+}
+
+.radio-box:has(input:checked) {
+    background-color: var(--input-stroke);
+    border: 2px solid var(--input-stroke);
+}
+
+

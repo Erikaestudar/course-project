@@ -1,22 +1,11 @@
-@media (width <= 80em) {
-    .colors-box {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-.customize-container {
-    margin-top: 3rem;
-}
-
 .colors-box {
-    margin-top: 1rem;   
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: space-around;
 }
 
 /* O círculo colorido visível */
 .colors-box .circle {
-    display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
@@ -25,19 +14,8 @@
     cursor: pointer;
 }
 
-/* Remove aparência nativa do input */
-.customize-container input[type="radio"] {
-    display: none;
-}
-
-/* Destaca o selecionado */
-.customize-container input[type="radio"]:checked + .circle {
-    outline: 0.125rem solid var(--brand-light);
-    border-color: var(--input-stroke);
-}
-  
-#blue-light + .circle {
-    background-color: var(--brand-light);
+.colors-box .circle:hover {
+    border: 5px solid var(--shape-hover);
 }
 
 #navy + .circle {
@@ -80,21 +58,13 @@
     background-color: #59fff9;
 }
 
-.input-wrapper > span {
-    margin-top: 1.75rem;
-}
-
-@media (47.8125em < width < 54.1875em) {
-    .theme-container {
-        margin-inline: auto;
-        width: 35rem;
-    }
+.radio-wrapper + .radio-wrapper {
+    margin-bottom: 1.75rem;
 }
 
 .theme-container {
     overflow: hidden;
-    margin-top: 1rem;
-    padding: 0.5rem;
+    padding-block: 0.1rem;
     grid-template-columns: repeat(auto-fit, minmax(8.375rem, 1fr)); 
 }
 
@@ -110,6 +80,10 @@
     margin-inline: auto;
 }
 
+.theme-container .card:hover {
+    background-color: var(--input-stroke);
+}
+
 .card img {
     width: 7.875rem;
     height: 4rem;
@@ -121,9 +95,4 @@
     display: block;
     font-weight: 400;
     margin-top: 0.1875rem;
-}
-
-.theme-container .card:has(:checked) {
-    outline: 0.125rem solid var(--brand-light);
-    border-color: var(--input-stroke);
 }

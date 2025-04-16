@@ -1,0 +1,17 @@
+.aside-container header {
+    padding: 1.5rem;
+}
+
+.aside-container header img {
+    width: 2.865rem;
+    margin-bottom: 1rem;
+}
+
+.aside-container header h1 {
+    font: var(--f-logo);
+    color: var(--color-logo);
+}
+
+.aside-container p {
+    margin-top: 0.25rem;
+}

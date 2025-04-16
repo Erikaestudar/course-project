@@ -1,4 +1,4 @@
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,6 +28,7 @@
     --ff-text: "Open Sans", sans-serif;
 
     --f-logo: 400 2.5rem var(--ff-logo);
+
     --h-md: 700 1.75rem var(--ff-heading);
     --h-sm: 700 1.125rem var(--ff-heading);
     --text-md: 600 1rem var(--ff-text);
@@ -43,15 +44,6 @@ body {
     font: var(--text-sm);
     color: var(--text-body);
     background-color: var(--shape-body);
-    overflow-x: hidden;
-}
-
-h3 {
-    font: var(--h-sm);
-}
-
-.text-14 {
-    font: var(--text-sm);
 }
 
 #app {
@@ -59,18 +51,25 @@ h3 {
     margin-inline: auto;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-aside img {
-    width: 2.865rem;
-    margin-bottom: 1rem;
-}
-
 main {
     background-color: var(--shape-bg);
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    font: var(--h-md);
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    font: var(--h-sm);
+}
+
+.grid {
+    display: grid;
 }
 
 .flex {
@@ -79,19 +78,6 @@ main {
 
 .flex-1 {
     flex: 1; /* Faz cada botão ocupar o mesmo espaço */
-}
-
-.flex-2 {
-    flex: 2;
-}
-
-.grid {
-    display: grid;
-}
-
-.f-logo {
-    font: var(--f-logo);
-    color: var(--color-logo);
 }
 
 .gap-8 {

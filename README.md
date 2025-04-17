@@ -1,5 +1,5 @@
-# course-project :woman_technologist:
- Projetos criados durando o curso
+<img src="index/assets/images/octocat.png" align="right" width="120">
+ Projetos criados durando o curso da RocketSeat
 
 ## Menu
 

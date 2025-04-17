@@ -4,7 +4,10 @@
     width: 100%;
 }
 
-input, textarea {
+input[type="text"], 
+input[type="datetime-local"],
+input[type="email"], 
+textarea {
     appearance: none;
 
     width: 100%;

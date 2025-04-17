@@ -302,9 +302,106 @@
                             </div>
                         </div>
                     </fieldset>
+
+                    <fieldset class="contact-info">
+                        <legend class="flex gap-12">
+                            <img src="assets/icons/contact.svg" alt="ícone de usuário">
+                            <h3>Dados para contato</h3>
+                        </legend>
+
+                        <div class="input-wrapper">
+                            <label for="name">Nome</label>
+                            <input 
+                            type="text" 
+                            name="name" 
+                            id="name"
+                            required
+                            placeholder="Nome completo">
+
+                            <div class="error">
+                                <img src="assets/icons/circle-alert.svg" alt="ícone de alerta vermelho">
+                                <span>Campo obrigatório</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-container flex gap-16">
+                            <div class="input-wrapper">
+                                <label for="mail">Email</label>
+                                <input 
+                                type="email" 
+                                name="mail" 
+                                id="mail"
+                                required 
+                                placeholder="exemplo@email.com" 
+                                >
+                                <div class="error">
+                                    <img src="assets/icons/circle-alert.svg" alt="ícone de alerta vermelho">
+                                    <span>Campo obrigatório</span>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="phone">Telefone</label>
+                                <input 
+                                type="text" 
+                                name="phone" 
+                                id="phone"
+                                placeholder="(99)99999-9999">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="terms-container">
+                        <legend></legend>
+
+                        <div class="terms-inner">
+                            <div class="input-wrapper flex gap-12">
+                                <label for="term-01" aria-label="term-01">
+                                    <input type="checkbox"
+                                    name="term-01" i
+                                    d="term-01">
+                                </label>
+                                <p>
+                                    Li e concordo com os <span>Termos e Condições</span> e com a <span>Política de Privacidade</span>
+                                </p>
+                            </div>
+
+
+                            <div class="input-wrapper flex gap-16">
+                                <label for="term-02" aria-label="term-02">
+                                    <input type="checkbox"
+                                    name="term-02" i
+                                    d="term-02">
+                                </label>
+                                <p>
+                                    Aceito receber atualizações e promoções por e-mail
+                                </p>
+                            </div>
+
+
+                            <div class="input-wrapper flex gap-16">
+                                <label for="term-03" aria-label="term-03">
+                                    <input type="checkbox"
+                                    name="term-03" i
+                                    d="term-03">
+                                </label>
+                                <p>
+                                    Aceito receber atualizações e promoções por SMS
+                                </p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="button-container">
+                        <button type="submit" id="submit" class="flex" value="Gerar convite">
+                            <img src="assets/icons/ticket-hover.svg" alt="ícone de ticket">
+                            Gerar convite
+                        </button>
+                    </div>
                 </form>
             </div>
         </main>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

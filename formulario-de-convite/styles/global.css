@@ -92,6 +92,12 @@ h3 {
     gap: 1rem;
 }
 
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px var(--input-stroke) inset !important;
+    -webkit-text-fill-color: var(--text-body) !important; /* cor do texto, se precisar */
+    transition: background-color 5000s ease-in-out 0s; /* truque pra evitar reset */
+}
+
 @media (width >= 64em) {
     :root {
         --px-main: 8.125rem;

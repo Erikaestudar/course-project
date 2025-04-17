@@ -1,0 +1,89 @@
+input[required] + .error {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+
+    color: var(--danger);
+    margin-top: 0.25rem;
+}
+
+input.invalid,
+input:invalid {
+    border: 0.125rem solid var(--danger);
+}
+
+input:not(:focus):valid + .error {
+    display: none;
+}
+
+.error img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.terms-container legend {
+    width: 100%;
+    height: 1px;
+    background-color: var(--input-stroke);
+}
+
+.terms-inner {
+    margin-top: 2.5rem;
+}
+
+.terms-inner input {
+    appearance: none;
+
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid var(--input-stroke);
+    border-radius: 0.25rem;
+    background-color: var(--input-base);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.terms-inner input:checked {
+    border: 1px solid var(--brand-light);
+}
+
+.terms-inner input:checked::after {
+    content: '';
+    position: absolute;
+    left: 0.40rem;
+    top: 0.10rem;
+    width: 0.33rem;
+    height: 0.7rem;
+    border: 0.5px solid var(--brand-light);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.terms-inner span {
+    color: var(--brand-light);
+}
+
+.button-container button {
+    width: 11.0625rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    font: var(--text-md);
+    background-color: var(--brand-dark);
+    color: var(--text-heading);
+    border: none;
+    border-radius: 0.5rem;
+
+    margin-left: auto;
+}
+
+.button-container button:hover {
+    background-color: var(--brand-mid);
+}
+
+.button-container button img {
+    width: 1.25rem;
+    height: 1.25rem;
+}

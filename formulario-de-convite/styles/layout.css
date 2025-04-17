@@ -16,6 +16,18 @@
     .droparea-wrapper {
         margin-right: auto;
     }
+
+    .contact-container {
+        flex-wrap: wrap
+    }
+
+    .terms-inner div {
+        margin-bottom: 1.5rem;
+    }
+
+    .button-container {
+        margin-bottom: 3rem;
+    }
 }
 
 @media (47.8125em < width < 54.1875em) {

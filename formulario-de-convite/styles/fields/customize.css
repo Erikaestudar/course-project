@@ -147,7 +147,7 @@
 
 #checkbox-track input[type="checkbox"]:checked::before {
     background-color: var(--text-heading);
-    transform: translateX(1.9rem);
+    transform: translateX(2rem);
 }
 
 .checkbox-inner span {
@@ -160,11 +160,6 @@
     position: relative;
 }
 
-.dropzone p {
-    font: var(--ff-text);
-    margin-inline: 1rem;
-}
-
 .drop-button {
     display: flex;
     align-items: center;
@@ -174,9 +169,8 @@
     border-radius: 0.5rem ;
 }
 
-.drop-button svg {
-    width: 1rem;
-    height: 1rem;
+.drop-button:hover {
+    background-color: var(--shape-hover);
 }
 
 .dropzone input {
@@ -185,4 +179,14 @@
     height: 100%;
     inset: 0;
     opacity: 0;
+}
+
+.drop-button svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.dropzone p {
+    font: var(--ff-text);
+    margin-inline: 1rem;
 }

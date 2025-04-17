@@ -71,7 +71,6 @@ input[type="radio"] {
     border: 1px solid var(--input-placeholder);
 }
 
-/*
 .radio-box div.image,
 .radio-box input[type="radio"]:checked ~ div.image {
     width: 1.2rem;
@@ -81,50 +80,25 @@ input[type="radio"] {
     
     transition: background-image 0.3s ease;
 }
-*/
 
 .radio-box input[type="radio"]:checked ~ span {
     color: var(--text-heading);
 }
 
 .presential div.image {
-    width: 1.2rem;
-    height: 1.2rem;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-image: url(../../assets/icons/presencial.svg);
-   
-    transition: background-image 0.3s ease;
 }
 
 .presential input[type="radio"]:checked ~ div.image {
-    width: 1.2rem;
-    height: 1.2rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
     background-image: url(../../assets/icons/presencial-hover.svg);
-    transition: background-image 0.3s ease;
 }
 
 .online div.image {
-    width: 1.2rem;
-    height: 1.2rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
     background-image: url(../../assets/icons/video.svg);
-    transition: background-image 0.3s ease;
 }
 
 .online input[type="radio"]:checked ~ div.image {
-    width: 1.2rem;
-    height: 1.2rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
     background-image: url(../../assets/icons/video-hover.svg);
-    transition: background-image 0.3s ease;
 }
 
 .radio-box:hover {

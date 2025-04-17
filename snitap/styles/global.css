@@ -24,6 +24,12 @@
     --text-xl: 4rem;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+}
+
 html, buttom {
     font: 500 1rem/1.5 var(--ff-base);
 }

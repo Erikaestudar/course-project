@@ -1,4 +1,4 @@
-<img src="index/assets/images/octocat.png" align="right" width="120">
+<img src=".index-rocketseat/assets/images/octocat.png" align="right" width="120">
  Projetos criados durando o curso da RocketSeat
 
 ## Menu

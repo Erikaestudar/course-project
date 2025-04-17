@@ -43,11 +43,13 @@
       <a href="https://erikaestudar.github.io/course-project/formulario-de-convite/index.html">Formulário de convite</a>
     </td>
   </tr>
+  <!--
   <tr>
     <td align="center">
-      <!-- Pode deixar vazio ou adicionar mais -->
+       Pode deixar vazio ou adicionar mais 
     </td>
   </tr>
+  -->
 </table>
 
  

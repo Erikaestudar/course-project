@@ -19,13 +19,12 @@
       <img src="- index-rocketseat/assets/images/travelgram.png" width="200"><br>
       <a href="https://erikaestudar.github.io/course-project/travelgram/index.html">Travelgram</a>
     </td>
-     <td align="center">
+  </tr>
+  <tr>
+    <td align="center">
       <img src="- index-rocketseat/assets/images/noticias.png" width="200"><br>
       <a href="https://erikaestudar.github.io/course-project/portal-de-noticias/index.html">Portal de notícias</a>
     </td>
-  </tr>
-
-  <tr>
     <td align="center">
       <img src="- index-rocketseat/assets/images/matricula.png" width="200"><br>
       <a href="https://erikaestudar.github.io/course-project/formulario-de-matricula/index.html">Formulário de matrícula</a>
@@ -34,7 +33,9 @@
       <img src="- index-rocketseat/assets/images/portfolio.png" width="200"><br>
       <a href="https://erikaestudar.github.io/course-project/portfolio-dev/index.html">Portfolio Dev</a>
     </td>
-   <td align="center">
+  </tr>
+  <tr>
+    <td align="center">
       <img src="- index-rocketseat/assets/images/zingen.png" width="200"><br>
       <a href="https://erikaestudar.github.io/course-project/zingen/index.html">Zingen</a>
     </td>
@@ -42,14 +43,10 @@
       <img src="- index-rocketseat/assets/images/convite.png" width="200"><br>
       <a href="https://erikaestudar.github.io/course-project/formulario-de-convite/index.html">Formulário de convite</a>
     </td>
-  </tr>
-  <!--
-  <tr>
     <td align="center">
-       Pode deixar vazio ou adicionar mais 
+      <!-- Pode deixar vazio ou adicionar mais -->
     </td>
   </tr>
-  -->
 </table>
 
  

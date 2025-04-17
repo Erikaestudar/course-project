@@ -3,44 +3,53 @@
 
 ## Menu
 
-- [Projetos](#projetos)
-- [GitHub Code](#github-code)
+## Projetos :books:
 
-### Projetos :books:
+<table>
+  <tr>
+    <td align="center">
+      <img src="index-rocketseat/assets/images/receita.png" width="100"><br>
+      <a href="https://erikaestudar.github.io/course-project/pagina-de-receita/index.html">Página de Receita</a>
+    </td>
+    <td align="center">
+      <img src="index-rocketseat/assets/images/local-turistico.png" width="100"><br>
+      <a href="https://erikaestudar.github.io/course-project/local-turistico/index.html">Local Turístico</a>
+    </td>
+    <td align="center">
+      <img src="index-rocketseat/assets/images/travelgram.png" width="100"><br>
+      <a href="https://erikaestudar.github.io/course-project/travelgram/index.html">Travelgram</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="index-rocketseat/assets/images/noticias.png" width="100"><br>
+      <a href="https://erikaestudar.github.io/course-project/portal-de-noticias/index.html">Portal de notícias</a>
+    </td>
+    <td align="center">
+      <img src="index-rocketseat/assets/images/matricula.png" width="100"><br>
+      <a href="https://erikaestudar.github.io/course-project/formulario-de-matricula/index.html">Formulário de matrícula</a>
+    </td>
+    <td align="center">
+      <img src="index-rocketseat/assets/images/portfolio.png" width="100"><br>
+      <a href="https://erikaestudar.github.io/course-project/portfolio-dev/index.html">Portfolio Dev</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="index-rocketseat/assets/images/zingen.png" width="100"><br>
+      <a href="https://erikaestudar.github.io/course-project/zingen/index.html">Zingen</a>
+    </td>
+    <td align="center">
+      <img src="index-rocketseat/assets/images/convite.png" width="100"><br>
+      <a href="https://erikaestudar.github.io/course-project/formulario-de-convite/index.html">Formulário de convite</a>
+    </td>
+    <td align="center">
+      <!-- Pode deixar vazio ou adicionar mais -->
+    </td>
+  </tr>
+</table>
 
-|<img src="- index-rocketseat/assets/images/receita.png" align="left" width="100">
-
-[Página de Receita](https://erikaestudar.github.io/course-project/pagina-de-receita/index.html)|
-
-|<img src="- index-rocketseat/assets/images/local-turistico.png" align="left" width="100">
-
-[Local Turístico](https://erikaestudar.github.io/course-project/local-turistico/index.html)|
-
-|<img src="- index-rocketseat/assets/images/travelgram.png" align="left" width="100">
-
-[Travelgram](https://erikaestudar.github.io/course-project/travelgram/index.html)|
-
-|<img src="- index-rocketseat/assets/images/noticias.png" align="left" width="100">
-
-[Portal de notícias](https://erikaestudar.github.io/course-project/portal-de-noticias/index.html)|
-
-|<img src="- index-rocketseat/assets/images/matricula.png" align="left" width="100">
-
-[Formulário de matrícula](https://erikaestudar.github.io/course-project/formulario-de-matricula/index.html) |
-
-|<img src="- index-rocketseat/assets/images/portfolio.png" align="left" width="100">
-
-[Portfolio Dev](https://erikaestudar.github.io/course-project/portfolio-dev/index.html)|
  
-|<img src="- index-rocketseat/assets/images/zingen.png" width="100">
-
-[Zingen](https://erikaestudar.github.io/course-project/zingen/index.html)|
-
-|<img src="- index-rocketseat/assets/images/convite.png" width="100">
-
-[Formulário de convite](https://erikaestudar.github.io/course-project/formulario-de-convite/index.html)|
- 
-
 ### GitHub Code :computer:
 
 - Página de Receita: [code](https://github.com/Erikaestudar/course-project/tree/main/pagina-de-receita)

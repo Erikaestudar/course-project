@@ -3,8 +3,8 @@
 
 ## Menu
  
-- [Projetos](#projetos)
-- [Códigos](#github-code)
+- [Projetos](#projetos-books)
+- [Códigos](#github-code-computer)
 
 ## Projetos :books:
 

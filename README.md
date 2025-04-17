@@ -15,7 +15,7 @@
 - Formulário de matrícula: [site](https://erikaestudar.github.io/course-project/formulario-de-matricula/index.html)
 - Portfolio Dev: [site](https://erikaestudar.github.io/course-project/portfolio-dev/index.html)
 - Zingen: [site](https://erikaestudar.github.io/course-project/zingen/index.html)
-- Formulário de convite: [site](formulario-de-convite/index.html)
+- Formulário de convite: [site](https://erikaestudar.github.io/course-project/formulario-de-convite/index.html)
 
 ### GitHub Code :computer:
 

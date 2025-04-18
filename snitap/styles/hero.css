@@ -126,9 +126,10 @@ h1 span {
     max-width: 2.5rem;
     right: 0;
     bottom: 35%;
+    opacity: 0;
 
     transform: translateX(400%);
-    animation: slideIn 2.2s 800ms ease both;
+    animation: slideIn 2.2s 800ms ease both, apper 100ms 800ms both;
 }
 
 @keyframes slideIn {
@@ -219,7 +220,7 @@ h1 span {
     }
 }
 
-@media (width < 37.5em) {
+@media (width < 58.75em) {
     section.hero {
         flex-direction: column-reverse;
     }
@@ -228,14 +229,13 @@ h1 span {
         max-width: 20rem;
     }
 
-    .hero .buttons {
-        display: inline-flex;
-        flex-direction: column-reverse;
-        flex-wrap: wrap;
-    }
-
     .hero .buy {
         height: 4.5rem;
+        max-width: 17.75;
+    }
+
+    .hero .buttons {
+        margin-bottom: 3rem;
     }
 
     .hero > div:nth-child(2) {
@@ -257,7 +257,15 @@ h1 span {
     }
 }
 
-@media (width >= 37.5rem) {
+@media (width < 68.875em) {
+    .hero .buttons {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+}
+
+@media (width >= 58.75rem) {
     section.hero {
         padding: 2.5rem 2rem;
         justify-content: space-between;

@@ -2,12 +2,6 @@ header .desktop-only {
     display: none;
 }
 
-@media (width >= 62em) {
-    header strong.desktop-only {
-        display: block;
-    }
-}
-
 header {
     max-width: 80em;
     margin: auto;
@@ -35,6 +29,7 @@ header {
 
 #secondary {
     padding-block: 0.875rem;
+    
     border: 1px solid var(--stroke-color);
     border-inline: none;
     justify-content: space-between;
@@ -45,8 +40,6 @@ header {
     scrollbar-width: none;   /* Firefox */
     -ms-overflow-style: none; /* IE e Edge */
 }
-
-
 
 @media (width <= 48em) {
     #primary {
@@ -64,5 +57,11 @@ header {
       
     #secondary a {
         display: inline-block;   /* importantíssimo pra funcionar com white-space */
+    }
+}
+
+@media (width >= 62em) {
+    header strong.desktop-only {
+        display: block;
     }
 }

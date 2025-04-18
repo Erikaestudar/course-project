@@ -47,7 +47,7 @@
       <a href="https://erikaestudar.github.io/course-project/formulario-de-convite/index.html">Formulário de convite</a>
     </td>
     <td align="center">
-      <!-- Pode deixar vazio ou adicionar mais -->
+      <a href="https://erikaestudar.github.io/course-project/snitap/index.html">Snitap Patins</a>
     </td>
   </tr>
 </table>

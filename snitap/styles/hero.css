@@ -3,6 +3,9 @@ section.hero {
     width: 100%;
     padding: 1rem 1.5rem;
     margin-inline: auto;
+
+    align-items: center;
+    overflow: hidden;
 }
 
 h1 {
@@ -32,7 +35,7 @@ h1 span:nth-child(3) {
 
 h1 span {
     display: block;
-    animation: slideUp 6s infinite ease;
+    animation: slideUp 5s 2s infinite ease;
 }
 
 /* buttons */
@@ -46,15 +49,12 @@ h1 span {
     align-items: center;
     gap: .75rem;
 
-    max-width: 17.75rem;
-    height: 4.5rem;
     border-radius: 5rem;
-
     transition: scale 350ms;
 }
 
 .hero .buy {
-    padding: 0.75rem 1.5rem;
+    padding: 1.5rem 3rem;
     background-color: var(--snitap-sun);
 }
 
@@ -75,6 +75,76 @@ h1 span {
 
 .hero .button:hover {
     scale: 1.1;
+}
+
+/* patins */
+.hero > div:nth-child(2) {
+    display: block;
+    width: 100%;
+    max-width: 30.5rem;
+    height: 30.5rem;
+}
+
+.hero > div:nth-child(2) .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero > div:nth-child(2) .content img {
+    position: absolute;
+    width: 100%;
+}
+
+.hero > div:nth-child(2) .content img[src*="ellipse"] {
+    width: 94%;
+    top: 3%;
+    left: 3%;
+
+    transform: translateX(200%);
+    animation: slideIn 3s 200ms ease forwards;
+}
+
+.hero > div:nth-child(2) .content img[src*="patins"] {
+    z-index: 1;
+
+    transform: translateX(200%);
+    animation: slideIn 3s ease forwards;
+}
+
+.hero > div:nth-child(2) .content img[src*="stars-1"] {
+    max-width: 5.5rem;
+    top: 30%;
+    z-index: 0;
+
+    opacity: 0;
+    transform: translateX(400%);
+    animation: slideIn 2s 800ms ease both, apper 100ms 800ms both;
+}
+
+.hero > div:nth-child(2) .content img[src*="stars-2"] {
+    max-width: 2.5rem;
+    right: 0;
+    bottom: 35%;
+
+    transform: translateX(400%);
+    animation: slideIn 2.2s 800ms ease both;
+}
+
+@keyframes slideIn {
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes apper {
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
@@ -150,18 +220,47 @@ h1 span {
 }
 
 @media (width < 37.5em) {
+    section.hero {
+        flex-direction: column-reverse;
+    }
+
     .hero h1 {
         max-width: 20rem;
     }
+
     .hero .buttons {
+        display: inline-flex;
         flex-direction: column-reverse;
         flex-wrap: wrap;
+    }
+
+    .hero .buy {
+        height: 4.5rem;
+    }
+
+    .hero > div:nth-child(2) {
+        max-width: 19.5rem;
+        height: 19.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero > div:nth-child(2) .content img[src*="stars-1"] {
+        max-width: 3.503125rem;
+        top: 30%;
+        z-index: 0;
+    }
+    
+    .hero > div:nth-child(2) .content img[src*="stars-2"] {
+        max-width: 1.598125rem;
+        right: 0rem;
+        bottom: 35%;
     }
 }
 
 @media (width >= 37.5rem) {
     section.hero {
         padding: 2.5rem 2rem;
+        justify-content: space-between;
     }
 
     h1 {
@@ -176,10 +275,6 @@ h1 span {
     h1 span {
         display: block;
         animation: slideUp 6s infinite ease;
-    }
-
-    .hero .button.buy {
-        padding: 1.5rem 3rem;
     }
 
     @keyframes slideUp {

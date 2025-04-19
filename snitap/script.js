@@ -22,6 +22,10 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 })
 
+/*
+
 window.addEventListener("resize", () => {
     location.reload()
 })
+    
+*/

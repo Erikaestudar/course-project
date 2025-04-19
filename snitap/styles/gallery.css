@@ -99,17 +99,14 @@ section.gallery {
 @media (min-width: 37.5em) {
     .content figure {
         border-radius: 2.5rem;
-        overflow: hidden;
+        overflow: hidden;  
     }
 
-  
     .gallery .content {
         display: grid;
         grid-template-areas: 
         "A B B"
         "C C D";
-
-        gap: 2.5rem;
     }
 
     .content figure:nth-child(1) {
@@ -138,6 +135,35 @@ section.gallery {
     }
 }
 
+@media (23.4375em < width <= 37.5em) {
+    .content figure > img {
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+}
+
+@media (37.5em < width < 54.375em) {
+    .content figure:hover figcaption {
+        transform: translateY(0);
+    }
+}
+
+@media (width >= 54.375em) {
+    .gallery .content {
+        gap: 2.5rem;
+    }
+
+    .content figure > img {
+        height: 25rem;
+        object-fit: cover;
+    }
+
+    .content figure:hover figcaption {
+        transform: translateY(0);
+    }
+}
+
 @media (width >= 80em) {
     section.gallery {
         --px-py: 2.5rem 2rem;  
@@ -148,12 +174,7 @@ section.gallery {
     }
 
     .gallery .content  {
-        --m-top: 2rem;
-    }
-
-    .content figure > img {
-        height: 25rem;
-        object-fit: cover;
+        --m-top: 2rem;  
     }
 
     .content figure:hover figcaption {

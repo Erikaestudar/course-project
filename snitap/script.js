@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let widthImg = imgFirst.offsetWidth + 24
 
     // Calcula quantas imagens precisam pra preencher toda a tela
-    let amountImgs = Math.ceil(widthScreen / widthImg) + 1
+    let amountImgs = Math.ceil(widthScreen / widthImg) + 10
 
     // Agora vamos adicionar imagens até chegar na quantidade calculada
     for (let i = 1; i < amountImgs; i++) {

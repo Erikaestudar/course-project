@@ -1,0 +1,122 @@
+footer {
+    --px-py-footer: 3rem 1.5rem;
+    max-width: 80rem;
+    width: 100%;
+
+    padding: var(--px-py-footer);
+    margin-inline: auto;
+}
+
+footer .logo {
+    align-items: center;
+    gap: .75rem;
+
+    font: 700 1.25rem/1.3 'Syne', sans-serif;
+}
+
+footer .logo img {
+    width: 2rem;
+    transition: rotate 350ms;
+}
+
+footer .logo:hover img {
+    /* 
+    só o rotate está disponível na maioria dos navegadores, mas se caso não tiver você pode usar:
+    transform: rotate(90deg);
+    */
+    rotate: 90deg;
+}
+
+footer .bottom {
+    gap: 1.5rem;
+}
+
+.bottom a {
+    width: fit-content;
+    position: relative;
+}
+
+.bottom a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.bottom a::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--snitap-sky-mid);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 200ms linear;
+}
+
+footer .social-links {
+    align-items: center;
+}
+
+.social-links img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.social-links a {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    position: relative;
+}
+
+.social-links a:hover::before {
+    scale: 1;
+}
+
+.social-links a::before {
+    content: "";
+
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+
+    background-color: var(--snitap-sun);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    scale: 0;
+    transition: scale 200ms;
+}
+
+
+@media (width <= 37.5em) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer .bottom {
+        margin-block: 3rem;
+        flex-direction: column;
+    }
+}
+
+@media (width >= 80em) {
+    footer {
+        --px-py-footer: 4rem 2rem 2rem;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav.bottom {
+        gap: 2rem;
+    }
+}

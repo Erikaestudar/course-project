@@ -93,11 +93,11 @@ footer .social-links {
     z-index: -1;
 
     scale: 0;
-    transition: scale 200ms;
+    transition: scale 200ms ease;
 }
 
 
-@media (width <= 37.5em) {
+@media (width < 50em) {
     footer {
         flex-direction: column;
     }
@@ -108,14 +108,16 @@ footer .social-links {
     }
 }
 
-@media (width >= 80em) {
+@media (width >= 50em) {
     footer {
         --px-py-footer: 4rem 2rem 2rem;
 
         align-items: center;
         justify-content: space-between;
     }
+}
 
+@media (width >= 80em) {
     nav.bottom {
         gap: 2rem;
     }

@@ -1,20 +1,8 @@
-@media screen and (min-width: 992px) {
-    #mobile-menu {
-        display: none;
-    }
-
-    nav ul {
-        gap: 1.5rem;
-    }
-
-    menu#itens {
-        display: none !important;
-    }
-}
-
-nav {
-    display: flex;
-    flex-flow: row nowrap;
+nav.container {
+    width: 100%;
+    max-width: 80rem;
+    height: auto;
+    margin-inline: auto;
     justify-content: space-between;
     align-items: center;
 
@@ -22,16 +10,116 @@ nav {
     padding-block: 1.25rem;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    
-    padding-block: 0.5rem;
+nav > a img {
+    max-width: 9rem;
+    transition: transform 0.3s ease-in-out;
 }
 
-nav ul li:last-child img {
+nav.container ul {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.search-input-wrapper {
+    flex: 1; /* Deixa o espaço flexível */
+    max-width: 25rem; /* Aqui você controla o limite */
+}
+
+.search-input-wrapper input {
+    display: none;
+    width: 100%;
+    min-width: 6.5rem;
+    max-width: 100%;
+
+    appearance: none;
+    border: none;
+    outline: none;
+    padding-block: 0.30rem;
+    border-radius: 2rem;
+    text-indent: 0.8rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+li.desktop-only {
+    display: none;
+}
+
+nav ul li.perfil-nav img {
     width: 2.5rem;
     height: 2.5rem;
     object-fit: cover;
+}
+
+@media (width < 62em) {
+    .hidden {
+        display: block;
+    }
+
+    nav .perfil-nav {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav .items-menu {
+        background-color: var(--background-color);
+        box-shadow:
+        0 2px 5px rgb(0 0 0 / .1),
+        0 9px 9px rgb(0 0 0 / .09),
+        0 20px 12px rgb(0 0 0 / .12),
+        0 36px 15px rgb(0 0 0 / .01);
+        border-radius: .5rem;
+        padding: .875rem;
+
+        display: none;
+        position: absolute;
+        bottom: -5.5rem;
+        right: 1rem;
+        z-index: 1;
+    }
+
+    nav .items-menu ul {
+        width: 7rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    nav .items-menu ul li {
+        margin-right: auto;
+    }
+}
+
+@media (width >= 62em) {
+    nav > a img {
+        max-width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav.container ul {
+        padding-block: 0.5rem;
+        gap: 1.5rem;
+    } 
+
+    nav .hidden {
+        display: none;
+    }
+
+    nav .desktop-only {
+        display: block;
+    }
+
+    nav ul li.perfil-nav {
+        display: block;
+    }
+
+    .search-input-wrapper input {
+        min-width: 19rem;
+        max-width: 100%;
+    }
 }

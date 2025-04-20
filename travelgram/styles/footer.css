@@ -1,9 +1,21 @@
 footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
+    width: 100%;
+    max-width: 80rem;
     padding-block: 1.5rem;
-
-    font: 0.875rem/150% var(--font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
+@media (width >= 36.225em) {
+    footer span:nth-child(1) {
+        margin-right: auto;
+    }
+
+    footer {
+        padding-inline: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

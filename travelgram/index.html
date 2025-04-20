@@ -6,7 +6,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <title>Travelgram | Perfil de viagens</title>
     <link rel="stylesheet" href="styles/index.css">
     
@@ -14,47 +13,69 @@
 </head>
 <body>
     <div class="bg-surface-color">
-        <nav class="container">
-            <a href="#" id="logo">
+        <nav class="container flex">
+            <a href="#">
                 <img src="assets/Logo.svg" alt="Logomarca">
             </a>
+
             <ul id="primary-menu">
-                <li>
-                    <span>
-                        <label for="search-input">buscar</label>
-                        <input type="text" name="search-input" id="search-input" class="show-search">
-                    </span>
+                <li class="search-input-wrapper">
+                    <label for="search-input" aria-label="search">
+                        <input type="text" name="search-input" id="search-input">
+                    </label>
                 </li>
-                <li>
-                    <img class="search-btn" src="assets/icons/MagnifyingGlass.svg" alt="ícone de busca">
+
+                <li class="search-btn">
+                    <a href="#search">
+                        <img src="assets/icons/MagnifyingGlass.svg" alt="ícone de lupa">
+                    </a>
                 </li>
-                <li class="hidden"><a href="#">Explorer</a></li>
-                <li class="hidden"><a href="#">Minhas viagens</a></li>
-                <li class="hidden"><a href="#">
-                    <img src="assets/Profile pic.png" alt="Imangem de Isabela Torres"></a>
+
+                <li class="items-menu hidden">
+                    <ul>
+                        <li class="">
+                            <a href="#perfil">Perfil</a>
+                        </li>
+                        <li>
+                            <a href="#explorar">Explorar</a>
+                        </li>
+                        <li>
+                            <a href="#minhas-viagens">Minhas viagens</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="hidden">
+                    <svg id="items-btn" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#6C6C6C"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </li>
+
+                <li class="desktop-only">
+                    <ul>
+                        <li>
+                            <a href="#explorar">Explorar</a>
+                        </li>
+                        <li>
+                            <a href="#minhas-viagens">Minhas viagens</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="perfil-nav">
+                    <a href="#perfil">
+                        <img src="assets/Profile pic.png" alt="Imangem de Isabela Torres">
+                    </a>
                 </li>
             </ul>
-            <div id="mobile-menu">
-                <span>
-                    <svg id="itens-btn" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#6C6C6C"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-                </span>
-            </div>
         </nav>
-        <menu id="itens">
-            <ul>
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Explorar</a></li>
-                <li><a href="#">Minhas viagens</a></li>
-            </ul>
-        </menu>
-    
+
         <header>
             <div class="container">
                 <div id="profile">
                     <img src="assets/Profile pic.png" alt="Imagem de Isabela Torres">
+
                     <div>
                         <h1>Isabela Torres</h1>
-                        <p id="destaque">Isabela Torres
+                        <p>Isabela Torres
                             Amante de viagens, cultura e gastronomia. 🌍✈️
                         </p>
                         <p>
@@ -63,24 +84,22 @@
                     </div>
                 </div>
 
-                <figure id="box-info">
-                    <ul id="info">
-                        <li>
-                            <img src="assets/icons/MapPin.svg" alt="Ícone de mapa">
-                            <span>São Paulo, Brazil</span>
-                        </li>
-                        <li><img src="assets/icons/AirplaneTilt.svg" alt="Ícone do avião">
-                            <span>37 países</span>
-                        </li>
-                        <li>
-                            <img src="assets/icons/Image.svg" alt="Ícone de fotografia">
-                            <span>240 fotos</span>
-                        </li>
-                    </ul>
-                </figure>
-            </div>
+                <ul id="info">
+                    <li>
+                        <img src="assets/icons/MapPin.svg" alt="Ícone de mapa">
+                        <span>São Paulo, Brazil</span>
+                    </li>
+                    <li><img src="assets/icons/AirplaneTilt.svg" alt="Ícone do avião">
+                        <span>37 países</span>
+                    </li>
+                    <li>
+                        <img src="assets/icons/Image.svg" alt="Ícone de fotografia">
+                        <span>240 fotos</span>
+                    </li>
+                </ul>
         </header>
     </div>
+
     <main class="container">
         <img src="assets/images/Image 01.png" alt="...">
         <img src="assets/images/Image 02.png" alt="...">
@@ -95,6 +114,7 @@
         <img src="assets/images/Image 11.png" alt="...">
         <img src="assets/images/Image 12.png" alt="...">
     </main>
+    
     <footer class="container">
         <span>Travelgram &copy; 2024</span>
         <span>Termos de uso</span>

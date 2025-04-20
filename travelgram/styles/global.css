@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --brand-color: hsl(7, 84%, 62%);
     --background-color: hsl(0, 0%, 100%);
@@ -21,7 +22,25 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
+    font: var(--text-md);
     color: var(--text-color-secondary);
+    background-color: var(--background-color);
+}
+
+.container {
+    padding-inline: 1.5rem;
+    max-width: 80rem; /* 1280px */
+    margin-inline: auto;
+}
+
+.bg-surface-color {
+    background-color: var(--surface-color);
+}
+
+ul {
+    list-style: none;
 }
 
 a {
@@ -34,12 +53,12 @@ a:hover {
     text-decoration: underline;
 }
 
-.container {
-    padding-inline: 2rem;
-    max-width: 80rem; /* 1280px */
-    margin-inline: auto;
+.flex {
+    display: flex;
 }
 
-.bg-surface-color {
-    background-color: var(--surface-color);
+@media (width >= 80em) {
+    .container {
+        padding-inline: 2rem;
+    }
 }

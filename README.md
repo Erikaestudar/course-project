@@ -64,3 +64,4 @@
 - Portfolio Dev: [code](https://github.com/Erikaestudar/course-project/tree/main/portfolio-dev)
 - Zingen: [code](https://github.com/Erikaestudar/course-project/tree/main/zingen)
 - Formulário de convite: [code](https://github.com/Erikaestudar/course-project/tree/main/formulario-de-convite)
+- Snitap Patins: [code](https://github.com/Erikaestudar/course-project/tree/main/snitap)

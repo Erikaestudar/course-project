@@ -13,7 +13,7 @@ main img {
     object-fit: cover;
 }
 
-@media (23.4375em < width < 40.625em) {
+@media (26em < width < 40.625em) {
     main img {
         width: 13rem;
         height: 13rem;

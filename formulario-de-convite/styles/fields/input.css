@@ -1,3 +1,5 @@
+/* Sobre o evento */
+
 .input-wrapper, 
 .radio-wrapper,
 .textarea-wrapper {
@@ -23,6 +25,7 @@ textarea {
 
 input:focus,
 textarea:focus,
+input[type="datetime-local"]:focus-within,
 .colors-box input[type="radio"]:checked + .circle,
 .theme-container .card:has(:checked)  {
     outline: .125rem solid var(--brand-light);
@@ -30,12 +33,23 @@ textarea:focus,
     outline-offset: .1px;
 }
 
-input[type="radio"] {
-    display: none;
+input[type="datetime-local"] {
+    min-width: 100%;
 }
+
+/* esconde o ícone de calendário no Safari */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/* Configuração do radio Tipo */
 
 .info {
     display: flex;
+}
+
+input[type="radio"] {
+    display: none;
 }
 
 .radio-inner {
@@ -67,18 +81,15 @@ input[type="radio"] {
     transition: color 0.3s ease;
 }
 
-.radio-box::before:has(input:checked) {
-    border: 1px solid var(--input-placeholder);
-}
-
 .radio-box input[type="radio"]:checked ~ span {
     color: var(--text-heading);
 }
 
 .online input[type="radio"]:checked ~ div.image svg path,
 .presential input[type="radio"]:checked ~ div.image svg path {
-   stroke: var(--brand-light);
-   transition: background-image 0.3s ease;
+    /* stroke pinta as linhas podendo deixar a imagem com o traço mais grosso, e fill colore o fundo deixando mais suave */
+    fill: var(--brand-light);
+    transition: background-image 0.3s ease;
 }
 
 .radio-box:hover {

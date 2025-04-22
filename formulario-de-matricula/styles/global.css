@@ -27,7 +27,6 @@
 
 body {
     overflow: hidden;
-
     font: var(--text);
     color: var(--text-secondary);
 }
@@ -53,16 +52,8 @@ img {
     flex: 2;
 }
 
-@media (width <= 48em) {
-    .flex-mobile {
-        flex-direction: column;
+@media (width < 62em) {
+    body {
+        overflow: auto;
     }
-    
-    .flex-mobile {
-        flex-direction: column;
-    }
-}
-
-aside .mobile-mode-primary {
-    display: none;
 }

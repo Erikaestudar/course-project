@@ -18,35 +18,31 @@ button {
     background-color: #F3541C;
 }
 
-.btn-secondary {
-    margin-left: auto;
-    border: 1px solid var(--text-highlight);
-}
-
 .btn-secondary:hover,
 .btn-secondary:focus {
     color: var(--brand-dark);
     outline: .25rem solid var(--surface-secondary);
 }
 
-@media (width <= 24em) {
-    button {
-        padding: 1rem 1.5rem;
-    }
+.btn-secondary {
+    border: 1px solid var(--text-highlight);
+}
 
+@media (width <= 26em) {
     div.actions-wrapper {
         flex-direction: column;
         text-align: center;
         margin-inline: auto;
-        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
     }
+}
 
-    main .btn-primary {
-        width: 85%;
+@media (width > 26em) {
+    div.actions-wrapper {
+        margin-bottom: 2.5rem;
     }
-
-    main .btn-secondary {
-        margin: auto;
-        width: 85%;
+    
+    .btn-secondary {
+        margin-left: auto;
     }
 }

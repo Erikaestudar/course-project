@@ -1,58 +1,113 @@
 #app {
-    display: grid;
-    grid-template-columns: 51.25% 48.75%;
-
+    width: 100%;
+    max-width: 80rem;
     height: 100vh;
+    margin-inline: auto;
+
     overflow: hidden;
 }
 
 main {
-    overflow: auto;
-    padding: 4rem;
+    overflow: auto; 
+    max-width: 100%;
+    padding: 1.5rem;
 }
 
-@media (width <= 48em) {
-    main {
-        padding: 2rem;
-    }
-}
-
-main .main-container {
+.main-container {
     max-width: 33rem;
-    margin-left: auto;
+    margin-inline: auto;
 }
 
-main .back {
+.main-container .back {
     display: flex;
     align-items: center;
     gap: .5rem;
     margin-bottom: 1.5rem;
-    cursor: pointer;
 }
 
-main h1 {
+.main-container h1 {
     font: 600 1.5rem/1.25 var(--font-family);
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
 }
 
 aside {
+    max-width: 100%;
     background-color: var(--surface-secondary);
-    padding: 4rem;
+    padding: 1.5rem;
 }
 
-aside .aside-container {
+.aside-container {
+    margin-inline: auto;
     max-width: 31rem;
 }
 
-aside .aside-container > img {
+.aside-container h2 {
+    font: 600 2.5rem/1.25 var(--font-family);
+    margin-bottom: .5rem;
+}
+
+.aside-container h2 span {
+    color: var(--text-highlight);
+}
+
+.aside-container > img {
     margin-top: 2rem;
 }
 
-aside h2 {
-    font: 600 2.5rem/1.25 var(--font-family);
-    margin-bottom: .5rem;
-
-    & span {
-        color: var(--text-highlight);
+@media (width < 62em) {
+    #app {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
     }
+
+    .aside-container header img {
+        display: block;
+        margin-inline: auto;
+        width: 22rem;
+    }
+
+    .aside-container header h2,
+    .aside-container header p {
+        display: none;
+    }
+}
+
+@media (width >= 62em) {
+    #app {
+        display: grid;
+        grid-template-columns: 51.25% 48.75%;
+    }
+
+    main {
+        padding: 4rem;
+    }
+
+    .main-container {
+        margin-left: auto;
+    }
+
+    aside {
+        padding: 4rem;
+    }
+
+    .aside-container {
+        max-width: 31rem;
+        margin-right: auto;
+    }
+
+    .aside-container h2 {
+        font: 600 2.5rem/1.25 var(--font-family);
+    }
+}
+
+@media (width > 80em) {
+    .aside-container h2 {
+        margin-block: 1.5rem;
+    }
+
+    .aside-container > img {
+        margin-top: 5rem;
+    }
+    
 }

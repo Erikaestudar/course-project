@@ -34,8 +34,8 @@ input:not(:focus):valid + .error {
 .terms-inner label {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
     cursor: pointer;
+    gap: .5rem;
 }
 
 .terms-inner span {

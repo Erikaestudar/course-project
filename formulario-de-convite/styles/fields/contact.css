@@ -25,15 +25,19 @@ input:not(:focus):valid + .error {
 
 /* Termos e Privacidade - checkbox */
 
-.terms-container legend {
+.terms-container {
     width: 100%;
-    height: 1px;
-    background-color: var(--input-stroke);
+    border-top: 1px solid var(--input-stroke);
+    margin-bottom: 3rem;
 }
 
-.terms-inner label {
+.terms-container .terms-inner:nth-child(1) {
+    margin-top: 2.5rem;
+}
+
+.terms-inner {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     gap: .5rem;
 }
@@ -42,39 +46,30 @@ input:not(:focus):valid + .error {
     color: var(--brand-light);
 }
 
-.terms-inner {
-    margin-top: 2.5rem;
-}
-
-.terms-inner input {
-    appearance: none;
-    
-    width: 1.25rem;
-    height: 1.25rem;
-    border: 1px solid var(--input-stroke);
-    border-radius: 0.25rem;
-    background-color: var(--input-base);
-    cursor: pointer;
+.checkbox-wrapper {
     position: relative;
-    transition: all 0.3s ease;
 }
 
-.terms-inner input:checked {
-    border: 1px solid var(--brand-light);
-}
-
-.terms-inner input:checked::after {
-    content: '';
+.checkbox-wrapper [type="checkbox"] {
+    all: unset;
     position: absolute;
-    left: 0.40rem;
-    top: 0.10rem;
-    width: 0.33rem;
-    height: 0.7rem;
-    border: 0.5px solid var(--brand-light);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+    inset: 0;
 }
 
+.checkbox-wrapper .checkbox-image {
+    flex: 0 0 1.5rem;
+    height: 1.5rem;
+    background: url(../../assets/icons/checkbox.svg) no-repeat;
+}
+
+.checkbox-wrapper:hover .checkbox-image,
+.checkbox-wrapper:focus-within .checkbox-image {
+    background: url(../../assets/icons/checkbox-hover.svg) no-repeat;
+}
+
+.checkbox-wrapper:has(:checked) .checkbox-image {
+    background: url(../../assets/icons/checkbox-checked.svg) no-repeat;
+}
 
 /* Botão */
 

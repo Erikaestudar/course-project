@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-title: #f8fbfb;
+    --text-body: #e2e7e9;
+    --text-label: #bac6c9;
+
+    --shape-background: #00050a;
+    --shape-base: #000f1f;
+    --shape-hover: #001933;
+    --shape-stroke: #002347;
+
+    --blue-dark: #144a72;
+    --blue-mid: #2374a4;
+    --pink-low: #3f0f41;
+    --pink-dark: #7d298a;
+    --pink-base: #9547a5;
+
+    --ff: "Raleway", sans-serif;
+    --title-lg: 700 3rem var(--ff);
+    --subtitle: 500 2rem/200% var(--ff);
+    --body-lg: 400 1.25rem/140% var(--ff);
+}
+
+/* GLOBAL */
+
+body {
+    font: 400 0.875rem/140% var(--ff);
+    background-color: var(--shape-background);
+}
+
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    font: 700 0.875rem var(--ff);
+    color: var(--text-title);
+    border-radius: .5rem;
+}
+
+img {
+    width: 100%;
+}
+
+/* HERO - NAV and First animation book */ 
+
+#hero {
+    width: 100%;
+    max-width: 90rem;
+    height: 95.25rem;
+    margin-inline: auto;
+    border: 2px solid #bac6c9;
+}
+
+#hero nav {
+    width: 100%;
+    max-width: 70rem;
+    margin-inline: auto;
+    margin-top: 1.25rem;
+    padding-inline: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hero nav .logo-image {
+    width: 4.034375rem;
+    height: 3rem;
+    background: url(../assets/images/hero-01/logo-symbol.svg) no-repeat center/cover;
+}
+
+#hero nav button {
+    width: 5.5625rem;
+    height: 2.5rem;
+    background-color: var(--pink-dark);
+}
+
+#hero nav button:hover {
+    background-image: radial-gradient(var(--pink-base)10%, var(--pink-dark));
+}
+
+@media (width >= 80em) {
+    #hero nav {
+        margin-top: 2.5rem;
+    }
+
+    #hero nav .logo-image {
+        width: 14.375rem;
+        height: 3.625rem;
+        background: url(../assets/images/hero-01/logo-horizontal.svg) no-repeat center/cover;
+    }
+}
+

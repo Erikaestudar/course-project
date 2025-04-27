@@ -30,7 +30,10 @@
 
 body {
     font: 400 0.875rem/140% var(--ff);
+    color: var(--text-body);
     background-color: var(--shape-background);
+    position: relative;
+    overflow-x: hidden;
 }
 
 button {
@@ -51,16 +54,16 @@ img {
 #hero {
     width: 100%;
     max-width: 90rem;
-    height: 95.25rem;
+    height: 46.6875rem;
     margin-inline: auto;
-    border: 2px solid #bac6c9;
+    position: relative;
 }
 
 #hero nav {
     width: 100%;
     max-width: 70rem;
     margin-inline: auto;
-    margin-top: 1.25rem;
+    padding-top: 1.25rem;
     padding-inline: 1.25rem;
     display: flex;
     justify-content: space-between;
@@ -83,9 +86,273 @@ img {
     background-image: radial-gradient(var(--pink-base)10%, var(--pink-dark));
 }
 
+/* header */
+
+#hero header {
+    max-width: 20.9375rem;
+    text-align: center;
+    margin-inline: auto;
+    margin-top: 2.5rem;
+}
+
+#hero header h1 {
+    padding-inline: 1rem;
+    color: var(--text-title);
+    font: 700 1.75rem var(--ff);
+    margin-bottom: 1rem;
+}
+
+#hero header span {
+    font: 400 0.875rem var(--ff);
+}
+
+/* HERO-1 - animation */
+/* Image */
+#hero .hero-background {
+    width: 100%;
+    max-width: 90rem;
+    height: 29rem;
+    margin-inline: auto;
+    
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    z-index: -1;
+    background: url(../assets/images/hero-01/hero-background.png) no-repeat center/cover;
+}
+
+#hero .hero-background > div {
+    width: 100%;
+    max-width: 90rem;
+    height: 29rem;
+    margin-inline: auto;
+    background: linear-gradient(180deg, rgba(0, 5, 10, 0) 0%, rgba(0, 5, 10, 0) 100%);
+}
+
+
+/* BLUR - ELLIPSES */
+#hero .blur-container {
+    width: 49.62rem;
+    height: 29.9375rem;
+
+    position: absolute;
+    left: calc(50% - 793.92px/2 + 0px);
+    top: calc(50% - 479px/2 + 112px);
+}
+
+#hero .blur-container div {
+    background-color: var(--pink-low);
+}
+
+/* Ellipse 1 */
+#hero .blur-container .ellipse-1 {
+    width: 12.6825rem;
+    height: 12.6825rem;
+    filter: blur(138.038px);
+
+    /*position: absolute;*/
+    right: -209.46px;
+    top: 393.13px;
+}
+
+/* Ellipse 2 */
+#hero .blur-container .ellipse-2 {
+    width: 9.7125rem;
+    height: 9.7125rem;
+    filter: blur(104.975px);
+
+    /*position: absolute;*/
+    left: -209.46px;
+    top: 298.9px;
+}
+
+/* Ellipse 3 */
+#hero .blur-container .ellipse-3 {
+    width: 13.896875rem;
+    height: 13.896875rem;
+    filter: blur(179.367px);
+
+    /*position: absolute;*/
+    left: calc(50% - 222.35px/2 - 82.86px);
+    top: 502.65px;
+}
+
+/* Ellipse 4 */
+#hero .blur-container .ellipse-4 {
+    width: 6.225rem;
+    height: 6.225rem;
+    filter: blur(96.7092px);
+
+    /*position: absolute;*/
+    right: -157.8px;
+    top: 246px;
+}
+
+
+/* HERO 1 - ICONS CONTAINER */
+#hero .icons-container {
+    max-width: 23.4375rem;
+    height: 15.6875rem;
+    margin-inline: auto;
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 496px;
+}
+
+#hero .icons-container h2 {
+    width: 20.9375rem;
+    height: 5.5rem;
+    margin-inline: auto;
+    text-align: center;
+    font: 500 1rem/140% var(--ff);
+
+    position: absolute;
+    left: calc(50% - 335px/2);
+    top: calc(50% - 88px/2 + 0.16px);
+}
+
+/* opened-spellbook  */
+#hero .icons-container .icon-01 {
+    width: 2.5rem;
+    height: 2.5rem; 
+
+    position: absolute;
+    left: calc(50% - 40px/2 + 94.85px);
+    top: calc(50% - 40px/2 - 77.5px);
+    transform: rotate(15deg);
+}
+
+#hero .icons-container .icon-01:hover {
+    transform: rotate(25deg);
+}
+
+/* ouija-planchette  */
+#hero .icons-container .icon-02 {
+    width: 2rem;
+    height: 2rem;
+
+    position: absolute;
+    left: calc(50% - 32px/2 - 157.5px);
+    top: calc(50% - 32px/2 + 63.5px);
+    transform: rotate(-30deg);
+}
+
+#hero .icons-container .icon-02:hover {
+    transform: rotate(-45deg);
+}
+
+/* crystal-ball  */
+#hero .icons-container .icon-03 {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    position: absolute;
+    left: calc(50% - 40px/2 + 148.5px);
+    top: calc(50% - 40px/2 + 64.5px);
+    transform: rotate(15deg);
+}
+
+#hero .icons-container .icon-03:hover {
+    transform: rotate(0deg);
+}
+
+@media (width > 59.375em ) {
+    #hero header {
+        max-width: 41rem;
+        text-align: center;
+        margin-inline: auto;
+        margin-top: 5rem;
+    }
+    
+    #hero header h1 {
+        color: var(--text-title);
+        font: var(--title-lg);
+        margin-bottom: 2rem;
+    }
+    
+    #hero header span {
+        display: inline-block;
+        max-width: 35.5rem;
+        padding-inline: 1.5rem;
+        font: 400 1.25rem/140% var(--ff);
+    }
+
+   
+}
+
+@media (59.375em < width < 80em) {
+    #hero .hero-background {
+        height: auto;
+        margin-inline: auto;
+    }
+
+     /* HERO 1 - ICONS CONTAINER */
+     #hero .icons-container {
+        max-width: 75rem;
+        height: 25rem;
+
+        position: absolute;
+        top: calc(50% - 88px/2 + 320px);
+        top: 840px;
+    }
+
+    #hero .icons-container h2 {
+        width: 62rem;
+        font: 500 2rem/140% var(--ff);
+
+        position: absolute;
+        left: calc(50% - 950px/2);
+        top: 114px;
+    }
+
+    /* Speelbook */
+    #hero .icons-container .icon-01 {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 9999px;
+
+        position: absolute;
+        left: calc(50% - 88px/2 + 4.19px);
+        top: calc(50% - 88px/2 - 147.74px);
+    }
+
+    /* Ouija Planchette */
+    #hero .icons-container .icon-02 {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 9090px;
+
+        position: absolute;
+        left: calc(50% - 80px/2 - 400px);
+        top: calc(50% - 80px/2 + 89.13px);
+    }
+
+    /* Crystal Ball */
+    #hero .icons-container .icon-03 {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 8181px;
+        
+        position: absolute;
+        left: calc(50% - 72px/2 + 430px);
+        top: calc(50% - 72px/2 + 90.15px);
+    }
+}
+
 @media (width >= 80em) {
+    #hero {
+        height: 95.25rem;
+
+        opacity: 1;
+        transition: opacity 3s;
+    }
+
     #hero nav {
-        margin-top: 2.5rem;
+        padding-top: 2.5rem;
     }
 
     #hero nav .logo-image {
@@ -93,5 +360,167 @@ img {
         height: 3.625rem;
         background: url(../assets/images/hero-01/logo-horizontal.svg) no-repeat center/cover;
     }
-}
+    
+    #hero .hero-background > div {
+        width: 90rem;
+        height: 59.25rem;
+        margin-inline: auto;
+        background: linear-gradient(180deg, rgba(0, 5, 10, 0) 0%, rgba(0, 5, 10, 0) 100%);
+    }
 
+    /* HERO-1 - animation */
+
+    /* header - desktop */
+    #hero header h1 {
+        opacity: 0;
+        animation: apper 3s 350ms both;
+    }
+
+    #hero header span {
+        opacity: 0;
+        animation: apper 3s 1s both;
+    }
+
+    /* Image */
+    #hero .hero-background {
+        width: 90rem;
+        height: 59.25rem;
+        margin-inline: auto;
+        opacity: 0;
+        animation: apper 4s .5ms both;
+    }
+
+    @keyframes apper {
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* BLUR - ELLIPSES - DESKTOP */
+
+    #hero .blur-container {
+        width: 120.0625rem;
+        height: 72.4375rem;
+        left: -259px;
+        top: 366px;
+    }
+
+    /* Ellipse 1 */
+    #hero .blur-container .ellipse-1 {
+        width: 30.6875rem;
+        height: 30.6875rem;
+        filter: blur(334px);
+
+        position: absolute;
+        left: calc(50% - 491px/2 + 696.5px);
+        top: 722px;
+    }
+
+    /* Ellipse 2 */
+    #hero .blur-container .ellipse-2 {
+        width: 23.5rem;
+        height: 23.5rem;
+        filter: blur(254px);
+
+        position: absolute;
+        left: calc(50% - 376px/2 - 791px);
+        top: 494px;
+    }
+
+    /* Ellipse 3 */
+    #hero .blur-container .ellipse-3 {
+        width: 33.625rem;
+        height: 33.625rem;
+        filter: blur(434px);
+
+        position: absolute;
+        left: calc(50% - 538px/2 - 219px);
+        top: 987px;
+    }
+
+    /* Ellipse 4 */
+    #hero .blur-container .ellipse-4 {
+        width: 15.0625rem;
+        height: 15.0625rem;
+        filter: blur(234px);
+
+        position: absolute;
+        left: calc(50% - 241px/2 + 696.5px);
+        top: 366px;
+    }
+
+    /* HERO 1 - ICONS CONTAINER */
+    #hero .icons-container {
+        max-width: 75rem;
+        height: 25rem;
+
+        position: absolute;
+        top: calc(50% - 88px/2 + 320px);
+        bottom: 80px;
+    }
+
+    #hero .icons-container h2 {
+        width: 71rem;
+        height: 8rem;
+        font: var(--subtitle);
+
+        position: absolute;
+        left: calc(50% - 1136px/2);
+        top: 114px;
+    }
+
+    #hero .icons-container h2 > span {
+        color: var(--blue-mid);
+    }
+
+    /* Speelbook */
+    #hero .icons-container .icon-01 {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 9999px;
+
+        position: absolute;
+        left: calc(50% - 88px/2 + 4.19px);
+        top: calc(50% - 88px/2 - 147.74px);
+        transform: rotate(20.76deg);
+    }
+
+    #hero .icons-container .icon-01:hover {
+        scale: 1.1;
+        transform: rotate(35deg);
+    }
+
+    /* Ouija Planchette */
+    #hero .icons-container .icon-02 {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 9090px;
+
+        position: absolute;
+        left: calc(50% - 80px/2 - 433.96px);
+        top: calc(50% - 80px/2 + 89.13px);
+        transform: rotate(99.47deg);
+    }
+
+    #hero .icons-container .icon-02:hover {
+        scale: 1.1;
+        transform: rotate(115deg)
+    }
+
+    /* Crystal Ball */
+    #hero .icons-container .icon-03 {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 8181px;
+        
+        position: absolute;
+        left: calc(50% - 72px/2 + 550.14px);
+        top: calc(50% - 72px/2 + 90.15px);
+        transform: rotate(-14.48deg);
+    }
+
+    #hero .icons-container .icon-03:hover {
+        scale: 1.1;
+        transform: rotate(-3deg);
+    }
+}

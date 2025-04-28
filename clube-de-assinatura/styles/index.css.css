@@ -16,6 +16,7 @@
 
     --blue-dark: #144a72;
     --blue-mid: #2374a4;
+    --blue-ligth: #73b6d2;
     --pink-low: #3f0f41;
     --pink-dark: #7d298a;
     --pink-base: #9547a5;
@@ -226,10 +227,6 @@ img {
     transform: rotate(15deg);
 }
 
-#hero .icons-container .icon-01:hover {
-    transform: rotate(25deg);
-}
-
 /* ouija-planchette  */
 #hero .icons-container .icon-02 {
     width: 2rem;
@@ -239,10 +236,6 @@ img {
     left: calc(50% - 32px/2 - 157.5px);
     top: calc(50% - 32px/2 + 63.5px);
     transform: rotate(-30deg);
-}
-
-#hero .icons-container .icon-02:hover {
-    transform: rotate(-45deg);
 }
 
 /* crystal-ball  */
@@ -256,9 +249,6 @@ img {
     transform: rotate(15deg);
 }
 
-#hero .icons-container .icon-03:hover {
-    transform: rotate(0deg);
-}
 
 @media (width > 59.375em ) {
     #hero header {
@@ -280,8 +270,6 @@ img {
         padding-inline: 1.5rem;
         font: 400 1.25rem/140% var(--ff);
     }
-
-   
 }
 
 @media (59.375em < width < 80em) {
@@ -313,7 +301,6 @@ img {
     #hero .icons-container .icon-01 {
         width: 5.5rem;
         height: 5.5rem;
-        border-radius: 9999px;
 
         position: absolute;
         left: calc(50% - 88px/2 + 4.19px);
@@ -324,7 +311,6 @@ img {
     #hero .icons-container .icon-02 {
         width: 5rem;
         height: 5rem;
-        border-radius: 9090px;
 
         position: absolute;
         left: calc(50% - 80px/2 - 400px);
@@ -335,7 +321,6 @@ img {
     #hero .icons-container .icon-03 {
         width: 4.5rem;
         height: 4.5rem;
-        border-radius: 8181px;
         
         position: absolute;
         left: calc(50% - 72px/2 + 430px);
@@ -346,9 +331,6 @@ img {
 @media (width >= 80em) {
     #hero {
         height: 95.25rem;
-
-        opacity: 1;
-        transition: opacity 3s;
     }
 
     #hero nav {
@@ -469,10 +451,6 @@ img {
         top: 114px;
     }
 
-    #hero .icons-container h2 > span {
-        color: var(--blue-mid);
-    }
-
     /* Speelbook */
     #hero .icons-container .icon-01 {
         width: 5.5rem;
@@ -480,14 +458,9 @@ img {
         border-radius: 9999px;
 
         position: absolute;
-        left: calc(50% - 88px/2 + 4.19px);
+        left: calc(50% - 88px/2 - 14px);
         top: calc(50% - 88px/2 - 147.74px);
-        transform: rotate(20.76deg);
-    }
-
-    #hero .icons-container .icon-01:hover {
-        scale: 1.1;
-        transform: rotate(35deg);
+        transform: scale(0.8) rotate(15deg);    
     }
 
     /* Ouija Planchette */
@@ -497,14 +470,9 @@ img {
         border-radius: 9090px;
 
         position: absolute;
-        left: calc(50% - 80px/2 - 433.96px);
+        left: calc(50% - 80px/2 - 520.96px);
         top: calc(50% - 80px/2 + 89.13px);
-        transform: rotate(99.47deg);
-    }
-
-    #hero .icons-container .icon-02:hover {
-        scale: 1.1;
-        transform: rotate(115deg)
+        transform: scale(0.8) rotate(92deg);
     }
 
     /* Crystal Ball */
@@ -516,11 +484,115 @@ img {
         position: absolute;
         left: calc(50% - 72px/2 + 550.14px);
         top: calc(50% - 72px/2 + 90.15px);
-        transform: rotate(-14.48deg);
+        transform: scale(0.8) rotate(-14deg);
+    }
+
+
+    /* - ANIMATED - HERO 1  ICONS CONTAINER */
+    #hero .icons-container .icon-01,
+    #hero .icons-container .icon-02,
+    #hero .icons-container .icon-03 {
+        opacity: 0;
+        transition: opacity 1s ease; 
+    }
+
+    /* Partes da frase */
+    #hero .icons-container h2 .part-01,
+    #hero .icons-container h2 .part-02,
+    #hero .icons-container h2 .part-03 {
+        color: var(--text-title);
+        opacity: 0.3;
+        transition: opacity 1s ease;
+    }
+
+    /* Spans dentro de cada parte */
+    #hero .icons-container h2 .part-01 > span,
+    #hero .icons-container h2 .part-02 > span,
+    #hero .icons-container h2 .part-03 > span {
+        color: inherit;
+        transition: color 0.5s ease;
+    }
+
+    /* Quando passa o mouse no container */
+    /* Ícone e parte 1 */
+    #hero .icons-container:hover .icon-01 {
+        opacity: 2;
+        transition-delay: 0.20ms;
+    }
+
+    #hero .icons-container:hover .part-01 {
+        opacity: 1;
+        transition-delay: 0.25ms;
+    }
+    
+    #hero .icons-container:hover .part-01 > span {
+        color: var(--blue-ligth);
+        transition-delay: 0.40ms;
+    }
+
+    #hero .icons-container .icon-01:hover {
+        transform: scale(1) rotate(25deg);
+        transition: transform 1s ease;
+    }
+
+
+    /* Ícone e parte 2 */
+    #hero .icons-container:hover .icon-02 {
+        opacity: 2;
+        transition-delay: 0.8s;
+    }
+    
+    #hero .icons-container:hover .part-02 {
+        opacity: 1;
+        transition-delay: 0.85s;
+    }
+    
+    #hero .icons-container:hover .part-02 > span {
+        color: var(--blue-ligth);
+        transition-delay: 0.89s;
+    }
+
+    #hero .icons-container .icon-02:hover {
+        transform: scale(1) rotate(110deg);
+        transition: transform 1s ease;
+    }
+
+    /* Ícone e parte 3 */
+    #hero .icons-container:hover .icon-03 {
+        opacity: 1;
+        transition-delay: 1.6s;
+    }
+    
+    #hero .icons-container:hover .part-03 {
+        opacity: 1;
+        transition-delay: 1.65s;
+    }
+    
+    #hero .icons-container:hover .part-03 > span {
+        color: var(--blue-ligth);
+        transition-delay: 1.69s;
     }
 
     #hero .icons-container .icon-03:hover {
-        scale: 1.1;
-        transform: rotate(-3deg);
+        transform: scale(1) rotate(-24deg);
+        transition: transform 1s ease;
     }
+
+    /*
+    #hero .icons-container:not(:hover) .icon-01 {
+        rotate: 15deg;
+        animation: shrinkOut 0.8s forwards ease;
+    }
+
+    @keyframes shrinkOut {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(0);
+            opacity: 0;
+          }
+    }
+    */
 }

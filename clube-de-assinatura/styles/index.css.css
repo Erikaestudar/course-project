@@ -460,7 +460,7 @@ img {
         position: absolute;
         left: calc(50% - 88px/2 - 14px);
         top: calc(50% - 88px/2 - 147.74px);
-        transform: scale(0.8) rotate(15deg);    
+        transform: rotate(15deg);    
     }
 
     /* Ouija Planchette */
@@ -472,7 +472,7 @@ img {
         position: absolute;
         left: calc(50% - 80px/2 - 520.96px);
         top: calc(50% - 80px/2 + 89.13px);
-        transform: scale(0.8) rotate(92deg);
+        transform: rotate(92deg);
     }
 
     /* Crystal Ball */
@@ -484,7 +484,7 @@ img {
         position: absolute;
         left: calc(50% - 72px/2 + 550.14px);
         top: calc(50% - 72px/2 + 90.15px);
-        transform: scale(0.8) rotate(-14deg);
+        transform: rotate(-14deg);
     }
 
 
@@ -493,7 +493,8 @@ img {
     #hero .icons-container .icon-02,
     #hero .icons-container .icon-03 {
         opacity: 0;
-        transition: opacity 1s ease; 
+        scale: 0.8;
+        transition: opacity 1s ease, scale 1s ease; 
     }
 
     /* Partes da frase */
@@ -517,17 +518,18 @@ img {
     /* Ícone e parte 1 */
     #hero .icons-container:hover .icon-01 {
         opacity: 2;
-        transition-delay: 0.20ms;
+        scale: 1;
+        transition-delay: 10ms;
     }
 
     #hero .icons-container:hover .part-01 {
         opacity: 1;
-        transition-delay: 0.25ms;
+        transition-delay: 10ms;
     }
     
     #hero .icons-container:hover .part-01 > span {
         color: var(--blue-ligth);
-        transition-delay: 0.40ms;
+        transition-delay: 10ms;
     }
 
     #hero .icons-container .icon-01:hover {
@@ -539,6 +541,7 @@ img {
     /* Ícone e parte 2 */
     #hero .icons-container:hover .icon-02 {
         opacity: 2;
+        scale: 1;
         transition-delay: 0.8s;
     }
     
@@ -560,6 +563,7 @@ img {
     /* Ícone e parte 3 */
     #hero .icons-container:hover .icon-03 {
         opacity: 1;
+        scale: 1;
         transition-delay: 1.6s;
     }
     
@@ -577,22 +581,4 @@ img {
         transform: scale(1) rotate(-24deg);
         transition: transform 1s ease;
     }
-
-    /*
-    #hero .icons-container:not(:hover) .icon-01 {
-        rotate: 15deg;
-        animation: shrinkOut 0.8s forwards ease;
-    }
-
-    @keyframes shrinkOut {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(0);
-            opacity: 0;
-          }
-    }
-    */
 }

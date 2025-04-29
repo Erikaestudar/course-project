@@ -53,7 +53,7 @@
   </tr>
   <tr>
     <td align="center">
-      <a href="https://erikaestudar.github.io/course-project/clube-de-assinatura/index.html">Snitap Patins</a>
+      <a href="https://erikaestudar.github.io/course-project/clube-de-assinatura/index.html">Encantos Literários</a>
     </td>
   </tr>
 </table>

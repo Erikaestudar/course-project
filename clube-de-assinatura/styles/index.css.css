@@ -296,7 +296,7 @@ img {
     height: 12.98rem;
 
     position: absolute;
-    left: calc(50% - 157.19px/2 - 21.04px);
+    left: calc(50% - 147.19px/2 - 21.04px);
     top: calc(50% - 207.68px/2 - 1.89px);
 }
 
@@ -306,12 +306,12 @@ img {
     height: 11.3075rem;
 
     position: absolute;
-    left: 223.86px;
+    left: 229.86px;
     top: 28.03px;
     z-index: -1;
     filter: drop-shadow(0.673184px 1.34637px 6.73184px rgba(0, 0, 0, 0.25));
     border-radius: 1.34637px;
-    transform: rotate(11.12deg);
+    transform: rotate(12deg);
 }
 
 /* MARCADOR PINK IMAGE  */
@@ -320,7 +320,7 @@ img {
     height: 11.275625rem;
 
     position: absolute;
-    left: 259.12px;
+    left: 265.12px;
     top: 58px;
     z-index: -2;
     filter: drop-shadow(0.673184px 1.34637px 6.73184px rgba(0, 0, 0, 0.25));
@@ -334,7 +334,7 @@ img {
     height: 5.3375rem;
 
     position: absolute;
-    left: 40.5px;
+    left: 43.5px;
     top: 210.56px;
     transform: rotate(-7.55deg);
     z-index: -1;
@@ -346,7 +346,7 @@ img {
     height: 0.63125rem;
 
     position: absolute;
-    left: 45.5px;
+    left: 50.5px;
     top: 48.09px;
 }
 
@@ -355,7 +355,7 @@ img {
     height: 2.674875rem;
 
     position: absolute;
-    left: 26px;
+    left: 29px;
     top: 186.51px;
 }
 
@@ -364,7 +364,7 @@ img {
     height: 50.99px;
 
     position: absolute;
-    left: 249.63px;
+    left: 255.63px;
     top: 225.81px;
 }
 
@@ -376,21 +376,21 @@ img {
 /* Livro em capa dura */
 .book-container span.top {
     position: absolute;
-    left: 10.46px;
+    left: 16px;
     top: 24.77px;
 }
 
 /* Broche exclusivo */
 .book-container span.center {
     position: absolute;
-    left: 11.12px;
+    left: 13.12px;
     top: 162.36px;
 }
 
 /* Marca páginas temático */
 .book-container span.bottom {
     position: absolute;
-    left: 203.58px;
+    left: 207.58px;
     top: 283.69px;
 }
 

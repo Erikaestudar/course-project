@@ -25,6 +25,7 @@
     --title-lg: 700 3rem var(--ff);
     --subtitle: 500 2rem/200% var(--ff);
     --body-lg: 400 1.25rem/140% var(--ff);
+    --body-md: 400 1rem/140% var(--ff);
 }
 
 /* GLOBAL */
@@ -204,7 +205,7 @@ img {
     top: 496px;
 }
 
-#hero .icons-container h2 {
+#hero .icons-container > div {
     width: 20.9375rem;
     height: 5.5rem;
     margin-inline: auto;
@@ -250,6 +251,149 @@ img {
 }
 
 
+/* SECTION KIT-BOOK AND GIFT */
+
+.kit-book {
+    max-width: 23.4375rem;
+    height: 39.4375rem;
+    margin-inline: auto;
+    text-align: center;
+    margin-top: 6.5rem;
+}
+
+.kit-book .title-container {
+    margin-bottom: 4rem;
+}
+
+.kit-book .title-inner img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.kit-book .title-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kit-book .title-inner h2 {
+    font: 700 1.5rem var(--ff);
+    color: var(--text-title);
+}
+
+
+/* BOOK - CONTAINER */
+.kit-book .book-container {
+    max-width: 23.4375rem;
+    height: 19.9375rem;
+    padding-inline: 1rem;
+    position: relative;
+}
+
+/* BOOK IMAGE */
+.kit-book .book-container img:nth-child(1) {
+    max-width: 9.824375rem;
+    height: 12.98rem;
+
+    position: absolute;
+    left: calc(50% - 157.19px/2 - 21.04px);
+    top: calc(50% - 207.68px/2 - 1.89px);
+}
+
+/* MARCADOR YELLOW IMAGE  */
+.kit-book .book-container img:nth-child(2) {
+    max-width: 3.65rem;
+    height: 11.3075rem;
+
+    position: absolute;
+    left: 223.86px;
+    top: 28.03px;
+    z-index: -1;
+    filter: drop-shadow(0.673184px 1.34637px 6.73184px rgba(0, 0, 0, 0.25));
+    border-radius: 1.34637px;
+    transform: rotate(11.12deg);
+}
+
+/* MARCADOR PINK IMAGE  */
+.kit-book .book-container img:nth-child(3) {
+    max-width: 3.618125rem;
+    height: 11.275625rem;
+
+    position: absolute;
+    left: 259.12px;
+    top: 58px;
+    z-index: -2;
+    filter: drop-shadow(0.673184px 1.34637px 6.73184px rgba(0, 0, 0, 0.25));
+    border-radius: 1.34637px;
+    transform: rotate(20deg); 
+}
+
+/* BROCHE IMAGE */
+.kit-book .book-container img:nth-child(4) {
+    max-width: 4.680625rem;
+    height: 5.3375rem;
+
+    position: absolute;
+    left: 40.5px;
+    top: 210.56px;
+    transform: rotate(-7.55deg);
+    z-index: -1;
+}
+
+/* Vector */
+.book-container img[src*="top"] {
+    width: 3.67125rem;
+    height: 0.63125rem;
+
+    position: absolute;
+    left: 45.5px;
+    top: 48.09px;
+}
+
+.book-container img[src*="center"] {
+    width: 2.205625rem;
+    height: 2.674875rem;
+
+    position: absolute;
+    left: 26px;
+    top: 186.51px;
+}
+
+.book-container img[src*="bottom"] {
+    width: 48.96px;
+    height: 50.99px;
+
+    position: absolute;
+    left: 249.63px;
+    top: 225.81px;
+}
+
+.book-container span {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+}
+
+/* Livro em capa dura */
+.book-container span.top {
+    position: absolute;
+    left: 10.46px;
+    top: 24.77px;
+}
+
+/* Broche exclusivo */
+.book-container span.center {
+    position: absolute;
+    left: 11.12px;
+    top: 162.36px;
+}
+
+/* Marca páginas temático */
+.book-container span.bottom {
+    position: absolute;
+    left: 203.58px;
+    top: 283.69px;
+}
+
 @media (width > 59.375em ) {
     #hero header {
         max-width: 41rem;
@@ -288,7 +432,7 @@ img {
         top: 840px;
     }
 
-    #hero .icons-container h2 {
+    #hero .icons-container > div {
         width: 62rem;
         font: 500 2rem/140% var(--ff);
 
@@ -439,9 +583,12 @@ img {
         position: absolute;
         top: calc(50% - 88px/2 + 320px);
         bottom: 80px;
+
+        will-change: transform, opacity; /* Hint to browser for optimization */
+        backface-visibility: hidden; /* Prevent flickering in some browsers */
     }
 
-    #hero .icons-container h2 {
+    #hero .icons-container > div {
         width: 71rem;
         height: 8rem;
         font: var(--subtitle);
@@ -494,22 +641,22 @@ img {
     #hero .icons-container .icon-03 {
         opacity: 0;
         scale: 0.8;
-        transition: opacity 1s ease, scale 1s ease; 
+        transition: opacity 1s ease, scale 0.5s ease, transform 1s ease; 
     }
 
     /* Partes da frase */
-    #hero .icons-container h2 .part-01,
-    #hero .icons-container h2 .part-02,
-    #hero .icons-container h2 .part-03 {
+    #hero .icons-container > div .part-01,
+    #hero .icons-container > div .part-02,
+    #hero .icons-container > div .part-03 {
         color: var(--text-title);
         opacity: 0.3;
         transition: opacity 1s ease;
     }
 
     /* Spans dentro de cada parte */
-    #hero .icons-container h2 .part-01 > span,
-    #hero .icons-container h2 .part-02 > span,
-    #hero .icons-container h2 .part-03 > span {
+    #hero .icons-container > div .part-01 > span,
+    #hero .icons-container > div .part-02 > span,
+    #hero .icons-container > div .part-03 > span {
         color: inherit;
         transition: color 0.5s ease;
     }
@@ -534,7 +681,7 @@ img {
 
     #hero .icons-container .icon-01:hover {
         transform: scale(1) rotate(25deg);
-        transition: transform 1s ease;
+        transition: transform .5s ease;
     }
 
 
@@ -542,43 +689,106 @@ img {
     #hero .icons-container:hover .icon-02 {
         opacity: 2;
         scale: 1;
-        transition-delay: 0.8s;
+        transition-delay: 0.7s;
     }
     
     #hero .icons-container:hover .part-02 {
         opacity: 1;
-        transition-delay: 0.85s;
+        transition-delay: 0.7s;
     }
     
     #hero .icons-container:hover .part-02 > span {
         color: var(--blue-ligth);
-        transition-delay: 0.89s;
+        transition-delay: 0.7s;
     }
 
     #hero .icons-container .icon-02:hover {
         transform: scale(1) rotate(110deg);
-        transition: transform 1s ease;
+        transition: transform .5s ease;
     }
 
     /* Ícone e parte 3 */
     #hero .icons-container:hover .icon-03 {
         opacity: 1;
         scale: 1;
-        transition-delay: 1.6s;
+        transition-delay: 1.4s;
     }
     
     #hero .icons-container:hover .part-03 {
         opacity: 1;
-        transition-delay: 1.65s;
+        transition-delay: 1.4s;
     }
     
     #hero .icons-container:hover .part-03 > span {
         color: var(--blue-ligth);
-        transition-delay: 1.69s;
+        transition-delay: 1.4s;
     }
 
     #hero .icons-container .icon-03:hover {
         transform: scale(1) rotate(-24deg);
-        transition: transform 1s ease;
+        transition: transform 0.5s ease;
+    }
+
+
+    /* SECTION KIT-BOOK AND GIFT */
+    .kit-book {
+        max-width: 90rem;
+        height: 99.125rem;
+    }  
+
+    .kit-book .title-inner h2 {
+        font: 700 2rem var(--ff);
+    }
+
+    .kit-book .title-inner p {
+        font: var(--body-md);
+    }
+
+    .kit-book .book-container {
+        max-width: 90rem;
+        height: 57.5rem;
+    }
+    
+    .kit-book .book-container img:nth-child(1) {
+        max-width: 29.1875rem;
+        height: 38.5625rem;
+
+        position: absolute;
+        left: calc(50% - 467px/2 - 13.5px);
+        top: calc(50% - 617px/2 - 17.5px);
+    }
+
+    .kit-book .book-container img:nth-child(2) {
+        max-width: 10.75rem;
+        height: 33.5rem;
+
+        position: absolute;
+        left: 882.75px;
+        top: 46px;
+
+        border-radius: 8px;
+        transform: rotate(12deg);
+    }
+
+    .kit-book .book-container img:nth-child(3) {
+        max-width: 10.75rem;
+        height: 33.5rem;
+
+        position: absolute;
+        left: 982.99px;
+        top: 140.16px;
+
+        border-radius: .5rem;
+        transform: rotate(20.5deg);
+    }
+
+    .kit-book .book-container img:nth-child(4) {
+        max-width: 13.875rem;
+        height: 15.875rem;
+
+        position: absolute;
+        left: 330px;
+        top: 590px;
+        transform: rotate(-8deg);
     }
 }

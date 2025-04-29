@@ -51,6 +51,11 @@
       <a href="https://erikaestudar.github.io/course-project/snitap/index.html">Snitap Patins</a>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <a href="https://erikaestudar.github.io/course-project/clube-de-assinatura/index.html">Snitap Patins</a>
+    </td>
+  </tr>
 </table>
 
  

@@ -35,7 +35,7 @@ body {
     color: var(--text-body);
     background-color: var(--shape-background);
     position: relative;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 button {
@@ -59,13 +59,14 @@ img {
     height: 46.6875rem;
     margin-inline: auto;
     position: relative;
+    overflow: hidden;
 }
 
 #hero nav {
     width: 100%;
     max-width: 70rem;
     margin-inline: auto;
-    padding-top: 1.25rem;
+    margin-top: 1.25rem;
     padding-inline: 1.25rem;
     display: flex;
     justify-content: space-between;
@@ -478,7 +479,7 @@ img {
     }
 
     #hero nav {
-        padding-top: 2.5rem;
+        margin-top: 2.5rem;
     }
 
     #hero nav .logo-image {

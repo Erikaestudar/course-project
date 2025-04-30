@@ -35,7 +35,8 @@ body {
     color: var(--text-body);
     background-color: var(--shape-background);
     position: relative;
-    overflow-x: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 button {
@@ -59,14 +60,13 @@ img {
     height: 46.6875rem;
     margin-inline: auto;
     position: relative;
-    overflow: hidden;
 }
 
 #hero nav {
     width: 100%;
     max-width: 70rem;
     margin-inline: auto;
-    margin-top: 1.25rem;
+    padding-top: 1.25rem;
     padding-inline: 1.25rem;
     display: flex;
     justify-content: space-between;
@@ -259,7 +259,9 @@ img {
     height: 39.4375rem;
     margin-inline: auto;
     text-align: center;
-    margin-top: 6.5rem;
+    padding-top: 5.5rem;
+
+    position: relative;
 }
 
 .kit-book .title-container {
@@ -282,6 +284,18 @@ img {
     color: var(--text-title);
 }
 
+.kit-book .ellipse-5 {
+    position: absolute;
+    width: 18.625rem;
+    height: 18.625rem;
+    left: calc(50% - 298px/2 + 0.5px);
+    top: calc(50% - 298px/2 - 7.5px);
+
+    background: var(--pink-low);
+    opacity: 0.5;
+    filter: blur(103.226px);
+    z-index: -3;
+}
 
 /* BOOK - CONTAINER */
 .kit-book .book-container {
@@ -417,6 +431,9 @@ img {
     }
 }
 
+
+/* MEDIA 950px ate 1280px */
+
 @media (59.375em < width < 80em) {
     #hero .hero-background {
         height: auto;
@@ -429,11 +446,19 @@ img {
         height: 25rem;
 
         position: absolute;
-        top: calc(50% - 88px/2 + 320px);
         top: 840px;
     }
 
     #hero .icons-container > div {
+        width: 62rem;
+        font: 500 2rem/140% var(--ff);
+
+        position: absolute;
+        left: calc(50% - 950px/2);
+        top: 114px;
+    }
+
+    #hero .icons-container h2 {
         width: 62rem;
         font: 500 2rem/140% var(--ff);
 
@@ -468,10 +493,143 @@ img {
         height: 4.5rem;
         
         position: absolute;
-        left: calc(50% - 72px/2 + 430px);
+        left: calc(50% - 72px/2 + 420px);
         top: calc(50% - 72px/2 + 90.15px);
     }
+
+    .kit-book {
+        max-width: 62rem;
+        height: 71.125rem;
+        margin-top: 35rem;
+    }  
+
+    .kit-book .title-inner h2 {
+        font: 700 2rem var(--ff);
+    }
+
+    .kit-book .title-inner p {
+        font: var(--body-md);
+    }
+
+    .kit-book .ellipse-5 {
+        position: absolute;
+        width: 48.125rem;
+        height: 48.125rem;
+        left: calc(50% - 930px/2 + 60px);
+        top: calc(50% - 930px/2 + 150px);
+    
+        background: var(--pink-low);
+        opacity: 0.5;
+        filter: blur(300px);
+    }
+
+    .kit-book .book-container {
+        max-width: 62rem;
+        height: 57.5rem;
+        position: relative;
+    }
+    
+    .kit-book .book-container img:nth-child(1) {
+        max-width: 27.1875rem;
+        height: 36.5625rem;
+
+        position: absolute;
+        left: calc(50% - 467px/2 - 13.5px);
+        top: calc(50% - 617px/2 - 17.5px);
+        z-index: 2;
+    }
+
+    .kit-book .book-container img:nth-child(2) {
+        max-width: 10.75rem;
+        height: 33.5rem;
+
+        position: absolute;
+        left: 625.75px;
+        top: 46px;
+
+        border-radius: 8px;
+        transform: rotate(12deg);
+    }
+
+    .kit-book .book-container img:nth-child(3) {
+        max-width: 10.75rem;
+        height: 33.5rem;
+
+        position: absolute;
+        left: 726.99px;
+        top: 140.16px;
+
+        border-radius: .5rem;
+        transform: rotate(19.2deg);
+    }
+
+    .kit-book .book-container img:nth-child(4) {
+        max-width: 13.875rem;
+        height: 15.875rem;
+
+        position: absolute;
+        left: 100px;
+        top: 560px;
+        transform: rotate(-8deg);
+    }
+
+    /* Vector */
+    .book-container img[src*="top"] {
+        width: 10rem;
+        height: 1.7rem;
+
+        position: absolute;
+        left: 8.5625rem;
+        top: 115.5px;
+    }
+
+    .book-container img[src*="center"] {
+        width: 6rem;
+        height: 6.5rem;
+
+        position: absolute;
+        left: 3.5rem;
+        top: 510px;
+    }
+
+    .book-container img[src*="bottom"] {
+        width: 8.090625rem;
+        height: 8.46875rem;
+
+        position: absolute;
+        left: 44.75rem;
+        top: 639px;
+    }
+
+    .book-container span {
+        font: var(--body-md);
+        color: var(--text-title);
+    }
+
+    /* Livro em capa dura */
+    .book-container span.top {
+        position: absolute;
+        left: 4.8rem;
+        top: 70px;
+    }
+
+    /* Broche exclusivo */
+    .book-container span.center {
+        position: absolute;
+        left: 2.625rem;
+        top: 460px;
+    }
+
+    /* Marca páginas temático */
+    .book-container span.bottom {
+        position: absolute;
+        left: 38.75rem;
+        top: 796px;
+    }
 }
+
+
+/* MEDIA ACIMA DE 1280px */
 
 @media (width >= 80em) {
     #hero {
@@ -479,7 +637,7 @@ img {
     }
 
     #hero nav {
-        margin-top: 2.5rem;
+        padding-top: 2.5rem;
     }
 
     #hero nav .logo-image {
@@ -540,7 +698,7 @@ img {
 
         position: absolute;
         left: calc(50% - 491px/2 + 696.5px);
-        top: 722px;
+        top: 330px;
     }
 
     /* Ellipse 2 */
@@ -551,7 +709,7 @@ img {
 
         position: absolute;
         left: calc(50% - 376px/2 - 791px);
-        top: 494px;
+        top: 264px;
     }
 
     /* Ellipse 3 */
@@ -562,7 +720,7 @@ img {
 
         position: absolute;
         left: calc(50% - 538px/2 - 219px);
-        top: 987px;
+        top: 587px;
     }
 
     /* Ellipse 4 */
@@ -573,7 +731,7 @@ img {
 
         position: absolute;
         left: calc(50% - 241px/2 + 696.5px);
-        top: 366px;
+        top: 26px;
     }
 
     /* HERO 1 - ICONS CONTAINER */
@@ -582,8 +740,7 @@ img {
         height: 25rem;
 
         position: absolute;
-        top: calc(50% - 88px/2 + 320px);
-        bottom: 80px;
+        top: calc(50% - 88px/2 + 325px);
 
         will-change: transform, opacity; /* Hint to browser for optimization */
         backface-visibility: hidden; /* Prevent flickering in some browsers */
@@ -735,6 +892,8 @@ img {
     .kit-book {
         max-width: 90rem;
         height: 99.125rem;
+        padding-top: 15.655rem;
+        position: relative;
     }  
 
     .kit-book .title-inner h2 {
@@ -745,28 +904,41 @@ img {
         font: var(--body-md);
     }
 
+    .kit-book .ellipse-5 {
+        position: absolute;
+        width: 58.125rem;
+        height: 58.125rem;
+        left: calc(50% - 930px/2);
+        top: calc(50% - 930px/2 - 200px);
+    
+        background: var(--pink-low);
+        opacity: 0.5;
+        filter: blur(300px);
+    }
+
     .kit-book .book-container {
         max-width: 90rem;
         height: 57.5rem;
+        position: relative;
     }
     
     .kit-book .book-container img:nth-child(1) {
         max-width: 29.1875rem;
         height: 38.5625rem;
-
+opacity: 0.1;
         position: absolute;
         left: calc(50% - 467px/2 - 13.5px);
         top: calc(50% - 617px/2 - 17.5px);
+        z-index: 2;
     }
 
     .kit-book .book-container img:nth-child(2) {
         max-width: 10.75rem;
         height: 33.5rem;
-
+        
         position: absolute;
         left: 882.75px;
         top: 46px;
-
         border-radius: 8px;
         transform: rotate(12deg);
     }
@@ -778,7 +950,6 @@ img {
         position: absolute;
         left: 982.99px;
         top: 140.16px;
-
         border-radius: .5rem;
         transform: rotate(20.5deg);
     }
@@ -792,4 +963,242 @@ img {
         top: 590px;
         transform: rotate(-8deg);
     }
+
+    /* Vector */
+    .book-container img[src*="top"] {
+        width: 10.90625rem;
+        height: 1.875rem;
+
+        position: absolute;
+        left: 345px;
+        top: 115.5px;
+    }
+
+    .book-container img[src*="center"] {
+        width: 6.553125rem;
+        height: 7.9375rem;
+
+        position: absolute;
+        left: 283.65px;
+        top: 510px;
+        z-index: -4;
+    }
+
+    .book-container img[src*="bottom"] {
+        width: 9.090625rem;
+        height: 9.46875rem;
+
+        position: absolute;
+        left: 955.3px;
+        top: 639px;
+    }
+
+    .book-container span {
+        font: var(--body-md);
+        color: var(--text-title);
+    }
+
+    /* Livro em capa dura */
+    .book-container span.top {
+        position: absolute;
+        left: 278px;
+        top: 70px;
+    }
+
+    /* Broche exclusivo */
+    .book-container span.center {
+        position: absolute;
+        left: 262px;
+        top: 460px;
+    }
+
+    /* Marca páginas temático */
+    .book-container span.bottom {
+        position: absolute;
+        left: 878px;
+        top: 796px;
+    }
+
+    /* ANIMAÇÕES KIT-BOOK */
+    /* Todos os demais elementos começam invisíveis e recolhidos */
+.book-container img:not(:first-child),
+.book-container span {
+  opacity: 0;
+  transform: scale(0.5) translate(0, 0);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+/* Quando o usuário passa o mouse em kit-book, começa a mágica */
+.kit-book:hover .book-container img:not(:first-child),
+.kit-book:hover .book-container span {
+  animation: fanOut 0.5s ease-out forwards;
+}
+
+/* Efeito de sair de trás */
+/* MARCADOR AMARELO - ANIMAÇÃO */
+.kit-book:hover .book-container img:nth-child(2) {
+    animation: yellowMarker 1s ease-out forwards;
+}
+
+.kit-book:hover .book-container img:nth-child(3) {
+    animation: pinkMarker 1s ease-out forwards;
+}
+
+.kit-book:hover .book-container img:nth-child(4) {
+    animation: pin 1s ease-out forwards;
+}
+
+.kit-book:hover .book-container img[src*="top"] {
+    animation: vectorTop 1s ease-out forwards;
+}
+
+.kit-book:hover .book-container span.top {
+    animation: spanTop 1s ease-out forwards;
+}
+
+.kit-book:hover .book-container img[src*="center"] {
+    animation: vectorCenter 1s ease-out forwards;
+}
+
+.kit-book:hover .book-container span.center {
+    animation: spanCenter 1s ease-out forwards;
+}
+
+@keyframes yellowMarker {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(-100%, 10%) rotate(0deg);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1.05) translate(1.3%, 0%) rotate(11deg); /* passa um pouco do ponto */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(0.9%, -0.2%) rotate(11deg); /* volta pra posição final */
+    }
+  }
+
+  /* MARCADOR ROSA - ANIMAÇÃO */
+  @keyframes pinkMarker {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(-220%, 20%) rotate(0deg);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1.05) translate(2.1%, -1.9%) rotate(19deg); 
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(1.9%, -1.7%) rotate(19deg); 
+    }
+  }
+
+  /* BROCHE - ANIMAÇÃO */
+  @keyframes pin {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(120%, -50%) rotate(0deg);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1) translate(2.2%, 0.40%) rotate(-10deg); 
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(1.8%, 0.27%) rotate(-10deg); 
+    }
+  }
+
+  /* VECTOR TOP + TEXTO */
+  @keyframes vectorTop {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(160%, 20rem);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1.05) translate(3%, 2%); 
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(2%, 0.27%); 
+    }
+  }
+
+  @keyframes spanTop {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(300%, 17rem);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1.05) translate(3%, 2%); 
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(2%, 0.27%); 
+    }
+  }
+
+   /* VECTOR CENTER + TEXTO */
+   @keyframes vectorCenter {
+    0% {
+        opacity: 1;
+        transform: scale(0.5) translate(28rem, -12rem);
+      }
+      70% {
+        opacity: 1;
+        transform: scale(1) translate(1%, 0.33%); 
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translate(0%, 0.27%); 
+      }
+  }
+
+  @keyframes spanCenter {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(28rem, -4.9rem);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1.05) translate(3.5%, 0.55%); 
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(2%, 0.27%); 
+    }
+  }
+
+/*
+@keyframes fanOut {
+  0% {
+    opacity: 1;
+    transform: scale(0.5) translate(-100%, 10%) rotate(0deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.1) translate(1.3%, 0%) rotate(11deg); 
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0.9%, -0.2%) rotate(11deg);
+  }
+}
+*/
+/* Dando delay pra criar o efeito leque */
+.kit-book:hover .book-container img:nth-child(2) { animation-delay: 0.1s; }
+.kit-book:hover .book-container img:nth-child(3) { animation-delay: 0.2s; }
+.kit-book:hover .book-container img:nth-child(4) { animation-delay: 0.3s; }
+.kit-book:hover .book-container img:nth-child(5) { animation-delay: 0.33s; }
+.kit-book:hover .book-container img:nth-child(6) { animation-delay: 0.35s; }
+.kit-book:hover .book-container img:nth-child(7) { animation-delay: 0.6s; }
+
+.kit-book:hover .book-container span.top { animation-delay: 0.35s; }
+.kit-book:hover .book-container span.center { animation-delay: 0.35s; }
+.kit-book:hover .book-container span.bottom { animation-delay: 0.9s; }
 }

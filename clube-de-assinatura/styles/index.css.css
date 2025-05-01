@@ -23,6 +23,8 @@
 
     --ff: "Raleway", sans-serif;
     --title-lg: 700 3rem var(--ff);
+    --title-md: 700 2.5rem var(--ff);
+    --title-Sx: 700 1rem var(--ff);
     --subtitle: 500 2rem/200% var(--ff);
     --body-lg: 400 1.25rem/140% var(--ff);
     --body-md: 400 1rem/140% var(--ff);
@@ -408,6 +410,118 @@ img {
     left: 207.58px;
     top: 283.69px;
 }
+
+/* PRICING-TABLE + CARDS */
+.pricing {
+    max-width: 23.4375rem;
+    height: 44.5rem;
+    margin-inline: auto;
+    border: 1px solid red;
+}
+
+.pricing h2 {
+    text-align: center;
+    margin-block: 12.125rem 3rem;
+    font: 700 1.5rem var(--ff);
+}
+
+.pricing .pricing-table {
+    /*display: flex;*/
+    gap: 3rem; 
+}
+
+.pricing-table .price-card {
+    width: 100%;
+    max-width: 17rem;
+    height: 25rem;
+    padding-block: 2rem;
+    margin-inline: auto;
+    background-color: var(--shape-base);
+    border: 2px solid var(--shape-stroke);
+    border-radius: 1.5rem; 
+}
+
+.pricing-table .price-card > div {
+    height: 21rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricing-table .price-card header {
+    width: 14rem;
+    margin-inline: auto;
+}
+
+.pricing-table .price-card h3 {
+    font: var(--title-Sx);
+    margin-bottom: 1.5rem;
+}
+
+.pricing-table .price p:nth-child(1) {
+    font: var(--title-md);
+    margin-bottom: .5rem;
+}
+
+.pricing-table .price p:nth-child(1) span {
+    font: var(--title-Sx);
+}
+
+.pricing-table .half-year {
+    position: relative;
+}
+
+
+/* Bunny */
+.pricing-table .half-year > img {
+    position: absolute;
+    width: 2.815625rem;
+    height: 3.120625rem;
+    left: 32px;
+    top: -50.19px;
+    display: none;
+}
+
+/* Details */
+.pricing-table .details {
+    width: 14rem;
+    height: auto;
+    margin-inline: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+
+.pricing-table .half-year .details button {
+    background-color: var(--pink-dark);
+}
+
+
+.pricing-table .details ul li {
+    font: 400 0.75rem/140% var(--ff);
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-table .details ul li img {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.pricing-table .details .subscribe-btn {
+    width: 13rem;
+    height: 2.5rem;
+    background-color: var(--blue-dark);
+    margin-inline: auto;
+}
+
+
+
+/* MEDIA ACIMA DE 950px */
 
 @media (width > 59.375em ) {
     #hero header {
@@ -925,7 +1039,7 @@ img {
     .kit-book .book-container img:nth-child(1) {
         max-width: 29.1875rem;
         height: 38.5625rem;
-opacity: 0.1;
+
         position: absolute;
         left: calc(50% - 467px/2 - 13.5px);
         top: calc(50% - 617px/2 - 17.5px);
@@ -1021,51 +1135,53 @@ opacity: 0.1;
 
     /* ANIMAÇÕES KIT-BOOK */
     /* Todos os demais elementos começam invisíveis e recolhidos */
-.book-container img:not(:first-child),
-.book-container span {
-  opacity: 0;
-  transform: scale(0.5) translate(0, 0);
-  transition: all 0.5s ease;
-  z-index: 1;
-}
+    .book-container img:not(:first-child),
+    .book-container span {
+    opacity: 0;
+    transform: scale(0.5) translate(0, 0);
+    transition: all 0.5s ease;
+    z-index: 1;
+    }
 
-/* Quando o usuário passa o mouse em kit-book, começa a mágica */
-.kit-book:hover .book-container img:not(:first-child),
-.kit-book:hover .book-container span {
-  animation: fanOut 0.5s ease-out forwards;
-}
+    /* Efeito de sair de trás */
+    /* MARCADOR AMARELO - ANIMAÇÃO */
+    .kit-book:hover .book-container img:nth-child(2) {
+        animation: yellowMarker 0.6s ease-out forwards;
+    }
 
-/* Efeito de sair de trás */
-/* MARCADOR AMARELO - ANIMAÇÃO */
-.kit-book:hover .book-container img:nth-child(2) {
-    animation: yellowMarker 1s ease-out forwards;
-}
+    .kit-book:hover .book-container img:nth-child(3) {
+        animation: pinkMarker 0.6s ease-out forwards;
+    }
 
-.kit-book:hover .book-container img:nth-child(3) {
-    animation: pinkMarker 1s ease-out forwards;
-}
+    .kit-book:hover .book-container img:nth-child(4) {
+        animation: pin 0.6s ease-out forwards;
+    }
 
-.kit-book:hover .book-container img:nth-child(4) {
-    animation: pin 1s ease-out forwards;
-}
+    .kit-book:hover .book-container img[src*="top"] {
+        animation: vectorTop 0.6s ease-out forwards;
+    }
 
-.kit-book:hover .book-container img[src*="top"] {
-    animation: vectorTop 1s ease-out forwards;
-}
+    .kit-book:hover .book-container span.top {
+        animation: spanTop 0.6s ease-out forwards;
+    }
 
-.kit-book:hover .book-container span.top {
-    animation: spanTop 1s ease-out forwards;
-}
+    .kit-book:hover .book-container img[src*="center"] {
+        animation: vectorCenter 0.6s ease-out forwards;
+    }
 
-.kit-book:hover .book-container img[src*="center"] {
-    animation: vectorCenter 1s ease-out forwards;
-}
+    .kit-book:hover .book-container span.center {
+        animation: spanCenter 0.6s ease-out forwards;
+    }
 
-.kit-book:hover .book-container span.center {
-    animation: spanCenter 1s ease-out forwards;
-}
+    .kit-book:hover .book-container img[src*="bottom"] {
+        animation: vectorBottom 0.6s ease-out forwards;
+    }
 
-@keyframes yellowMarker {
+    .kit-book:hover .book-container span.bottom {
+        animation: spanBottom 0.6s ease-out forwards;
+    }
+
+  @keyframes yellowMarker {
     0% {
       opacity: 1;
       transform: scale(0.5) translate(-100%, 10%) rotate(0deg);
@@ -1157,7 +1273,7 @@ opacity: 0.1;
         opacity: 1;
         transform: scale(1) translate(0%, 0.27%); 
       }
-  }
+    }
 
   @keyframes spanCenter {
     0% {
@@ -1174,31 +1290,183 @@ opacity: 0.1;
     }
   }
 
-/*
-@keyframes fanOut {
-  0% {
-    opacity: 1;
-    transform: scale(0.5) translate(-100%, 10%) rotate(0deg);
+  /* VECTOR BOTTOM + TEXTO */
+  @keyframes vectorBottom {
+    0% {
+        opacity: 1;
+        transform: scale(0.5) translate(-22rem, -12rem);
+      }
+      70% {
+        opacity: 1;
+        transform: scale(1) translate(1%, 0.33%); 
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translate(0%, 0.27%); 
+      }
   }
-  70% {
-    opacity: 1;
-    transform: scale(1.1) translate(1.3%, 0%) rotate(11deg); 
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate(0.9%, -0.2%) rotate(11deg);
-  }
-}
-*/
-/* Dando delay pra criar o efeito leque */
-.kit-book:hover .book-container img:nth-child(2) { animation-delay: 0.1s; }
-.kit-book:hover .book-container img:nth-child(3) { animation-delay: 0.2s; }
-.kit-book:hover .book-container img:nth-child(4) { animation-delay: 0.3s; }
-.kit-book:hover .book-container img:nth-child(5) { animation-delay: 0.33s; }
-.kit-book:hover .book-container img:nth-child(6) { animation-delay: 0.35s; }
-.kit-book:hover .book-container img:nth-child(7) { animation-delay: 0.6s; }
 
-.kit-book:hover .book-container span.top { animation-delay: 0.35s; }
-.kit-book:hover .book-container span.center { animation-delay: 0.35s; }
-.kit-book:hover .book-container span.bottom { animation-delay: 0.9s; }
+  @keyframes spanBottom {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translate(-14rem, -16rem);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1.05) translate(3.5%, 0.55%); 
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(2%, 0.27%); 
+    }
+  }
+
+  /* Efeito de retorno dos itens */
+    /* MARCADOR AMARELO - ANIMAÇÃO */
+    .kit-book:not(:hover) .book-container img:nth-child(2) {
+        animation: yellowMarkerBack 0.6s ease-out forwards;
+    }
+
+    .kit-book:not(:hover) .book-container img:nth-child(3) {
+        animation: pinkMarkerBack 0.6s ease-out forwards;
+    }
+
+    .kit-book:not(:hover) .book-container img:nth-child(4) {
+        animation: pinBack 0.6s ease-out forwards;
+    }
+
+    .kit-book:not(:hover) .book-container img[src*="top"] {
+        animation: vectorTopBack 0.6s ease-out forwards;
+    }
+
+    .kit-book:not(:hover) .book-container span.top {
+        animation: spanTopBack 0.6s ease-out forwards;
+    }
+
+    .kit-book:not(:hover) .book-container img[src*="center"] {
+        animation: vectorCenterBack 0.6s ease-out forwards;
+    }
+
+    .kit-book:not(:hover) .book-container span.center {
+        animation: spanCenterBack 0.6s ease-out forwards;
+    }
+
+    .kit-book:not(:hover) .book-container img[src*="bottom"] {
+        animation: vectorBottomBack 0.6s ease-out forwards;
+    }
+
+    .kit-book:not(:hover) .book-container span.bottom {
+        animation: spanBottomBack 0.6s ease-out forwards;
+    }
+
+  /* MARCADOR AMARELO - ANIMAÇÃO */  
+  @keyframes yellowMarkerBack {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(0.9%, -0.2%) rotate(11deg); /* volta pra posição final */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(0.5) translate(-100%, 10%) rotate(0deg);
+    }
+  }
+
+  /* MARCADOR ROSA - ANIMAÇÃO */
+  @keyframes pinkMarkerBack {
+    0% {
+      opacity: 1;
+      transform: scale(1) translate(1.9%, -1.7%) rotate(19deg); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.5) translate(-220%, 20%) rotate(0deg);
+      }
+  }
+
+  /* BROCHE - ANIMAÇÃO */
+  @keyframes pinBack {
+    0% {
+      opacity: 1;
+      transform: scale(1) translate(1.8%, 0.27%) rotate(-10deg); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.5) translate(120%, -50%) rotate(0deg);
+    }
+  }
+
+  /* VECTOR TOP + TEXTO */
+  @keyframes vectorTopBack {
+    0% {
+      opacity: 1;
+      transform: scale(1) translate(2%, 0.27%); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.5) translate(160%, 20rem);
+    }
+  }
+
+  @keyframes spanTopBack {
+    0% {
+      opacity: 1;
+      transform: scale(1) translate(2%, 0.27%); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.5) translate(300%, 17rem);
+    }
+  }
+
+   /* VECTOR CENTER + TEXTO */
+  @keyframes vectorCenterBack {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(0%, 0.27%); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.5) translate(28rem, -12rem);
+    }
+  }
+
+  @keyframes spanCenterBack {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(2%, 0.27%); 
+      }
+    100% {
+      opacity: 1;
+      transform: scale(0.5) translate(28rem, -4.9rem);
+      }
+  }
+
+  /* VECTOR BOTTOM + TEXTO */
+  @keyframes vectorBottomBack {
+      0% {
+        opacity: 1;
+        transform: scale(1) translate(0%, 0.27%); 
+      }
+      100% {
+        opacity: 1;
+        transform: scale(0.5) translate(-22rem, -12rem);
+      }
+  }
+
+  @keyframes spanBottomBack {
+    0% {
+        opacity: 1;
+        transform: scale(1) translate(2%, 0.27%); 
+      }
+    100% {
+      opacity: 1;
+      transform: scale(0.5) translate(-14rem, -16rem);
+    }
+  }
+
+
+  .pricing {
+    max-width: 90rem;
+    height: 77.125rem;
+  }
 }

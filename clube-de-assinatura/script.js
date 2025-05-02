@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', function() {
     let iconsContainer = document.querySelector('#hero .icons-container')
 
@@ -71,3 +72,16 @@ document.addEventListener('DOMContentLoaded', function() {
         startAnimation()
     })
 })
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const pricingTable = document.querySelector(".pricing-table");
+    let animationStarted = false;
+
+    pricingTable.addEventListener("mouseenter", () => {
+      if (!animationStarted) {
+        pricingTable.classList.add("start-animation");
+        animationStarted = true;
+      }
+    });
+});

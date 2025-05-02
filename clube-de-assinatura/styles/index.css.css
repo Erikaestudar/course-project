@@ -1552,8 +1552,9 @@ img {
   .pricing .pricing-table {
     max-width: 90rem;
     height: 47rem;
+    margin-inline: auto;
     position: relative;
-    border: 2px dashed white;
+    border: 1px solid rgb(244, 245, 247);
   }    
 
   .pricing svg {
@@ -1579,94 +1580,79 @@ img {
     justify-content: space-between;
 }
 
-  /* POSIÇÕES DOS CARTÕES DE PLANOS */
-    .monthly, .annual {
-        transform: scale(0.95) rotate(0deg) translateY(4rem);
-    }
+ /* Animação só dispara se tiver a classe start-animation */
+.pricing-table.start-animation .monthly {
+    animation: monthly .5s ease-out both;
+}
 
-    /* Animação só dispara se tiver a classe start-animation */
-    .pricing-table:hover .monthly {
-        opacity: 1;
-        animation: monthly 3s ease-out both;
-    }
-    .pricing-table:hover .annual {
-        opacity: 1;
-        animation: annual 3s ease-out both;
-    }
-    .pricing-table:hover .half-year {
-        animation: halfYear 3s ease-out both;
-    }
+.pricing-table.start-animation .annual {
+    animation: annual .5s ease-out both;
+}
 
+.pricing-table.start-animation .half-year {
+    animation: halfYear .5s ease-out both;
+}
 
-    /* Semestral */
-    .pricing-table .half-year {
-        position: absolute;
-        left: calc(50% - 288px/2 + 0.43px);
-        top: calc(16% + 16px/2 - 12.91px);
-        z-index: 1;
-    }
+/* Semestral */
+.pricing-table .half-year {
+    position: absolute;
+    left: calc(50% - 288px/2 + 0.43px);
+    top: calc(20% + 16px/2 - 12.91px);
+    z-index: 1;
+}
 
-    /* Mensal */
-    .pricing-table .monthly {
-        position: absolute;
-        left: calc(50% - 288px/2 - 300px);
-        top: calc(4% + 250px/2 + 26px);
-        transform: rotate(-8deg);
-    }
+/* Mensal */
+.pricing-table .monthly {
+    position: absolute;
+    left: calc(50% - 288px/2 + 0.43px);
+    top: calc(20% + 16px/2 - 12.91px);
+}
 
-    /* Anual */
-    .pricing-table .annual {
-        position: absolute;
-        left: calc(50% - 288px/2 + 302.67px);
-        top: calc(4% + 250px/2 + 26px);
-        transform: rotate(8deg);
-    }
+/* Anual */
+.pricing-table .annual {
+    position: absolute;
+    left: calc(50% - 288px/2 + 0.43px);
+    top: calc(20% + 16px/2 - 12.91px);
+}
 
-    /* ANIMAÇÃO DOS CARTÕES DOS PLANOS */
-    .pricing-table .price-card:hover {
-        cursor: pointer;
-        background-color: var(--shape-hover);
-        transform: translateY(-12px);
-        z-index: 2;
-        box-shadow: 0 0 20px rgba(226, 231, 233, 0.199); /* Efeito de brilho */
-        transition: transform 1s ease, box-shadow 1s ease;
-    }
+/* ANIMAÇÃO DOS CARTÕES DOS PLANOS */
+.pricing-table .price-card:hover {
+    cursor: pointer;
+    background-color: var(--shape-hover);
+    transform: translateY(-22px);
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(226, 231, 233, 0.250);
+    transition: transform 1s ease, box-shadow 1s ease;
+}
 
-    .pricing-table .monthly:hover {
-        transform: rotate(-8deg) translateY(-12px);
-    }
+.pricing-table .monthly:hover {
+    transform: rotate(-8deg) translateY(-22px);
+}
 
-    .pricing-table .annual:hover {
-        transform: rotate(8deg) translateY(-12px);
-    }
+.pricing-table .annual:hover {
+    transform: rotate(8deg) translateY(-22px);
+}
 
 
-    @keyframes halfYear {
-        0% {
-            transform: translateY(10px);
-        }
-        100% {
-            transform: translateY(-10px);
-        }
+@keyframes halfYear {
+    to {
+        transform: translateY(-8px);
     }
+}
 
-    @keyframes monthly {
-        0% {
-            transform: scale(0.95) rotate(0) translate(110%, -4.1rem);
-        }
-        100% {
-            transform: scale(1) rotate(-8deg);
-        }
+@keyframes monthly {
+    to {
+        transform:translate(-288px, 55px) rotate(-8deg);
     }
+}
 
-    @keyframes annual {
-        0% {
-            transform: scale(0.95) rotate(0) translate(-110%, -4.1rem);
-        }
-        100% {
-            transform: scale(1) rotate(8deg);
-        }
+@keyframes annual {
+    to {
+        transform: translate(288px, 55px) rotate(8deg);
     }
+}
+
+
 
     
 }

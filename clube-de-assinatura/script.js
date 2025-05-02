@@ -75,13 +75,76 @@ document.addEventListener('DOMContentLoaded', function() {
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-    const pricingTable = document.querySelector(".pricing-table");
-    let animationStarted = false;
+    let pricingTable = document.querySelector(".pricing-table")
+    let animationStarted = false
 
     pricingTable.addEventListener("mouseenter", () => {
       if (!animationStarted) {
-        pricingTable.classList.add("start-animation");
-        animationStarted = true;
+        pricingTable.classList.add("start-animation")
+        animationStarted = true
       }
+    })
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+    let cards = document.querySelectorAll(".price-card")
+    let halfYearCard = document.querySelector(".price-card.half-year")
+  
+    cards.forEach(card => {
+      card.addEventListener("mouseenter", () => {
+        card.classList.add("hovering")
+        // Se o hover não for no half-year, tira o destaque
+        if (!card.classList.contains("half-year")) {
+          halfYearCard.classList.remove("highlight")
+        }
+      })
+  
+      card.addEventListener("mouseleave", () => {
+        card.classList.remove("hovering")
+        
+        // Verifica se nenhum outro card está com hover
+        let anyHovered = [...cards].some(c => c.classList.contains("hovering"))
+        if (!anyHovered) {
+          halfYearCard.classList.add("highlight")
+        }
+      })
+    })
+  
+    // Inicialmente: destaca o half-year
+    halfYearCard.classList.add("highlight")
+  })
+  
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".pricing-table");
+  
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+  
+    container.addEventListener("mousedown", (e) => {
+      isDown = true;
+      container.classList.add("dragging");
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
     });
-});
+  
+    container.addEventListener("mouseleave", () => {
+      isDown = false;
+      container.classList.remove("dragging");
+    });
+  
+    container.addEventListener("mouseup", () => {
+      isDown = false;
+      container.classList.remove("dragging");
+    });
+  
+    container.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 1.5; // Velocidade do arrasto
+      container.scrollLeft = scrollLeft - walk;
+    });
+  });
+  

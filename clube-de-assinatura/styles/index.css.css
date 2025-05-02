@@ -48,6 +48,7 @@ button {
     font: 700 0.875rem var(--ff);
     color: var(--text-title);
     border-radius: .5rem;
+    cursor: pointer;
 }
 
 img {
@@ -428,34 +429,46 @@ img {
 
 .pricing-table {
     display: flex;
-    justify-content: center;
+  
     align-items: center;
     gap: 1rem;
-    overflow: hidden;
+    padding-inline: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pricing-table::-webkit-scrollbar {
+    display: none; /* Esconde a barra no Chrome/Safari */
+  }
+
+.pricing-table .monthly .stars,
+.pricing-table .annual .stars {
+    display: none;
 }
 
 /* CONFIGURAÇÃO GERAL DOS CARTÕES */
 .pricing-table .price-card {
     width: 100%;
-    width: 17rem;
+    max-width: 17rem;
     height: 25rem;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     margin-inline: auto;
     background-color: var(--shape-base);
     border: 2px solid var(--shape-stroke);
     border-radius: 1.5rem; 
+    flex: 0 0 auto; /* Impede que os cards encolham */
 }
 
 .pricing-table .price-card:hover {
     background-color: var(--shape-hover);
-    transform: translateY(-12px);
     z-index: 2;
     box-shadow: 0 0 20px rgba(226, 231, 233, 0.199); /* Efeito de brilho */
-    transition: transform 450ms ease, box-shadow 300ms ease;
+    transition: box-shadow 300ms ease;
 }
 
 .pricing-table .price-card > div {
-    height: 21rem;
+    height: 21.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -520,30 +533,26 @@ img {
 
 /* Details - CONFIGURAÇÃO GERAL DOS BÔNUS DE CADA PLANO */
 .pricing-table .details {
-    width: 14rem;
+    font: 300 0.75rem/140% var(--ff);
+    width: 15rem;
     height: auto;
     margin-inline: auto;
     
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
-}
-
-.pricing-table .half-year .details button {
-    background-color: var(--pink-dark);
+    gap: .5rem;
 }
 
 .pricing-table .details ul li {
-    font: 400 0.75rem/140% var(--ff);
-    margin-top: 0.75rem;
+    font: 300 0.75rem/140% var(--ff);
     display: flex;
     align-items: center;
 }
 
 .pricing-table .details ul li img {
-    width: 0.875rem;
-    height: 0.875rem;
+    width: 2.2rem;
+    height: 2.2rem;
 }
 
 .pricing-table .details .subscribe-btn {
@@ -553,9 +562,20 @@ img {
     margin-inline: auto;
 }
 
+.pricing-table .details .subscribe-btn:hover {
+    background-color: var(--blue-mid);
+}
 
+.pricing-table .half-year .details button {
+    background-color: var(--pink-dark);
+}
+
+.pricing-table .half-year .details button:hover {
+    background-color: var(--pink-base);
+}
 
 /* ------------------------- */
+
 
 
 /* MEDIA ACIMA DE 950px */
@@ -1554,18 +1574,17 @@ img {
     height: 47rem;
     margin-inline: auto;
     position: relative;
-    border: 1px solid rgb(244, 245, 247);
   }    
 
-  .pricing svg {
+  .pricing .bg {
+    background: url(../assets/images/pricing-background.svg) no-repeat center/cover;
     width: 59rem;
     height: 59rem;
-
+    filter: blur(300px);
     position: absolute;
     top: 202rem;
-    left: calc(21.5% + 10px);
+    left: 22%;
     z-index: -2;
-    border: 1px solid rgb(0, 119, 255);
   }
 
   .pricing-table .price-card {
@@ -1578,6 +1597,10 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.pricing-table .details .subscribe-btn {
+    width: 14rem;
 }
 
  /* Animação só dispara se tiver a classe start-animation */
@@ -1597,7 +1620,7 @@ img {
 .pricing-table .half-year {
     position: absolute;
     left: calc(50% - 288px/2 + 0.43px);
-    top: calc(20% + 16px/2 - 12.91px);
+    top: 19.5%;
     z-index: 1;
 }
 
@@ -1605,32 +1628,101 @@ img {
 .pricing-table .monthly {
     position: absolute;
     left: calc(50% - 288px/2 + 0.43px);
-    top: calc(20% + 16px/2 - 12.91px);
+    top: 19.5%;
 }
 
 /* Anual */
 .pricing-table .annual {
     position: absolute;
     left: calc(50% - 288px/2 + 0.43px);
-    top: calc(20% + 16px/2 - 12.91px);
+    top: 19.5%;
 }
 
 /* ANIMAÇÃO DOS CARTÕES DOS PLANOS */
 .pricing-table .price-card:hover {
-    cursor: pointer;
     background-color: var(--shape-hover);
-    transform: translateY(-22px);
     z-index: 2;
     box-shadow: 0 0 20px rgba(226, 231, 233, 0.250);
-    transition: transform 1s ease, box-shadow 1s ease;
+    transition: box-shadow 1s ease;
 }
 
-.pricing-table .monthly:hover {
-    transform: rotate(-8deg) translateY(-22px);
+
+/* Destaque do half-year quando ninguém estiver em hover */
+.price-card.half-year.highlight {
+    background-color: var(--shape-hover);
+  }
+  
+  /* Quando ele mesmo estiver com hover, mantém cor */
+  .price-card.half-year.hovering {
+    background-color: var(--shape-hover);
+  }
+  
+
+/* CONFIGURAÇÃO DAS ESTRELAS */
+
+.pricing-table .monthly .stars,
+.pricing-table .annual .stars {
+    display: block;
 }
 
-.pricing-table .annual:hover {
-    transform: rotate(8deg) translateY(-22px);
+/* MONTHLY STARS */
+.pricing-table .monthly .stars img:nth-child(1) {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    left: -45px;
+    top: -50px;
+
+    transform: matrix(0.99, 0.14, 0.14, -0.99, 0, 0) rotate(-1px);
+}
+
+.pricing-table .monthly .stars img:nth-child(2) {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: -46px;
+    top: -8px;
+
+    transform: matrix(0.99, 0.14, 0.14, -0.99, 0, 0) rotate(-1px);
+}
+
+.pricing-table .monthly:hover .stars img:nth-child(1) {
+    animation: bigStarUp .5s both ease;
+}
+
+.pricing-table .monthly:hover .stars img:nth-child(2) {
+    animation: smallStarUp .5s both ease;
+}
+
+
+/* ANNUAL STARS */
+
+.pricing-table .annual .stars img:nth-child(1) {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    left: calc(50% - 23.22px/2 + 147px);
+    top: calc(50% - 23.22px/2 + 208px);
+
+    transform: matrix(0.99, 0.14, 0.14, -0.99, 0, 0) rotate(-1px);
+}
+
+.pricing-table .annual .stars img:nth-child(2) {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: calc(50% - 23.22px/2 + 127px);
+    top: calc(50% - 23.22px/2 + 230px);
+
+    transform: matrix(0.99, 0.14, 0.14, -0.99, 0, 0) rotate(-1px);
+}
+
+.pricing-table .annual:hover .stars img:nth-child(1) {
+    animation: bigStar .5s both ease;
+}
+
+.pricing-table .annual:hover .stars img:nth-child(2) {
+    animation: smallStar .5s both ease;
 }
 
 
@@ -1652,7 +1744,28 @@ img {
     }
 }
 
+@keyframes bigStarUp {
+    to {
+        transform: rotate(-10deg);
+    }
+}
 
+@keyframes smallStarUp {
+    to {
+        transform: rotate(15deg);
+    }
+}
 
+@keyframes bigStar {
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes smallStar {
+    to {
+        transform: rotate(-15deg);
+    }
+}
     
 }

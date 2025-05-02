@@ -252,7 +252,7 @@ img {
     top: calc(50% - 40px/2 + 64.5px);
     transform: rotate(15deg);
 }
-
+/* -------------------------- */
 
 /* SECTION KIT-BOOK AND GIFT */
 
@@ -410,6 +410,8 @@ img {
     left: 207.58px;
     top: 283.69px;
 }
+/* -------------------------- */
+
 
 /* PRICING-TABLE + CARDS */
 .pricing {
@@ -421,24 +423,35 @@ img {
 
 .pricing h2 {
     text-align: center;
-    margin-block: 12.125rem 3rem;
+    margin-block: 6.5rem 3rem;
     font: 700 1.5rem var(--ff);
 }
 
-.pricing .pricing-table {
-    /*display: flex;*/
-    gap: 3rem; 
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
+/* CONFIGURAÇÃO GERAL DOS CARTÕES */
 .pricing-table .price-card {
     width: 100%;
-    max-width: 17rem;
+    width: 17rem;
     height: 25rem;
-    padding-block: 2rem;
+    padding: 1.5rem;
     margin-inline: auto;
     background-color: var(--shape-base);
     border: 2px solid var(--shape-stroke);
     border-radius: 1.5rem; 
+}
+
+.pricing-table .price-card:hover {
+    background-color: var(--shape-hover);
+    transform: translateY(-12px);
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(226, 231, 233, 0.199); /* Efeito de brilho */
+    transition: transform 450ms ease, box-shadow 300ms ease;
 }
 
 .pricing-table .price-card > div {
@@ -456,6 +469,11 @@ img {
 .pricing-table .price-card h3 {
     font: var(--title-Sx);
     margin-bottom: 1.5rem;
+    color: var(--blue-ligth);
+}
+
+.pricing-table .half-year h3 {
+    color: #c59dd2;
 }
 
 .pricing-table .price p:nth-child(1) {
@@ -467,10 +485,12 @@ img {
     font: var(--title-Sx);
 }
 
+/* HALF-YEAR - CONFIGURAÇÃO DO CARTÃO SEMESTRAL */
+
+/* CONFIGURAÇÃO DO BUNNY-IMG */
 .pricing-table .half-year {
     position: relative;
 }
-
 
 /* Bunny */
 .pricing-table .half-year > img {
@@ -482,7 +502,23 @@ img {
     display: none;
 }
 
-/* Details */
+/* CONFIGURAÇÃO DA TAG DE DESTAQUE NO HEADLINE DO CARTÃO SEMESTRAL */
+.pricing-table .half-year .tag {
+    width: 5.625rem;
+    height: 1.875rem;
+    padding: 0.5625rem 1.25rem;
+    border-radius: 62.4375rem;
+
+    font: 700 0.625rem var(--ff);
+    letter-spacing: 5%;
+    background-color: var(--shape-stroke);
+
+    position: absolute;
+    right: 24.43px;
+    top: 23.91px;
+}
+
+/* Details - CONFIGURAÇÃO GERAL DOS BÔNUS DE CADA PLANO */
 .pricing-table .details {
     width: 14rem;
     height: auto;
@@ -494,11 +530,9 @@ img {
     gap: 1.5rem;
 }
 
-
 .pricing-table .half-year .details button {
     background-color: var(--pink-dark);
 }
-
 
 .pricing-table .details ul li {
     font: 400 0.75rem/140% var(--ff);
@@ -519,6 +553,9 @@ img {
     margin-inline: auto;
 }
 
+
+
+/* ------------------------- */
 
 
 /* MEDIA ACIMA DE 950px */
@@ -542,6 +579,10 @@ img {
         max-width: 35.5rem;
         padding-inline: 1.5rem;
         font: 400 1.25rem/140% var(--ff);
+    }
+
+    .pricing .half-year img {
+        display: block;
     }
 }
 
@@ -739,6 +780,37 @@ img {
         position: absolute;
         left: 38.75rem;
         top: 796px;
+    }
+
+
+     /* PRICING-TABLE + CARDS */
+     .pricing {
+        max-width: 62rem;
+        height: 52rem;
+        padding-inline: 2rem;
+        position: relative;
+    }
+
+    /* POSIÇÕES DOS CARTÕES DE PLANOS */
+    /* Semestral */
+    .pricing-table .half-year {
+        position: absolute;
+        left: calc(50% - 288px/2 + 0.43px);
+        top: calc(50% - 216px/2 - 12.91px);
+    }
+
+    /* Mensal */
+    .pricing-table .monthly {
+        position: absolute;
+        left: calc(50% - 288px/2 - 317px);
+        top: calc(50% - 216px/2 + 26px);
+    }
+
+    /* Anual */
+    .pricing-table .annual {
+        position: absolute;
+        left: calc(50% - 288px/2 + 319.67px);
+        top: calc(50% - 216px/2 + 26px);
     }
 }
 
@@ -1367,7 +1439,7 @@ img {
     }
     100% {
       opacity: 1;
-      transform: scale(0.5) translate(-100%, 10%) rotate(0deg);
+      transform: scale(0.5) translate(-185%, 10%) rotate(0deg);
     }
   }
 
@@ -1379,7 +1451,7 @@ img {
     }
     100% {
         opacity: 1;
-        transform: scale(0.5) translate(-220%, 20%) rotate(0deg);
+        transform: scale(0.5) translate(-300%, 20%) rotate(0deg);
       }
   }
 
@@ -1449,7 +1521,7 @@ img {
       }
       100% {
         opacity: 1;
-        transform: scale(0.5) translate(-22rem, -12rem);
+        transform: scale(0.5) translate(-27.5rem, -12rem);
       }
   }
 
@@ -1460,13 +1532,141 @@ img {
       }
     100% {
       opacity: 1;
-      transform: scale(0.5) translate(-14rem, -16rem);
+      transform: scale(0.5) translate(-21rem, -16rem);
     }
   }
+  /* -------------------------- */
 
 
+  /* PRICING-TABLE + CARDS */
   .pricing {
     max-width: 90rem;
     height: 77.125rem;
   }
+
+  .pricing h2 {
+    margin-block: 12.125rem 3rem;
+    font: 700 2rem var(--ff);
+  }
+
+  .pricing .pricing-table {
+    max-width: 90rem;
+    height: 47rem;
+    position: relative;
+    border: 2px dashed white;
+  }    
+
+  .pricing svg {
+    width: 59rem;
+    height: 59rem;
+
+    position: absolute;
+    top: 202rem;
+    left: calc(21.5% + 10px);
+    z-index: -2;
+    border: 1px solid rgb(0, 119, 255);
+  }
+
+  .pricing-table .price-card {
+    width: 18rem;
+    height: 26rem;
+  }
+
+  .pricing-table .price-card > div {
+    height: 22.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+  /* POSIÇÕES DOS CARTÕES DE PLANOS */
+    .monthly, .annual {
+        transform: scale(0.95) rotate(0deg) translateY(4rem);
+    }
+
+    /* Animação só dispara se tiver a classe start-animation */
+    .pricing-table:hover .monthly {
+        opacity: 1;
+        animation: monthly 3s ease-out both;
+    }
+    .pricing-table:hover .annual {
+        opacity: 1;
+        animation: annual 3s ease-out both;
+    }
+    .pricing-table:hover .half-year {
+        animation: halfYear 3s ease-out both;
+    }
+
+
+    /* Semestral */
+    .pricing-table .half-year {
+        position: absolute;
+        left: calc(50% - 288px/2 + 0.43px);
+        top: calc(16% + 16px/2 - 12.91px);
+        z-index: 1;
+    }
+
+    /* Mensal */
+    .pricing-table .monthly {
+        position: absolute;
+        left: calc(50% - 288px/2 - 300px);
+        top: calc(4% + 250px/2 + 26px);
+        transform: rotate(-8deg);
+    }
+
+    /* Anual */
+    .pricing-table .annual {
+        position: absolute;
+        left: calc(50% - 288px/2 + 302.67px);
+        top: calc(4% + 250px/2 + 26px);
+        transform: rotate(8deg);
+    }
+
+    /* ANIMAÇÃO DOS CARTÕES DOS PLANOS */
+    .pricing-table .price-card:hover {
+        cursor: pointer;
+        background-color: var(--shape-hover);
+        transform: translateY(-12px);
+        z-index: 2;
+        box-shadow: 0 0 20px rgba(226, 231, 233, 0.199); /* Efeito de brilho */
+        transition: transform 1s ease, box-shadow 1s ease;
+    }
+
+    .pricing-table .monthly:hover {
+        transform: rotate(-8deg) translateY(-12px);
+    }
+
+    .pricing-table .annual:hover {
+        transform: rotate(8deg) translateY(-12px);
+    }
+
+
+    @keyframes halfYear {
+        0% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes monthly {
+        0% {
+            transform: scale(0.95) rotate(0) translate(110%, -4.1rem);
+        }
+        100% {
+            transform: scale(1) rotate(-8deg);
+        }
+    }
+
+    @keyframes annual {
+        0% {
+            transform: scale(0.95) rotate(0) translate(-110%, -4.1rem);
+        }
+        100% {
+            transform: scale(1) rotate(8deg);
+        }
+    }
+
+    
 }

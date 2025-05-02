@@ -418,7 +418,6 @@ img {
     max-width: 23.4375rem;
     height: 44.5rem;
     margin-inline: auto;
-    border: 1px solid red;
 }
 
 .pricing h2 {
@@ -432,6 +431,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    overflow: hidden;
 }
 
 /* CONFIGURAÇÃO GERAL DOS CARTÕES */

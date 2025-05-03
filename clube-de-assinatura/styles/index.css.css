@@ -55,6 +55,12 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: var(--blue-ligth);
+    font: 500 0.875rem var(--ff);
+}
+
 /* HERO - NAV and First animation book */ 
 
 #hero {
@@ -433,14 +439,7 @@ img {
     align-items: center;
     gap: 1rem;
     padding-inline: 1rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 }
-
-.pricing-table::-webkit-scrollbar {
-    display: none; /* Esconde a barra no Chrome/Safari */
-  }
 
 .pricing-table .monthly .stars,
 .pricing-table .annual .stars {
@@ -577,6 +576,194 @@ img {
 /* ------------------------- */
 
 
+/* FOOTER */
+footer {
+    position: relative;
+}
+
+footer .links-container {
+    max-width: 19.4375rem;
+    height: 17.4375rem;
+    margin-inline: auto;
+
+    padding-top: 6rem;
+}
+
+footer .links-container .social-links {
+    max-width: 19.4375rem;
+    height: 6.5rem;
+    text-align: center;
+}
+
+footer div > img {
+    max-width: 9.91375rem;
+    height: 2.5rem;
+    margin-bottom: .75rem;
+}
+
+.social-links nav {
+    border-top: 1px solid var(--shape-stroke);
+    padding-top: 0.75rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links nav a {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+nav a:hover::before {
+    scale: 1;
+}
+
+nav a::before {
+    content: "";
+
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-color: var(--shape-stroke);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    scale: 0;
+    transition: scale 200ms ease;
+}
+
+.social-links nav a > span {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+nav a:nth-child(1) span {
+    background: url(../assets/icons/instagram-default.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(1):hover span {
+    background: url(../assets/icons/instagram.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(2) span {
+    background: url(../assets/icons/twitter-default.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(2):hover span {
+    background: url(../assets/icons/twitter.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(3) span {
+    background: url(../assets/icons/facebook-default.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(3):hover span {
+    background: url(../assets/icons/facebook.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(4) span {
+    background: url(../assets/icons/discord-default.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(4):hover span {
+    background: url(../assets/icons/discord.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(5) span {
+    background: url(../assets/icons/whatsapp-default.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(5):hover span {
+    background: url(../assets/icons/whatsapp.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(6) span {
+    background: url(../assets/icons/mail-default.svg) no-repeat center/cover;
+}
+
+nav a:nth-child(6):hover span {
+    background: url(../assets/icons/mail.svg) no-repeat center/cover;
+}
+
+footer .nav-wrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+footer .nav-wrapper h3 {
+    font: var(--title-Sx);
+    margin-bottom: 1.25rem;
+}
+
+footer .nav-wrapper a {
+    padding-block: 0.25rem;
+}
+
+footer .nav-wrapper a:hover {
+    color: var(--text-body);
+}
+
+footer .nav-wrapper .content-links,
+footer .nav-wrapper .help-links {
+    width: 8.9375rem;
+    height: 8.4375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .nav-wrapper .content-links nav,
+footer .nav-wrapper .help-links nav {
+    width: 8.9375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+/* MEDIA ATÉ 375px */
+@media (width <= 23.4375em) {
+    footer {
+        max-width: 23.4375rem;
+        height: 25.9375rem;
+        margin-inline: auto;
+        background: url(../assets/images/hero-01/footer-bg-sm.svg) no-repeat center/cover;
+    } 
+}
+
+@media (width > 23.4375em) {
+    footer {
+        max-width: 90rem;
+        height: 25.9375rem;
+        margin-inline: auto;
+        background: url(../assets/images/hero-01/book-trace-bg.svg) no-repeat center/cover;
+    } 
+}
+
+/* MEDIA ATÉ 950px */
+@media (width < 59.375em) {
+    .pricing-table {
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .pricing-table::-webkit-scrollbar {
+        display: none; /* Esconde a barra no Chrome/Safari */
+    }   
+}
+
 
 /* MEDIA ACIMA DE 950px */
 
@@ -603,6 +790,22 @@ img {
 
     .pricing .half-year img {
         display: block;
+    }
+
+    footer .links-container {
+        max-width: 58rem;
+        height: auto;
+        display: flex;
+        margin-inline: auto;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8.5rem 2rem 0rem 2rem;
+
+    }
+
+    footer div > img {
+        max-width: 16.5rem;
+        height: 4.160625rem;
     }
 }
 
@@ -1767,5 +1970,10 @@ img {
         transform: rotate(-15deg);
     }
 }
-    
+
+
+/* FOOTER */
+footer .links-container {
+    max-width: 74rem;
+}
 }

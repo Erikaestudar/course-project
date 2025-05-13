@@ -19,7 +19,7 @@
 .container {
     --max-width: 375px;
     width: min(var(--max-width), 100% - var(--px-lg) * 2);
-    margin: auto;
+    margin-inline: auto;
 }
 
 .desktop-only {

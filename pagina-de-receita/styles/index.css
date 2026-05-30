@@ -9,9 +9,14 @@
 :root {
     font-family: "Alice", serif;
     line-height: 150%;
-    color: #573A37;
 
     --bg-main: hsl(50, 61%, 85%);
+
+    --text-color-primary: #291B1A;
+    --text-color-secondary: #573A37;
+    --text-color-on-bg: #F0E8C2;
+    --text-color-link: #ad847f;
+    --text-color-link-hover: #533d3a;
     --h1: 800 2rem/140% "Alice", serif;
     --h2: 600 1.2rem/150% "Alice", serif;
 }
@@ -19,6 +24,7 @@
 body {
     width: 100vw;
     min-height: 100vh;
+    color: var(--text-color-secondary);
     background-color: var(--bg-main);
 }
 
@@ -35,7 +41,7 @@ h2 {
 }
 
 h1, h2 {
-    color: #291B1A;
+    color: var(--title-color);
     margin-bottom: 0.25rem;
 }
 
@@ -69,19 +75,18 @@ section#preparation p + p{
 }
 
 footer {
-    padding: 0.5rem;
+    padding: 2.5rem 0.5rem;
     text-align: center;
     font-size: 1rem;
-    color: #291B1A;
 }
 
 a {
-    color: #ad847f;
+    color: var(--text-color-link);
     text-decoration: none;
 }
 
 a:hover {
-    color: #533d3a;
+    color: var(--text-color-link-hover);
     text-decoration: underline;
 }
 
@@ -91,13 +96,8 @@ footer img {
 }
 
 @media (width >= 53.125em) {
-    :root {
-        --h1: 800 2.5rem/140% "Alice", serif;
-        --h2: 600 1.5rem/150% "Alice", serif;
-    }
-
     body {
-        background: url(../assets/imagens/background.jpg) no-repeat center/cover;
+        background: url(../assets/images/background.jpg) no-repeat center/cover;
     }
 
     article#page {
@@ -115,7 +115,7 @@ footer img {
     }
 
     footer {
-        color: #F0E8C2;
+        color: var(--text-color-on-bg);
         justify-content: center;
         align-items: center;
         padding-bottom: 3rem;

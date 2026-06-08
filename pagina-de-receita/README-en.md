@@ -1,6 +1,6 @@
 # Recipe Page
 
-- [Read this README in Portuguese](README-pt.md)
+- [Read this README in Portuguese](README.md)
 - [View the live project](https://erikaestudar.github.io/course-project/pagina-de-receita/index.html)
 
 This project is a simple styled recipe page created as part of a front-end challenge. The page showcases a coffee cupcake with whipped cream recipe, including an image, ingredients list, and preparation instructions.

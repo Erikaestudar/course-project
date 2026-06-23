@@ -1,0 +1,52 @@
+.drop {
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.drop:hover {
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.356); 
+}
+
+article.drop-text {
+    transition: all 0.3s ease-in-out;
+}
+
+article.drop-text p {
+    transition: all 0.3s ease-in-out;
+
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3; 
+    line-clamp: 3;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+article.drop-text p.expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    line-clamp: unset;
+    overflow: visible;
+    text-overflow: unset;
+}
+
+@media (width >= 48em) {
+    svg.drop {
+        display: none;
+    }
+
+    article.drop-text {
+        display: block;
+    }
+
+    article.drop-text p {
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        line-clamp: unset;
+        overflow: visible;
+        text-overflow: unset;
+    }
+}

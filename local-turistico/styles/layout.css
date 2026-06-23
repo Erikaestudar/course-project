@@ -1,0 +1,37 @@
+#title-page {
+    margin: 3rem auto;
+}
+
+div.container {
+    margin-block: 2.5rem;
+}
+
+section#title-list {
+    margin-block: 4rem;
+}
+
+section + section {
+    margin-bottom: 3rem;
+}
+
+article.drop-text span {
+    margin-top: 1rem;
+}
+
+footer span {
+    text-align: center;
+    margin: 2.68rem auto;
+}
+
+
+@media (width >= 64em) {
+    article#title-page {
+        max-width: 70rem;
+    }
+
+    img {
+        border-radius: 1.75rem;
+    }
+
+    
+}

@@ -11,48 +11,37 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="top">
     <div class="bg-surface-color">
-        <nav class="container flex">
-            <a href="#">
-                <img src="assets/Logo.svg" alt="Logomarca">
+        <nav class="container flex" aria-label="Navegação principal">
+            <a href="#top">
+                <img src="assets/Logo.svg" alt="Travelgram">
             </a>
 
             <ul id="primary-menu">
                 <li class="search-input-wrapper">
-                    <label for="search-input" aria-label="search">
-                        <input type="text" name="search-input" id="search-input">
-                    </label>
+                    <label class="visually-hidden" for="search-input">Buscar fotos</label>
+                    <input type="search" name="search-input" id="search-input">
                 </li>
 
-                <li class="search-btn">
-                    <a href="#search">
-                        <img src="assets/icons/MagnifyingGlass.svg" alt="ícone de lupa">
-                    </a>
+                <li>
+                    <button class="search-btn" type="button" aria-label="Abrir busca" aria-controls="search-input" aria-expanded="false">
+                        <img src="assets/icons/MagnifyingGlass.svg" alt="">
+                    </button>
                 </li>
 
-                <li class="items-menu hidden">
-                    <ul>
-                        <li class="">
+                <li class="nav-links">
+                    <button id="items-btn" class="items-btn mobile-only" type="button" aria-label="Abrir menu" aria-controls="site-menu" aria-expanded="false">
+                        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="#6C6C6C">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                        </svg>
+                    </button>
+                    <ul id="site-menu" class="menu">
+                        <li class="mobile-only">
                             <a href="#perfil">Perfil</a>
                         </li>
                         <li>
-                            <a href="#explorar">Explorar</a>
-                        </li>
-                        <li>
-                            <a href="#minhas-viagens">Minhas viagens</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="hidden">
-                    <svg id="items-btn" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#6C6C6C"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-                </li>
-
-                <li class="desktop-only">
-                    <ul>
-                        <li>
-                            <a href="#explorar">Explorar</a>
+                            <a href="#minhas-viagens">Explorar</a>
                         </li>
                         <li>
                             <a href="#minhas-viagens">Minhas viagens</a>
@@ -62,7 +51,7 @@
 
                 <li class="perfil-nav">
                     <a href="#perfil">
-                        <img src="assets/Profile pic.png" alt="Imangem de Isabela Torres">
+                        <img src="assets/Profile pic.png" alt="Foto de perfil de Isabela Torres">
                     </a>
                 </li>
             </ul>
@@ -73,7 +62,7 @@
                 <div id="profile">
                     <img src="assets/Profile pic.png" alt="Imagem de Isabela Torres">
 
-                    <div>
+                    <div id="perfil">
                         <h1>Isabela Torres</h1>
                         <p>Isabela Torres
                             Amante de viagens, cultura e gastronomia. 🌍✈️
@@ -97,22 +86,23 @@
                         <span>240 fotos</span>
                     </li>
                 </ul>
+            </div>
         </header>
     </div>
 
-    <main class="container">
-        <img src="assets/images/Image 01.png" alt="...">
-        <img src="assets/images/Image 02.png" alt="...">
-        <img src="assets/images/Image 03.png" alt="...">
-        <img src="assets/images/Image 04.png" alt="...">
-        <img src="assets/images/Image 05.png" alt="...">
-        <img src="assets/images/Image 06.png" alt="...">
-        <img src="assets/images/Image 07.png" alt="...">
-        <img src="assets/images/Image 08.png" alt="...">
-        <img src="assets/images/Image 09.png" alt="...">
-        <img src="assets/images/Image 10.png" alt="...">
-        <img src="assets/images/Image 11.png" alt="...">
-        <img src="assets/images/Image 12.png" alt="...">
+    <main id="minhas-viagens" class="container" aria-label="Galeria de fotos de viagem">
+        <img src="assets/images/Image 01.png" alt="Vista de um lago alpino a partir de um barco de madeira">
+        <img src="assets/images/Image 02.png" alt="Canal de Veneza cercado por edifícios ao entardecer">
+        <img src="assets/images/Image 03.png" alt="Casas coloridas construídas sobre um penhasco à beira-mar">
+        <img src="assets/images/Image 04.png" alt="Ponte de pedra sobre um canal de Veneza">
+        <img src="assets/images/Image 05.png" alt="Cúpula e fachada ornamentada da Catedral de Florença">
+        <img src="assets/images/Image 06.png" alt="Vila costeira colorida junto a águas azul-turquesa">
+        <img src="assets/images/Image 07.png" alt="Terraço de restaurante ao lado de um canal veneziano">
+        <img src="assets/images/Image 08.png" alt="Rua estreita com casas coloridas, flores e uma scooter">
+        <img src="assets/images/Image 09.png" alt="Vista do Coliseu de Roma contra o céu azul">
+        <img src="assets/images/Image 10.png" alt="Fachada de restaurante italiano com uma scooter branca à frente">
+        <img src="assets/images/Image 11.png" alt="Pratos de massa e taças sobre uma mesa de madeira">
+        <img src="assets/images/Image 12.png" alt="Ponte Vecchio sobre o rio Arno em Florença">
     </main>
     
     <footer class="container">
@@ -120,7 +110,6 @@
         <span>Termos de uso</span>
         <span>Política de privacidade</span>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

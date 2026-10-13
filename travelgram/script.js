@@ -1,70 +1,91 @@
-let searchBtn = document.querySelector('.search-btn')
-let searchInput = document.querySelector('#search-input')
-let itemsBtn = document.querySelector('#items-btn')
-let itemsMenu = document.querySelector('.items-menu')
+const searchButton = document.querySelector('.search-btn')
+const searchInput = document.querySelector('#search-input')
+const searchInputWrapper = document.querySelector('.search-input-wrapper')
+const menuButton = document.querySelector('#items-btn')
+const menu = document.querySelector('#site-menu')
+const desktopBreakpoint = 992
 
-// Garante que o input de busca inicie oculto
-searchInput.style.display = 'none'
-
-// Alternar visibilidade do menu de navegação mobile
-if (itemsBtn && itemsMenu) {
-    itemsBtn.addEventListener('click', (event) => {
-        event.stopPropagation() // Impede que o clique na lupa feche o menu
-
-        if (window.innerWidth < 992) {
-            // Alterna visibilidade do menu lateral
-            itemsMenu.style.display = (itemsMenu.style.display === 'block') ? 'none' : 'block'
-            searchInput.style.display = 'none' // Fecha o input se estiver aberto
-        }
-    })
+if (!searchButton || !searchInput || !searchInputWrapper || !menuButton || !menu) {
+    throw new Error('Os controles de navegação do Travelgram não foram encontrados.')
 }
 
-searchBtn.addEventListener('click', (event) => {
-    event.stopPropagation()
+function setSearchOpen(isOpen) {
+    searchInputWrapper.classList.toggle('is-open', isOpen)
+    searchButton.setAttribute('aria-expanded', String(isOpen))
+    searchButton.setAttribute('aria-label', isOpen ? 'Fechar busca' : 'Abrir busca')
 
-    let isSearchHidden = searchInput.style.display === 'none' || searchInput.style.display === ''
-
-    if (isSearchHidden) {
-        searchInput.style.display = 'block'
+    if (isOpen) {
         searchInput.focus()
-    } else {
-        searchInput.style.display = 'none'
     }
+}
 
-    // Só esconde o menu se estiver em tela pequena
-    if (window.innerWidth < 992) {
-        itemsMenu.style.display = 'none'
-    }
-})
+function setMenuOpen(isOpen) {
+    menu.classList.toggle('is-open', isOpen)
+    menuButton.setAttribute('aria-expanded', String(isOpen))
+    menuButton.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu')
+}
 
-// Esconder o input ao clicar fora dele
-document.body.addEventListener('click', (event) => {
-    if (!event.target.closest('#search-input') && !event.target.closest('.search-btn')) {
-        searchInput.style.display = 'none'
-    }
+searchButton.addEventListener('click', () => {
+    const isSearchOpen = searchInputWrapper.classList.contains('is-open')
+    setSearchOpen(!isSearchOpen)
 
-    if (window.innerWidth < 992) {
-        if (!event.target.closest('.items-menu') && !event.target.closest('.items-btn')) {
-            itemsMenu.style.display = 'none'
-        }
+    if (!isSearchOpen && window.innerWidth < desktopBreakpoint) {
+        setMenuOpen(false)
     }
 })
 
-// Monitora mudanças no tamanho da tela para evitar perda de foco
+menuButton.addEventListener('click', () => {
+    if (window.innerWidth < desktopBreakpoint) {
+        const isMenuOpen = menu.classList.contains('is-open')
+        setMenuOpen(!isMenuOpen)
+        setSearchOpen(false)
+    }
+})
+
+document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Element)) {
+        return
+    }
+
+    if (!event.target.closest('.search-input-wrapper, .search-btn')) {
+        setSearchOpen(false)
+    }
+
+    if (
+        window.innerWidth < desktopBreakpoint
+        && !event.target.closest('#site-menu, #items-btn')
+    ) {
+        setMenuOpen(false)
+    }
+})
+
+document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') {
+        return
+    }
+
+    const menuWasOpen = menu.classList.contains('is-open')
+    const searchWasOpen = searchInputWrapper.classList.contains('is-open')
+
+    setMenuOpen(false)
+    setSearchOpen(false)
+
+    if (menuWasOpen) {
+        menuButton.focus()
+    } else if (searchWasOpen) {
+        searchButton.focus()
+    }
+})
+
 window.addEventListener('resize', () => {
-    if (window.innerWidth >= 992) {
-        // Fecha os menus se estiver em tela grande
-        itemsMenu.style.display = 'none'
-        searchInput.style.display = 'none'
+    if (window.innerWidth >= desktopBreakpoint) {
+        setMenuOpen(false)
+        setSearchOpen(false)
     }
 })
 
-// Captura todos os links dentro do menu
-document.querySelectorAll('.items-menu a').forEach(link => {
+menu.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-        itemsMenu.style.display = 'none' // Fecha o menu ao clicar em qualquer link
+        setMenuOpen(false)
     })
 })
-
-
-

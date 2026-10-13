@@ -1,6 +1,4 @@
 footer {
-    width: 100%;
-    max-width: 80rem;
     padding-block: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -18,6 +16,5 @@ footer {
     footer {
         padding-inline: 2rem;
         flex-direction: row;
-        justify-content: space-between;
     }
 }

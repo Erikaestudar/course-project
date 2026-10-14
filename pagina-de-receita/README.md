@@ -1,4 +1,4 @@
-- [Leia este README em inglês](README-en.md)
+🌐 **Português** | [English](README-en.md)
 
 # Página de Receita
 

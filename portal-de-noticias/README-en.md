@@ -90,7 +90,7 @@ portal-de-noticias/
 
 ## 🌐 View the Project
 
-[Open TechNews on GitHub Pages](https://erikaestudar.github.io/course-project/)
+[Open TechNews on GitHub Pages](https://erikaestudar.github.io/course-project/portal-de-noticias/index.html)
 
 ## 📝 How to Use
 

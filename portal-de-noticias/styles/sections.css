@@ -124,10 +124,6 @@ section header a:hover span {
     text-overflow: ellipsis; 
 }
 
-#more article {
-    margin-bottom: clamp(0.5rem, 50%, 1.1rem);
-}
-
 /* 375px = 23.4375em */    
 /* 600px = 37.5em */
 /* 768px = 48em */
@@ -156,7 +152,7 @@ section header a:hover span {
     #ai article img {
         width: 100%; /* Mantém um tamanho proporcional */
         max-width: 300px; /* Limita o tamanho máximo */
-        aspect-ratio: 16 / 9; /* Proporção de retrato (16:9) */
+        aspect-ratio: 16 / 9; /* Proporção horizontal (16:9) */
         object-fit: cover; /* Garante que a imagem não deforme */
         border-radius: 0.5rem; 
     }
@@ -239,15 +235,14 @@ section header a:hover span {
         display: -webkit-box; 
         -webkit-box-orient: vertical; 
         -webkit-line-clamp: 2; 
-        line-clamp: 4;
+        line-clamp: 2; 
         overflow: hidden; 
         text-overflow: ellipsis; 
     }
 
     #more img {
-        width: 5rem;
+        width: 4.5rem;
         aspect-ratio: 1/1;
         object-fit: cover;
     }
 }
-

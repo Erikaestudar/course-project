@@ -1,4 +1,4 @@
-// Função para ativar a rolagem suave
+// Ativa o arraste com mouse; em touch, o menu usa a rolagem nativa do navegador.
 function initScroll(containerId) {
     const container = document.querySelector(containerId);
     
@@ -32,20 +32,8 @@ function initScroll(containerId) {
             container.scrollLeft = scrollLeft - walk;
         });
 
-        // Rolagem por touch (para mobile)
-        container.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].pageX - container.offsetLeft;
-            scrollLeft = container.scrollLeft;
-        });
-
-        container.addEventListener('touchmove', (e) => {
-            const x = e.touches[0].pageX - container.offsetLeft;
-            const walk = (x - startX) * 2;
-            container.scrollLeft = scrollLeft - walk;
-        });
     }
 }
 
 // Inicia a rolagem para os dois elementos
 initScroll('#secondary');
-

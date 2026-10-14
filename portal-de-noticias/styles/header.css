@@ -18,7 +18,6 @@ header {
     gap: 0.5rem;
 }
 
-/* nesting css */
 #primary div:nth-child(2) {
     margin-inline: auto;
 }

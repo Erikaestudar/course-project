@@ -91,9 +91,9 @@ main {
         padding-inline: 2rem;
     }
 
-    main {
-        row-gap: 5rem;
+    main {        
         margin-block: 2.5rem;
+        row-gap: 5rem;
 
         /* section ai and aside */
         grid-template-columns: 2fr 1.4fr;

@@ -108,6 +108,6 @@ Projeto desenvolvido por Erika Sugawara como parte de um curso da Rocketseat.
 
 ## Licença
 
-O projeto não contém um arquivo de licença. A licença aplicável deve ser consultada no repositório GitHub em que ele for publicado.
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](../LICENSE) na raiz do repositório.
 
 **Desenvolvido com ❤️ como projeto educacional**

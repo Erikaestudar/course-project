@@ -108,6 +108,6 @@ Created by Erika Sugawara as part of a Rocketseat course.
 
 ## License
 
-The project does not include a license file. The applicable license should be checked in the GitHub repository where it will be published.
+This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file in the repository root.
 
 **Built with ❤️ as an educational project**

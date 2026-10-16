@@ -1,0 +1,107 @@
+.intro-container {
+    background: var(--gray-200) url(../assets/images/Background_Intro.png) no-repeat center/cover;
+    height: auto;
+    min-height: 46.875rem;
+    padding: clamp(4rem, 10vw, 7.5rem) 1.5rem 3.5rem;
+    text-align: center;
+}
+
+section#info {
+    max-width: 65rem;
+    margin-inline: auto;
+}
+
+#info > header {
+    width: 100%;
+    max-width: 42.5rem;    
+}
+
+.user-wrapper {
+    position: relative;
+}
+
+.user-wrapper .border-box-perfil {
+    width: 6.125rem;
+    height: 6.125rem;
+    border: 2px solid var(--red);
+    border-radius: 50%; 
+}
+
+.border-box-perfil img {
+    width: 5.45rem;
+    height: 5.45rem;
+    object-fit: cover;  
+}
+
+.user-wrapper span {
+    position: absolute;
+    bottom: -0.9rem;
+    right: -0.4rem;
+}
+
+header span:has(.accent-color) {
+    max-width: 100%;        
+    font: var(--subtitle);
+    margin-block: 2rem 0.5rem;
+}
+
+header span:has(.accent-color) > .accent-color {
+    white-space: nowrap;
+}
+
+header > h1 {
+    font: var(--h1);
+    color: var(--gray-600);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.25rem;
+
+    font-size: clamp(2rem, 8vw, 3.5rem);  
+}
+
+header > p {
+    color: var(--gray-400);
+    padding-inline: 0.5rem;
+}
+
+/* Hardskills */
+.tags {
+    margin-block: 5rem 5.875rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tag-wrapper {
+    background-color: var(--gray-300);
+    font: var(--text-md);
+    padding: 0.5rem;
+    border-radius: 50%;
+
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tag-wrapper img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: cover;
+}
+
+.tag-wrapper p {
+    display: none;
+}
+
+
+@media (width >= 62em) {
+    header > span:has(.accent-color) {
+        margin-top: 3.5rem;
+    }
+
+    .tag-wrapper {
+        padding: .5rem 1rem;
+        border-radius: 1.875rem;
+    }
+
+    .tag-wrapper p {
+        display: block;  
+    }
+}

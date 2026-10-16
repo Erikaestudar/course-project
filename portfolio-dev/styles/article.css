@@ -1,0 +1,30 @@
+article {
+    background-color: var(--gray-100);
+    padding-block: 5.5rem 7.5rem;
+}
+
+article header {
+    max-width: 42.5rem;
+    margin-inline: auto;    
+    text-align: center;
+}
+
+.devices-container {
+    max-width: 55.5rem;
+    margin: 3.5rem auto 0rem;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.devices-container .devices-inner {
+    width: 17.5rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+}
+
+.devices-inner h3 {
+    margin-block: 1.25rem 0.5rem;
+}

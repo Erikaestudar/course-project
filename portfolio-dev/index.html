@@ -11,22 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Asap:wdth,wght@75..125,700&family=Inconsolata:wdth@50..200&family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-container">
-        <div class="header-container">
-
-            <header>
+    <div class="intro-container">
+        <section id="info" class="flex-cols">
+            <header class="flex-cols">
                 <div class="user-wrapper">
-                    <div class="photo-perfil">
-                        <img src="assets/images/border-user.png" alt="borda do perfil">
+                    <div class="border-box-perfil flex-cols">
                         <img src="assets/images/user.png" alt="foto do usuário">
                     </div>
                     <span>
-                        <img src="assets/icons/Code.svg" alt="ícone de código">
+                        <img src="assets/images/code.png" alt="ícone de código">
                     </span>
                 </div>
 
                 <span>
-                    Hello World! Meu nome é <span>Martina Santos</span> e sou
+                    Hello World! Meu nome é <span class="accent-color">Martina Santos</span> e sou
                 </span>
                 <h1>
                     Desenvolvedora Fullstack
@@ -37,68 +35,71 @@
 
             </header>
 
-            <div class="hard-skills">
-                <div class="input-wrapper">
+            <div class="tags flex gap-16">
+                <div class="tag-wrapper flex">
                     <img src="assets/icons/icon-github.svg" alt="ícone do GitHub"> 
                     <p>GitHub</p>
                 </div>
-                <div class="input-wrapper">
+                <div class="tag-wrapper flex">
                     <img src="assets/icons/icon-html.svg" alt="ícone do HTML">  
                     <p>HTML</p>
                 </div>
-                <div class="input-wrapper">
+                <div class="tag-wrapper flex">
                     <img src="assets/icons/icon-css.svg" alt="ícone do CSS"> 
                     <p>CSS</p>
                 </div>
-                <div class="input-wrapper">
+                <div class="tag-wrapper flex">
                     <img src="assets/icons/icon-javascript.svg" alt="ícone do Javascript"> 
                     <p>Javascript</p>
                 </div>
-                <div class="input-wrapper">
+                <div class="tag-wrapper flex">
                     <img src="assets/icons/icon-react.svg" alt="ícone do React"> 
                     <p>React</p>
                 </div>
-                <div class="input-wrapper">
+                <div class="tag-wrapper flex">
                     <img src="assets/icons/icon-node.svg" alt="ícone do Node.js"> 
                     <p>Node.js</p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <img src="assets/icons/CaretDoubleDown.png" alt="ícone mais conteúdo">
     </div>
 
     <main>
-        <div class="title-container">
-            <span>Meu trabalho</span>
+        <header>
+            <span class="accent-color">Meu trabalho</span>
             <h2>
                 Veja os projetos em destaque
             </h2>
-        </div>
+        </header>
 
-        <div class="project-container">
-
-            <div class="project-inner">
+        <section class="project-container grid-template-cols">
+            <a href="https://erikaestudar.github.io/course-project/travelgram/index.html" class="project-wrapper">
+                
                 <img src="assets/images/Thumbnail_Project-01.png" alt="Projeto Travelgram">
+                
                 <div>
                     <h3>Travelgram</h3>
                     <p>
                         Rede social onde as pessoas mostram os registros de suas viagens pelo mundo
                     </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-inner">
+            <a href="https://erikaestudar.github.io/course-project/portal-de-noticias/index.html" class="project-wrapper">
+
                 <img src="assets/images/Thumbnail_Project-02.png" alt="Projeto Tech News">
                 <div>
                     <h3>Tech News</h3>
                     <p>
                         Homepage de um portal de notícias sobre a área de tecnologia
                     </p>
-                </div>
-            </div>
+                </div>                
+            </a>
 
-            <div class="project-inner">
+            <a href="https://erikaestudar.github.io/course-project/pagina-de-receita/index.html" class="project-wrapper">
+
                 <img src="assets/images/Thumbnail_Project-03.png" alt="Projeto Página de Receitas">
                 <div>
                     <h3>Página de receita</h3>
@@ -106,9 +107,10 @@
                         Página com o passo a passo de uma receita para cupcakes
                     </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-inner">
+            <a href="https://erikaestudar.github.io/course-project/zingen/index.html" class="project-wrapper">
+
                 <img src="assets/images/Thumbnail_Project-04.png" alt="Projeto Zingen">
                 <div>
                     <h3>Zingen</h3>
@@ -116,9 +118,10 @@
                         Landing Page completa e responsiva de um aplicativo de Karaokê
                     </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-inner">
+            <a href="https://erikaestudar.github.io/course-project-js/projeto-refund-main/index.html" class="project-wrapper">
+
                 <img src="assets/images/Thumbnail_Project-05.png" alt="Projeto Página de Reembolso">
                 <div>
                     <h3>Refund</h3>
@@ -126,9 +129,10 @@
                         Um sistema para pedido e acompanhamento de reembolso
                     </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="project-inner">
+            <a href="https://erikaestudar.github.io/course-project/local-turistico/index.html" class="project-wrapper">
+
                 <img src="assets/images/Thumbnail_Project-06.png" alt="Projeto Página de turismo">
                 <div>
                     <h3>Página de turismo</h3>
@@ -136,19 +140,20 @@
                         Página com as principais informações para quem quer viajar para Busan
                     </p>
                 </div>
-            </div>
-        </div>
+            </a>
+
+        </section>
     </main>
 
-    <aside>
-        <div class="title-container">
-            <span>Meus Serviços</span>
+    <article>
+        <header>
+            <span class="accent-color">Meus Serviços</span>
             <h2>
                 Como posso ajudar o seu negócio
             </h2>
-        </div>
+        </header>
 
-        <div class="devices-container">
+        <section class="devices-container flex">
             <div class="devices-inner">
                 <img src="assets/icons/devices.svg" alt="ícone de dispositivos (aparelhos)">
                 <div>
@@ -178,45 +183,45 @@
                     </p>
                 </div> 
             </div>
-        </div>
-    </aside>
+        </section>
+    </article>
 
     <footer>
-        <div class="title-container">
-            <span>Contato</span>
+        <header>
+            <span class="accent-color">Contato</span>
             <h2>
                 Gostou do meu trabalho?
             </h2>
             <p>
                 Entre em contato ou acompanhe as minhas redes sociais!
             </p>
-        </div>
-
-        <nav>
-            <a href="#">
+        </header>
+        
+        <nav class="flex-cols gap-24">
+            <a href="#" class="flex">
                 <img src="assets/icons/linkedin.svg" alt="ícone do Linkedin">
                 Linkedin
                 <img src="assets/icons/arrowUpRight.svg" alt="ícone de uma flecha apontando para nordeste">
             </a>
 
-            <a href="#">
+            <a href="#" class="flex">
                 <img src="assets/icons/instagram-logo.svg" alt="ícone do Instagram">
                 Instagram
                 <img src="assets/icons/arrowUpRight.svg" alt="ícone de uma flecha apontando para nordeste">
             </a>
 
-            <a href="#">
+            <a href="#" class="flex">
                 <img src="assets/icons/github-logo.svg" alt="ícone do GitHub">
                 GitHub
                 <img src="assets/icons/arrowUpRight.svg" alt="ícone de uma flecha apontando para nordeste">
             </a>
 
-            <a href="#">
+            <a href="#" class="flex">
                 <img src="assets/icons/envelopeSimple.svg" alt="ícone de um envelope simples">
                 E-mail
                 <img src="assets/icons/arrowUpRight.svg" alt="ícone de uma flecha apontando para nordeste">
             </a>
-        </nav>
+        </nav>        
     </footer>
 </body>
 </html>

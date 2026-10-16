@@ -1,0 +1,51 @@
+footer {
+    height: 49.19rem;
+    background: url(../assets/images/Background_Contacts.png) center/cover;
+}
+
+footer header {
+    max-width: 42.5rem;
+    padding-top: 8rem;
+    margin-inline: auto;
+    text-align: center;
+}
+
+footer .accent-color {
+    color: var(--purple);
+}
+
+footer p {
+    font: var(--text-md);
+    margin-block: 0.5rem 3rem;
+}
+
+nav {
+    padding-inline: 1.5rem; 
+}
+
+nav a {
+    width: 100%;
+    max-width: 25rem;
+    height: 4.25rem;
+    background-color: var(--gray-300);
+    font: var(--text-md);
+
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border: 1px solid transparent;
+
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav a img:nth-child(2) {
+    margin-left: auto;
+}
+
+nav a:hover {
+    border: 1px solid var(--blue);
+}
+
+nav a:hover > img:nth-child(1) {
+    filter: brightness(0) saturate(100%) invert(40%) sepia(34%) saturate(1184%) hue-rotate(175deg) brightness(92%) contrast(93%);
+} 

@@ -1,0 +1,25 @@
+.flex {
+    display: flex;
+}
+
+.flex-cols {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gap-16 {
+    gap: 1rem;
+}
+
+.gap-24 {
+    gap: 1.5rem;
+}
+
+.grid-template-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20.625rem), 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}

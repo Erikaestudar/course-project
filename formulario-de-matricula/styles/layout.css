@@ -1,15 +1,9 @@
 #app {
-    width: 100%;
-    max-width: 80rem;
-    height: 100vh;
-    margin-inline: auto;
-
-    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 main {
-    overflow: auto; 
-    max-width: 100%;
     padding: 1.5rem;
 }
 
@@ -21,7 +15,7 @@ main {
 .main-container .back {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -31,14 +25,13 @@ main {
 }
 
 aside {
-    max-width: 100%;
     background-color: var(--surface-secondary);
-    padding: 1.5rem;
+    padding: 2.1rem 1.5rem;
 }
 
 .aside-container {
-    margin-inline: auto;
     max-width: 31rem;
+    margin-inline: auto;
 }
 
 .aside-container h2 {
@@ -54,60 +47,31 @@ aside {
     margin-top: 2rem;
 }
 
-@media (width < 62em) {
-    #app {
-        height: auto;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .aside-container header img {
-        display: block;
-        margin-inline: auto;
-        width: 22rem;
-    }
-
-    .aside-container header h2,
-    .aside-container header p {
-        display: none;
-    }
-}
-
 @media (width >= 62em) {
     #app {
         display: grid;
         grid-template-columns: 51.25% 48.75%;
+
+        height: 100vh;
+        overflow: hidden;    
     }
 
     main {
+        overflow: auto;
         padding: 4rem;
     }
 
-    .main-container {
+    main .main-container {
         margin-left: auto;
+        margin-right: 0;
     }
 
     aside {
         padding: 4rem;
     }
 
-    .aside-container {
-        max-width: 31rem;
+    aside .aside-container {
+        margin-left: 0;        
         margin-right: auto;
     }
-
-    .aside-container h2 {
-        font: 600 2.5rem/1.25 var(--font-family);
-    }
-}
-
-@media (width > 80em) {
-    .aside-container h2 {
-        margin-block: 1.5rem;
-    }
-
-    .aside-container > img {
-        margin-top: 5rem;
-    }
-    
 }

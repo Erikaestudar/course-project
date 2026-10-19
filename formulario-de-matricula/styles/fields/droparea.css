@@ -9,6 +9,7 @@
 
     text-align: center;
     padding: 1.75rem 1rem;
+
     position: relative;
 }
 
@@ -24,8 +25,9 @@
     color: #A8A29E;
 }
 
-.dropzone:hover, .dropzone:has(input:focus) {
-    outline-width: 0;
+.dropzone:hover,
+.dropzone:has(input:focus) {
+    border-width: 2px;
     border-color: var(--stroke-highlight);
     background-color: var(--surface-secondary);
 }
@@ -36,7 +38,7 @@
     stroke: var(--stroke-highlight);
 }
 
-.dropzone:hover p, 
+.dropzone:hover p,
 .dropzone:has(input:focus) p {
     color: var(--text-tertiary);
 }

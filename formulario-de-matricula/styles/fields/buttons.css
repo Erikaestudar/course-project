@@ -4,12 +4,11 @@ button {
     color: var(--text-highlight);
     padding: .75rem 1.5rem;
     border-radius: .5rem;
-
     cursor: pointer;
 }
 
-.btn-primary {
-    color: white;
+button.btn-primary {
+    color: var(--surface-primary);
     background-color: var(--brand-dark);
 }
 
@@ -18,31 +17,18 @@ button {
     background-color: #F3541C;
 }
 
+button.btn-secondary {
+    border: 1px solid var(--text-highlight);
+}
+
 .btn-secondary:hover,
 .btn-secondary:focus {
     color: var(--brand-dark);
     outline: .25rem solid var(--surface-secondary);
 }
 
-.btn-secondary {
-    border: 1px solid var(--text-highlight);
-}
-
-@media (width <= 26em) {
-    div.actions-wrapper {
-        flex-direction: column;
-        text-align: center;
-        margin-inline: auto;
-        margin-bottom: 2.5rem;
-    }
-}
-
-@media (width > 26em) {
-    div.actions-wrapper {
-        margin-bottom: 2.5rem;
-    }
-    
-    .btn-secondary {
+@media (width >= 62em) {
+    button.btn-secondary {
         margin-left: auto;
     }
 }

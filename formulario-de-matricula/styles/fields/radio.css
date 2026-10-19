@@ -9,8 +9,7 @@ label + .radio-wrapper {
 }
 
 .radio-inner {
-    border: 2px solid transparent;
-    outline: 1px solid var(--stroke-default);
+    border: 1px solid var(--stroke-default);
     border-radius: .5rem;
 
     display: grid;
@@ -24,7 +23,8 @@ label + .radio-wrapper {
 .radio-inner input,
 .radio-inner input:focus,
 .radio-inner input:hover {
-    all: unset;
+    all:unset;
+
     position: absolute;
     inset: 0;
 }
@@ -40,7 +40,7 @@ label + .radio-wrapper {
     left: .5rem;
 }
 
-.radio-inner:hover,
+.radio-inner:hover, 
 .radio-inner:focus-within {
     border: 1px solid var(--stroke-highlight);
 }

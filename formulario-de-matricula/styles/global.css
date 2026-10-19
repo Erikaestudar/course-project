@@ -26,7 +26,6 @@
 }
 
 body {
-    overflow: hidden;
     font: var(--text);
     color: var(--text-secondary);
 }
@@ -38,6 +37,16 @@ h1, h2 {
 img {
     max-width: 100%;
     height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--stroke-highlight);
 }
 
 .flex {
@@ -52,8 +61,8 @@ img {
     flex: 2;
 }
 
-@media (width < 62em) {
+@media (width >= 62em) {
     body {
-        overflow: auto;
+        overflow: hidden;
     }
 }

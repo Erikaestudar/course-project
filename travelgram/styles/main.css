@@ -8,16 +8,9 @@ main {
 }
 
 main img {
-    width: 9rem;
-    height: 9rem;
+    width: clamp(9rem, 5.773rem + 16.14vw, 17.875rem);
+    height: clamp(9rem, 5.773rem + 16.14vw, 17.875rem);
     object-fit: cover;
-}
-
-@media (26em < width < 40.625em) {
-    main img {
-        width: 13rem;
-        height: 13rem;
-    }
 }
 
 @media (width >= 40.625em) {

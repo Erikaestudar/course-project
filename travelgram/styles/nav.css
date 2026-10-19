@@ -77,7 +77,11 @@ nav.container ul#primary-menu {
     border: 0;
 }
 
-nav ul li.perfil-nav img {
+nav .perfil-nav {
+    display: none;
+}
+
+nav li.perfil-nav img {
     width: 2.5rem;
     height: 2.5rem;
     object-fit: cover;
@@ -103,9 +107,7 @@ nav ul li.perfil-nav img {
         display: block;
     }
 
-    nav .perfil-nav {
-        display: none;
-    }
+
 
     .menu {
         display: none;

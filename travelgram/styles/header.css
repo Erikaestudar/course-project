@@ -3,14 +3,31 @@ header {
     font: var(--text-md);
 }
 
+header .container {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
 #profile {
     display: flex;
     gap: 1rem;
 }
 
+#profile img {
+    width: clamp(9rem, 8rem + 5vw, 12rem);
+    height: clamp(9rem, 8rem + 5vw, 12rem);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 #profile h1 {
-    font: bold 1.3rem/1.25 var(--font-family);
+    font-family: var(--font-family);
+    font-weight: bold;
+    line-height: 1.25;
+    font-size: clamp(1.3rem, 1.045rem + 1.273vw, 2rem);
     color: var(--text-color-primary);
+
+    margin-bottom: .5rem;
 }
 
 #profile p {
@@ -19,7 +36,12 @@ header {
 
 #info {
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
+
+    position: absolute;
+    top: 2.6rem;
+    right: 2.2rem;
 }
 
 #info li {
@@ -28,63 +50,21 @@ header {
     gap: .5rem;
 }
 
-@media (width <= 40.625em) {
-    header .container {
-        margin-bottom: 1rem;
-    }
-
-    #profile {
-        position: relative;
-    }
-
-    #profile img {
-        width: 9rem;
-        height: 9rem;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-
+@media (width <= 22.5em) {
     #info {
-        flex-direction: column;
-
-        position: absolute;
-        top: 8rem;
-        left: 11.5rem; 
+        position: static;
+        margin-top: 1rem;
     }
 }
 
 @media (40.625em < width < 62em) {
-    header .container {
-        margin-bottom: 1rem;
-    }
-
     #profile {
         gap: 2.5rem;
-        position: relative;
-    }
-
-    #profile h1 {
-        font: var(--text-lg);
-        margin-bottom: 0.5rem;
-    }
-
-    #profile img {
-        width: 10rem;
-        height: 10rem;
-        object-fit: cover;
-        border-radius: 50%;
     }
 
     #profile div p:nth-child(2) {
         display: block;
-        max-width: 20rem;
-    }
-
-    #info {
-        font: var(--text-sm);
-        position: absolute;
-        top: 13rem;
-        left: 13.8rem; 
+        max-width: clamp(14rem, 11.82rem + 10.91vw, 20rem);
     }
 }
 
@@ -93,15 +73,13 @@ header {
         padding-block: 2rem;
     }
 
-    header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items:  center;
-    }
-
     #profile {
         gap: 2rem;
-        align-items: center;
+    }
+
+    #profile img {
+        width: 11rem;
+        height: 11rem;
     }
 
     #profile > div {
@@ -109,8 +87,7 @@ header {
     }
 
     #profile h1 {
-        font: var(--text-lg);
-        margin-bottom: 0.5rem;
+        font-size: 2rem;
     }
 
     #profile p {
@@ -118,8 +95,7 @@ header {
     }
 
     #info {
-        width: 17.5rem;
-        flex-direction: column;
+        width: 17rem;
         gap: 1rem;
     }
 }

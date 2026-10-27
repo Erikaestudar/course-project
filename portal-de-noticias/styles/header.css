@@ -1,12 +1,3 @@
-header .desktop-only {
-    display: none;
-}
-
-header {
-    max-width: 80em;
-    margin: auto;
-}
-
 #primary {
     padding-block: 1.25rem;
 }
@@ -26,9 +17,12 @@ header {
     justify-self: end;
 }
 
+header strong.desktop-only {
+    display: none;
+}
+
 #secondary {
     padding-block: 0.875rem;
-    
     border: 1px solid var(--stroke-color);
     border-inline: none;
     justify-content: space-between;
@@ -40,27 +34,17 @@ header {
     -ms-overflow-style: none; /* IE e Edge */
 }
 
-@media (width <= 48em) {
-    #primary {
-        padding-inline: 1rem;
-    }
-
-    #secondary a {
-        font-weight: 600;
-        padding-inline: 1.5rem;
-    }
-
-    #secondary::-webkit-scrollbar {
-        display: none;           /* Chrome, Safari */
-    }
-      
-    #secondary a {
-        display: inline-block;   /* importantíssimo pra funcionar com white-space */
-    }
+#secondary::-webkit-scrollbar {
+    display: none;           /* barra de rolagem Chrome, Safari */
+}
+    
+#secondary a {
+    font-weight: 600;
+    display: inline-block;   /* importantíssimo pra funcionar com white-space */
 }
 
 @media (width >= 62em) {
     header strong.desktop-only {
-        display: block;
+            display: block;
     }
 }

@@ -1,7 +1,12 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
@@ -20,8 +25,11 @@
     --text-span: 600 0.875rem/145% var(--font-family);
     --text: 400 1rem/140% var(--font-family);
     --text-sm: 400 0.875rem/160% var(--font-family);
+
     --text-extra: 400 0.875rem/140% "Archivo Black", sans-serif;
     --text-extra-sm: 400 0.78rem/140% "Archivo Black", sans-serif;
+
+    --px-lg: 1.5rem;
 }
 
 body {
@@ -50,7 +58,11 @@ img {
 }
 
 .container {
-    max-width: 80rem;
+    --container-width: clamp(23.4375rem, 100vw, 48rem);
+    
+    width: 100%;
+    max-width: var(--container-width);     
+    padding-inline: var(--px-lg);
     margin-inline: auto;
 }
 
@@ -59,7 +71,8 @@ img {
 }
 
 main {
-    column-gap: 2rem;
+    margin-block: 2.5rem 5rem;
+    row-gap: 4rem;
 }
 
 .content-tag {
@@ -75,25 +88,20 @@ main {
 }
 
 
-@media (width <= 48em){
-    main {
-        row-gap: 2rem;
-        margin-block: 1rem;
-    }
-
-    #ads {
-        padding-inline: 1rem;
-    }
-}
-
 @media (width >= 48em) {
-    .container {
-        padding-inline: 2rem;
+    :root {
+        --px-lg: 2rem;
     }
 
-    main {        
-        margin-block: 2.5rem;
+    .container {
+        --container-width: clamp(48rem, 100vw, 80rem);
+        max-width: var(--container-width);     
+        padding-inline: var(--px-lg);
+    }
+
+    main {
         row-gap: 5rem;
+        column-gap: 2rem;
 
         /* section ai and aside */
         grid-template-columns: 2fr 1.4fr;

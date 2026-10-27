@@ -3,12 +3,12 @@
     display: grid;
 }
 
-.grid-flow-col {
-    grid-auto-flow: column;
+.grid-flow {
+    grid-auto-flow: row;
 }
 
-.grid-cols-2 {
-    grid-template-columns: 1fr 1fr;
+.grid-flow-col {
+    grid-auto-flow: column;
 }
 
 .gap-16 {
@@ -33,4 +33,17 @@
 
 .text-sm {
     font: var(--text-sm);
+}
+
+
+@media (width >= 37.5em) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width >= 62em) {
+    .grid-flow {
+        grid-auto-flow: column;
+    }
 }

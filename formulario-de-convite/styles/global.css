@@ -1,7 +1,12 @@
-*, *::after, *::before {
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+}
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
@@ -27,7 +32,7 @@
     --ff-heading: "Baloo 2", sans-serif;
     --ff-text: "Open Sans", sans-serif;
 
-    --f-logo: 400 2.5rem var(--ff-logo);
+    --h1-logo: 400 2.5rem var(--ff-logo);
 
     --h-md: 700 1.75rem var(--ff-heading);
     --h-sm: 700 1.125rem var(--ff-heading);
@@ -43,16 +48,20 @@
 body {
     font: var(--text-sm);
     color: var(--text-body);
-    background-color: var(--shape-body);
+    background-color: var(--shape-bg);
 }
 
-#app {
-    max-width: 80rem;
+.container {
+    --container-width: clamp(23.4375rem, 100vw, 80rem);
+    
+    width: 100%;
+    max-width: var(--container-width);     
+    padding-inline: 1.25rem;
     margin-inline: auto;
 }
 
 main {
-    background-color: var(--shape-bg);
+    background-color: var(--shape-body);
 }
 
 img {
@@ -68,38 +77,4 @@ h3 {
     font: var(--h-sm);
 }
 
-.grid {
-    display: grid;
-}
 
-.flex {
-    display: flex;
-}
-
-.flex-1 {
-    flex: 1; /* Faz cada botão ocupar o mesmo espaço */
-}
-
-.gap-8 {
-    gap: 0.5rem;
-}
-
-.gap-12 {
-    gap: 0.75rem;
-}
-
-.gap-16 {
-    gap: 1rem;
-}
-
-input:-webkit-autofill {
-    box-shadow: 0 0 0px 1000px var(--input-stroke) inset !important;
-    -webkit-text-fill-color: var(--text-body) !important; /* cor do texto, se precisar */
-    transition: background-color 5000s ease-in-out 0s; /* truque pra evitar reset */
-}
-
-@media (width >= 64em) {
-    :root {
-        --px-main: 8.125rem;
-    }
-}

@@ -13,21 +13,21 @@
 <body>
     <div id="app" class="grid">
         <aside>
-            <div class="aside-container">
+            <div class="container">
                 <header>
                     <img src="assets/Logo.svg" alt="ícone de corneta com confete">
                     <h1>Festivite</h1>
-                        <p>
-                        Crie um convite digital para o seu evento
-                        </p>
+                    <p>
+                    Crie um convite digital para o seu evento
+                    </p>
                 </header>
             </div>
         </aside>
 
         <main>
-            <div class="main-container">
+            <div class="container">
                 <h2>Crie seu convite</h2>
-                <form method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data" novalidate>
                     <fieldset class="about-event">
                         <legend class="flex gap-12">
                             <img src="assets/icons/calendar.svg" alt="ícone de calendário">
@@ -119,68 +119,21 @@
                         <div class="radio-wrapper">
                             <label>Cor principal</label>
 
-                            <div class="colors-box flex flex-1">
+                            <div class="colors-box flex flex-1" id="color-options">
+                                <!-- Exemplo de opção de cor; as opções são criadas pelo script.js.
                                 <label class="color" for="blue-light" aria-label="blue-light">
                                     <input type="radio" name="colors" id="blue-light">
                                     <div class="circle"></div>
                                 </label>
-
-                                <label class="color" for="navy" aria-label="navy">
-                                    <input type="radio" name="colors" id="navy">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="purple" aria-label="purple">
-                                    <input type="radio" name="colors" id="purple">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="fuschia" aria-label="fuschia">
-                                    <input type="radio" name="colors" id="fuschia">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="pink" aria-label="pink">
-                                    <input type="radio" name="colors" id="pink">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="red" aria-label="red">
-                                    <input type="radio" name="colors" id="red">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="orange" aria-label="orange">
-                                    <input type="radio" name="colors" id="orange">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="yellow" aria-label="yellow">
-                                    <input type="radio" name="colors" id="yellow">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="lime" aria-label="lime">
-                                    <input type="radio" name="colors" id="lime">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="green" aria-label="green">
-                                    <input type="radio" name="colors" id="green">
-                                    <div class="circle"></div>
-                                </label>
-
-                                <label class="color" for="cyran" aria-label="cyran">
-                                    <input type="radio" name="colors" id="cyran">
-                                    <div class="circle"></div>
-                                </label>
+                                -->
                             </div>
                         </div>
 
                         <div class="radio-wrapper">
                             <label>Tema do evento</label>
 
-                            <div class="theme-container grid gap-8">
+                            <div class="theme-container grid gap-8" id="theme-options">
+                                <!-- Exemplo de cartão de tema; as opções são criadas pelo script.js.
                                 <div class="card">
                                     <label>
                                         <input type="radio" name="themes" id="bithday">
@@ -188,94 +141,7 @@
                                         <span>Aniversário</span>
                                     </label>
                                 </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="kids">
-                                        <img src="assets/themes/image02.png" alt="Tema de festa Infantil">
-                                        <span>Infantil</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="graduation">
-                                        <img src="assets/themes/image03.png" alt="Tema de Formatura">
-                                        <span>Formatura</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="marriage">
-                                        <img src="assets/themes/image04.png" alt="Tema de Casamento">
-                                        <span>Casamento</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="baby-shower">
-                                        <img src="assets/themes/image05.png" alt="Tema de Chá de bebê">
-                                        <span>Chá de bebê</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="bridal-shower">
-                                        <img src="assets/themes/image06.png" alt="Tema de Chá de panela">
-                                        <span>Chá de panela</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="Carnival">
-                                        <img src="assets/themes/image07.png" alt="Tema de Carnaval">
-                                        <span>Carnaval</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="Easter">
-                                        <img src="assets/themes/image08.png" alt="Tema de Páscoa">
-                                        <span>Páscoa</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="June-festival">
-                                        <img src="assets/themes/image09.png" alt="Tema de São João">
-                                        <span>São João</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="Halloween">
-                                        <img src="assets/themes/image10.png" alt="Tema de Halloween">
-                                        <span>Halloween</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="Christmas">
-                                        <img src="assets/themes/image11.png" alt="Tema de Natal">
-                                        <span>Natal</span>
-                                    </label>   
-                                </div>
-
-                                <div class="card"> 
-                                    <label>
-                                        <input type="radio" name="themes" id="Others">
-                                        <img src="assets/themes/image12.png" alt="Tema de Outro">
-                                        <span>Outro</span>
-                                    </label>   
-                                </div>
+                                -->
                             </div>
                         </div>
 
@@ -396,6 +262,7 @@
                             Gerar convite
                         </button>
                     </div>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </main>

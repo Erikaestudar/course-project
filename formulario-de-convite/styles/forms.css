@@ -3,9 +3,9 @@
 fieldset {
     border: none;
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
     max-width: 100%;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
 }
 
 legend {
@@ -14,8 +14,8 @@ legend {
 }
 
 legend img {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 label {
@@ -23,6 +23,9 @@ label {
     color: var(--text-body);
 
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
+.radio-wrapper {
+    flex-wrap: wrap;
+}

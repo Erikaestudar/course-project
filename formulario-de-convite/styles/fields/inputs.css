@@ -42,7 +42,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
 
-/* Configuração do radio Tipo */
+
+/* Configuração do radio Tipo (Presencial ou Online) */
 
 .info {
     display: flex;
@@ -99,4 +100,16 @@ input[type="radio"] {
 .radio-box:has(input:checked) {
     background-color: var(--input-stroke);
     border: 2px solid var(--input-stroke);
+}
+
+@media (width <= 37.5em) {
+    .date-event,
+    .info {
+        flex-wrap: wrap;
+    }
+
+    .info {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }

@@ -31,7 +31,7 @@ O projeto apresenta a interface e valida os campos obrigatórios de nome e e-mai
 
 ## Captura de tela
 
-![Captura de tela do formulário Festivite](assets/images/screenshot.png)
+![Captura de tela do formulário Festivite](assets/screenshot.png)
 
 ## 🎯 Funcionalidades
 

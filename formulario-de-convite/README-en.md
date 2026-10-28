@@ -31,7 +31,7 @@ The project presents the interface and validates the required name and email fie
 
 ## Screenshot
 
-![Screenshot of the Festivite form](assets/images/screenshot.png)
+![Screenshot of the Festivite form](assets/screenshot.png)
 
 ## 🎯 Features
 

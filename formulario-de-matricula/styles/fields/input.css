@@ -53,6 +53,7 @@ select {
 }
 
 .address .flex {
+    flex-direction: column;
     gap: 1.25rem;
 }
 
@@ -96,8 +97,8 @@ input:valid + .error {
     display: none;
 }
 
-@media (width < 80em) {
+@media (width >= 62em) {
     .address .flex {
-        flex-direction: column;
+        flex-direction: row;
     }
 }

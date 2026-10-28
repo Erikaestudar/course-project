@@ -42,11 +42,17 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
 
+.date-event {
+    flex-wrap: wrap;
+}
+
 
 /* Configuração do radio Tipo (Presencial ou Online) */
 
 .info {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 input[type="radio"] {
@@ -102,14 +108,13 @@ input[type="radio"] {
     border: 2px solid var(--input-stroke);
 }
 
-@media (width <= 37.5em) {
-    .date-event,
-    .info {
-        flex-wrap: wrap;
+@media (width > 37.5em) {
+    .date-event {
+        flex-wrap: nowrap;
     }
 
     .info {
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 }

@@ -53,6 +53,7 @@
   </tr>
   <tr>
     <td align="center">
+      <img src=".index-rocketseat/assets/images/clube-literario.png" width="200"><br>
       <a href="https://erikaestudar.github.io/course-project/clube-de-assinatura/index.html">Encantos Literários</a>
     </td>
   </tr>
